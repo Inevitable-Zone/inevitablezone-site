@@ -971,6 +971,10 @@ a.back{letter-spacing:.06em}
   const menu=$('menu'),nav=$('nav');
   menu.onclick=()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
   nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+  const closeMenu=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')};
+  document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&!menu.contains(e.target))closeMenu()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus()}});
+  window.addEventListener('resize',()=>{if(innerWidth>1180&&nav.classList.contains('open'))closeMenu()});
 
   /* router: each section is its own page */
   const views=[...document.querySelectorAll('[data-view]')];
