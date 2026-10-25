@@ -617,6 +617,12 @@ header{border-bottom:0!important}
 /* no top rule on subpages (first section under the header) */
 section.view{border-top:0!important}
 section.view#zespol{border-top:.5px solid var(--rule)!important}
+
+/* compact subpage top: content starts right under the header, same after refresh */
+section.view:not(#zespol){padding-top:44px!important}
+section.view .back{margin-bottom:28px}
+section.view{scroll-margin-top:400px}
+@media (max-width:720px){section.view:not(#zespol){padding-top:28px!important}section.view .back{margin-bottom:20px}}
 </style>
 </head>
 <body>
@@ -1035,12 +1041,14 @@ section.view#zespol{border-top:.5px solid var(--rule)!important}
     if(!names.includes(h))h='home';
     views.forEach(v=>v.hidden=v.dataset.view!==h);root.setAttribute('data-v',h);
     nav.querySelectorAll('a').forEach(a=>a.getAttribute('href')==='#'+h?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
-    window.scrollTo(0,0);
+    window.scrollTo({top:0,left:0,behavior:'instant'});requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
     if(h==='story')initStory();
   }
   window.addEventListener('hashchange',route);
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=a.getAttribute('href').slice(1);
     if(names.includes(t)){e.preventDefault();if(location.hash==='#'+t)route();else location.hash=t;}});
+  try{history.scrollRestoration='manual'}catch(e){}
+  window.addEventListener('load',()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
   route();
 
   /* trainer filters */
