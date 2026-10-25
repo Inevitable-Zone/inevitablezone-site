@@ -551,6 +551,23 @@ a.back{letter-spacing:.06em}
   .fl-loop-label{text-align:left;margin:0;padding:0 0 0 30px;width:auto}
 }
 @media (max-width:720px){.vision{padding-block:72px 40px}.flow{padding-block:32px 72px}.flow-head h2{margin-bottom:40px}}
+
+/* light hamburger + refined mobile menu */
+.menu{border:0!important;background:none!important;padding:10px 0 10px 6px!important;width:34px;height:34px;display:none;flex-direction:column;justify-content:center;gap:7px;cursor:pointer}
+.menu span{display:block;width:22px;height:1px;background:var(--ink);transition:transform .3s ease,opacity .3s ease;margin-left:auto}
+.menu span:last-child{width:15px}
+.menu[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg);width:20px}
+.menu[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg);width:20px}
+@media (max-width:1180px){
+  .menu{display:flex}
+  nav ul.open{padding:6px max(48px,env(safe-area-inset-right,0px)) 22px max(48px,env(safe-area-inset-left,0px));box-shadow:0 18px 30px -24px rgba(11,31,58,.25);border-bottom:.5px solid var(--rule)}
+  nav ul.open a{font-size:11px!important;letter-spacing:.18em;padding:15px 0!important;border-bottom:.5px solid var(--rule)!important;color:var(--ink)}
+  nav ul.open li:last-child a{border-bottom:0!important}
+  nav ul.open a.gold{color:var(--gold)}
+}
+@media (max-width:720px){
+  nav ul.open{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px));top:calc(72px + env(safe-area-inset-top,0px))}
+}
 </style>
 </head>
 <body>
@@ -574,7 +591,7 @@ a.back{letter-spacing:.06em}
         </div>
         <a class="contact-link" href="#kontakt"><span class="pl">Kontakt</span><span class="en">Contact</span></a>
       </div>
-      <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+      <button class="menu" id="menu" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
     </div>
   </div>
 </header>
