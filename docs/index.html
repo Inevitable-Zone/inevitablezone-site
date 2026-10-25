@@ -576,6 +576,14 @@ a.back{letter-spacing:.06em}
 .hd-mark{width:46px;height:46px;flex:none;overflow:visible}
 .hd-text{font-family:var(--sans);font-size:92px;font-weight:700;letter-spacing:.08em;fill:var(--ink)}
 @media (max-width:720px){.hd-mark{width:36px;height:36px}.logo{gap:9px}}
+
+/* larger orbit mark (2x) */
+.hd-mark{width:92px!important;height:92px!important}
+.bar{height:112px!important}
+@media (max-width:1180px){nav ul.open{top:calc(112px + env(safe-area-inset-top,0px))!important}}
+@media (max-width:720px){.hd-mark{width:72px!important;height:72px!important}.bar{height:92px!important}nav ul.open{top:calc(92px + env(safe-area-inset-top,0px))!important}}
+@media (max-width:430px){.logo img{height:26px!important}.logo{gap:7px!important}.langbox{gap:8px!important}.lang button{padding:3px 4px!important}.contact-link{letter-spacing:.12em!important}.tools{gap:10px!important}}
+@media (max-width:360px){.hd-mark{width:56px!important;height:56px!important}.logo img{height:22px!important}.langbox{flex-direction:column!important;align-items:flex-end!important;gap:4px!important}.bar{height:80px!important}nav ul.open{top:calc(80px + env(safe-area-inset-top,0px))!important}}
 </style>
 </head>
 <body>
