@@ -864,7 +864,7 @@ a.back{letter-spacing:.06em}
     <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
     <div class="sec-head">
       <div><p class="label">Tell me a story</p><h2><span class="pl">Opowiedz nam, co się dzieje</span><span class="en">Tell us what is happening</span></h2></div>
-      <p><span class="pl">Napisz swoimi słowami, z czym mierzy się Twój zespół lub Ty. Nie musi być ładnie. Przygotujemy z tego uporządkowaną wiadomość, którą możesz poprawić i wysłać do nas.</span><span class="en">Write in your own words what you or your team are facing. It doesn’t need to be polished. We’ll turn it into a clear message you can edit and send to us.</span></p>
+      <p><span class="pl">Napisz swoimi słowami, z czym mierzy się Twój zespół lub Ty. Nie musi być ładnie. Z tego powstanie wiadomość, którą możesz poprawić i wysłać do nas.</span><span class="en">Write in your own words what you or your team are facing. It doesn’t need to be polished. We’ll turn it into a message you can edit and send to us.</span></p>
     </div>
     <div class="story">
       <div class="st-in">
@@ -881,7 +881,7 @@ a.back{letter-spacing:.06em}
         <div class="f"><label for="s-subj"><span class="pl">Temat</span><span class="en">Subject</span></label><input id="s-subj"></div>
         <div class="f"><label for="s-body"><span class="pl">Treść</span><span class="en">Message</span></label><textarea id="s-body" rows="14"></textarea></div>
         <div class="actions">
-          <button class="btn" id="s-send" type="button"><span class="pl">Wyślij do zespołu Inevitable Zone</span><span class="en">Send to the Inevitable Zone team</span></button>
+          <button class="btn" id="s-send" type="button"><span class="pl">Wyślij e-mailem do zespołu</span><span class="en">Email it to the team</span></button>
           <button class="btn line" id="s-copy" type="button"><span class="pl">Kopiuj</span><span class="en">Copy</span></button>
         </div>
         <p class="hint" id="s-sent"></p>
@@ -902,7 +902,7 @@ a.back{letter-spacing:.06em}
           <div><b>Rafał Obstawski</b><span>+48 793 669 950</span><span style="grid-column:1/-1">rafal.obstawski@inevitable.zone</span></div>
         </div>
       </div>
-      <form id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <form id="form" name="contact" novalidate>
         <input type="hidden" name="form-name" value="contact"><p hidden><label>Nie wypełniaj: <input name="bot-field"></label></p>
         <div class="f full"><span class="label" id="tl"><span class="pl">Czego dotyczy rozmowa</span><span class="en">What would you like to discuss</span></span>
           <div class="topics" role="group" aria-labelledby="tl">
@@ -934,12 +934,6 @@ a.back{letter-spacing:.06em}
   </footer>
 </main>
 
-<form name="story" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input type="hidden" name="form-name" value="story"><input name="bot-field"><input name="name"><input name="company"><input name="subject"><textarea name="message"></textarea><textarea name="original"></textarea><input name="lang">
-</form>
-<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-  <input name="bot-field"><input name="topics"><input name="name"><input name="role"><input name="company"><input name="email"><textarea name="message"></textarea><input name="consent"><input name="lang">
-</form>
 <script>
 
 (function(){
@@ -990,21 +984,22 @@ a.back{letter-spacing:.06em}
   const encode=data=>Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
   const postForm=data=>fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:encode(data)}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status)});
 
-  /* ---------- contact form: Netlify Forms ---------- */
+  /* ---------- contact form: prepared e-mail (GitHub Pages, no server) ---------- */
+  const TEAM='adam.bugaj@inevitable.zone,karina.tomczyk@inevitable.zone';
+  const mailto=(subject,body)=>'mailto:'+TEAM+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   const form=$('form'),out=$('out');
-  const T={pl:{miss:'Uzupełnij: ',name:'imię i nazwisko',company:'firmę',email:'e-mail',bad:'Sprawdź adres e-mail: brakuje znaku @ lub domeny.',consent:'Zaznacz zgodę na kontakt, abyśmy mogli odpowiedzieć.',sending:'Wysyłam…',ok:n=>'Dziękujemy, '+n+'. Odezwiemy się wkrótce.',fail:'Nie udało się wysłać. Napisz proszę bezpośrednio na adam.bugaj@inevitable.zone.'},
-           en:{miss:'Please fill in: ',name:'full name',company:'company',email:'email',bad:'Check the email address: it is missing an @ or a domain.',consent:'Please tick the consent box so we can reply.',sending:'Sending…',ok:n=>'Thank you, '+n+'. We will be in touch shortly.',fail:'Sending failed. Please write directly to adam.bugaj@inevitable.zone.'}};
-  form.addEventListener('submit',async e=>{e.preventDefault();const t=T[lang()];out.hidden=false;
+  const T={pl:{miss:'Uzupełnij: ',name:'imię i nazwisko',company:'firmę',email:'e-mail',bad:'Sprawdź adres e-mail: brakuje znaku @ lub domeny.',consent:'Zaznacz zgodę na kontakt, abyśmy mogli odpowiedzieć.',ok:'Otworzyliśmy Twój program pocztowy z gotową wiadomością. Jeśli się nie otworzył, napisz na adam.bugaj@inevitable.zone.'},
+           en:{miss:'Please fill in: ',name:'full name',company:'company',email:'email',bad:'Check the email address: it is missing an @ or a domain.',consent:'Please tick the consent box so we can reply.',ok:'We opened your email app with a ready message. If it did not open, write to adam.bugaj@inevitable.zone.'}};
+  form.addEventListener('submit',e=>{e.preventDefault();const t=T[lang()];out.hidden=false;
     if(form.querySelector('[name="bot-field"]').value)return;
     const miss=['name','company','email'].filter(id=>!$(id).value.trim());
     if(miss.length){out.textContent=t.miss+miss.map(m=>t[m]).join(', ')+'.';$(miss[0]).focus();return}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('email').value)){out.textContent=t.bad;return}
     if(!$('consent').checked){out.textContent=t.consent;return}
-    out.textContent=t.sending;
     const topics=['t1','t2','t3','t4'].filter(id=>$(id).checked).map(id=>$(id).value).join(', ');
-    try{await postForm({'form-name':'contact',topics,name:$('name').value,role:$('role').value,company:$('company').value,email:$('email').value,message:$('msg').value,consent:'tak',lang:lang()});
-      out.textContent=t.ok($('name').value.trim().split(' ')[0]);form.reset();}
-    catch(err){out.textContent=t.fail}});
+    const body=($('msg').value||'')+'\n\n—\n'+$('name').value+(($('role').value)?', '+$('role').value:'')+'\n'+$('company').value+'\n'+$('email').value+(topics?'\n'+(lang()==='en'?'Topics: ':'Tematy: ')+topics:'');
+    location.href=mailto((lang()==='en'?'Enquiry: ':'Zapytanie: ')+$('company').value,body);
+    out.textContent=t.ok;});
 
   /* ---------- Psychology News: approved articles from news.json ---------- */
   let pub=[];
@@ -1026,33 +1021,20 @@ a.back{letter-spacing:.06em}
 
   /* ---------- Tell me a story: Netlify Function + Netlify Forms ---------- */
   function initStory(){}
-  $('s-go').onclick=async()=>{
+  $('s-go').onclick=()=>{
     const st=$('s-status');const text=$('s-text').value.trim();const L=lang()==='en';
     if(text.length<20){st.textContent=L?'Write a few sentences first.':'Napisz najpierw kilka zdań.';return}
-    st.textContent=L?'Writing…':'Piszę…';$('s-go').disabled=true;
-    try{
-      const r=await fetch('/.netlify/functions/story',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({story:text,name:$('s-name').value,company:$('s-company').value,lang:lang()})});
-      if(!r.ok)throw new Error('HTTP '+r.status);
-      const j=await r.json();
-      $('s-subj').value=j.subject||'';$('s-body').value=j.body||'';
-      $('s-out').hidden=false;st.textContent='';$('s-sent').textContent='';
-      $('s-out').scrollIntoView({behavior:'smooth',block:'start'});
-    }catch(err){
-      // fallback: prepare a simple, editable draft from the visitor's own words
-      $('s-subj').value=(L?'Our situation: ':'Nasza sytuacja: ')+($('s-company').value||$('s-name').value||'').trim();
-      $('s-body').value=(L?'Dear Inevitable Zone team,\n\n':'Dzień dobry,\n\n')+text+'\n\n'+(L?'Kind regards,\n':'Z wyrazami szacunku,\n')+$('s-name').value;
-      $('s-out').hidden=false;st.textContent=L?'The writing assistant is unavailable right now, so we prepared a simple draft for you to edit.':'Asystent pisania jest chwilowo niedostępny, więc przygotowaliśmy prosty szkic do poprawienia.';
-    }finally{$('s-go').disabled=false}
+    $('s-subj').value=(L?'Our situation: ':'Nasza sytuacja: ')+($('s-company').value||$('s-name').value||'').trim();
+    $('s-body').value=(L?'Dear Inevitable Zone team,\n\n':'Dzień dobry,\n\n')+text+'\n\n'+(L?'Kind regards,\n':'Z wyrazami szacunku,\n')+$('s-name').value+($('s-company').value?'\n'+$('s-company').value:'');
+    $('s-out').hidden=false;st.textContent='';$('s-sent').textContent='';
+    $('s-out').scrollIntoView({behavior:'smooth',block:'start'});
   };
   $('s-copy').onclick=()=>{const t=$('s-subj').value+'\n\n'+$('s-body').value;const L=lang()==='en';
     const done=()=>{$('s-sent').textContent=L?'Copied.':'Skopiowano.'};
     try{navigator.clipboard.writeText(t).then(done,()=>{$('s-body').select()})}catch(e){$('s-body').select()}};
-  $('s-send').onclick=async()=>{const L=lang()==='en';const msg=$('s-sent');
-    if(!$('s-body').value.trim()){return}
-    msg.textContent=L?'Sending…':'Wysyłam…';
-    try{await postForm({'form-name':'story',name:$('s-name').value,company:$('s-company').value,subject:$('s-subj').value,message:$('s-body').value,original:$('s-text').value,lang:lang()});
-      msg.textContent=L?'Sent. Thank you, we will get back to you.':'Wysłane. Dziękujemy, odezwiemy się.';}
-    catch(err){msg.textContent=L?'Could not send. Please copy the message and email it to us.':'Nie udało się wysłać. Skopiuj wiadomość i wyślij ją do nas e-mailem.'}};
+  $('s-send').onclick=()=>{const L=lang()==='en';if(!$('s-body').value.trim())return;
+    location.href=mailto($('s-subj').value,$('s-body').value);
+    $('s-sent').textContent=L?'We opened your email app with the message. If it did not open, copy it and send it to adam.bugaj@inevitable.zone.':'Otworzyliśmy Twój program pocztowy z wiadomością. Jeśli się nie otworzył, skopiuj ją i wyślij na adam.bugaj@inevitable.zone.';};
 })();
 
 </script>
