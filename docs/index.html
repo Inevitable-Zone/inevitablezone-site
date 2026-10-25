@@ -1109,6 +1109,19 @@ section.view#zespol{border-top:.5px solid var(--rule)!important}
     $('s-sent').textContent=L?'We opened your email app with the message. If it did not open, copy it and send it to adam.bugaj@inevitable.zone.':'Otworzyliśmy Twój program pocztowy z wiadomością. Jeśli się nie otworzył, skopiuj ją i wyślij na adam.bugaj@inevitable.zone.';};
 })();
 
+
+/* hover bio: opens on hover over the trainer, closes only with the minus */
+(()=>{const box=document.getElementById('trainers');if(!box)return;
+  const canHover=window.matchMedia('(hover:hover) and (pointer:fine)');
+  box.addEventListener('mouseover',e=>{if(!canHover.matches)return;
+    const tr=e.target.closest('.tr');if(!tr||tr.contains(e.relatedTarget))return;
+    const d=tr.querySelector('details');if(d&&!d.open&&!d.dataset.shut){d.open=true;d.dataset.t=Date.now()}});
+  box.addEventListener('mouseout',e=>{const tr=e.target.closest('.tr');if(!tr||tr.contains(e.relatedTarget))return;
+    const d=tr.querySelector('details');if(d)delete d.dataset.shut});
+  box.addEventListener('click',e=>{const sm=e.target.closest('.tr summary');if(!sm)return;const d=sm.parentElement;
+    if(d.open&&Date.now()-(+d.dataset.t||0)<350){e.preventDefault();return}
+    if(d.open)d.dataset.shut='1'});
+})();
 </script>
 </body>
 </html>
