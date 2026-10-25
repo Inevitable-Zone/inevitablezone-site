@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Inevitable Zone Institute · Human Reflection of Business</title>
+<meta name="description" content="Psychologia biznesu dla zarządów, liderów i zespołów. Programy rozwojowe, mentoring i interwencje kryzysowe prowadzone przez doktorów psychologii, wykładowców i praktyków biznesu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://inevitable.zone/">
+<meta property="og:title" content="Inevitable Zone Institute">
+<meta property="og:description" content="Każda strategia przechodzi przez ludzki umysł. Psychologia biznesu dla zarządów, liderów i zespołów.">
+<meta property="og:image" content="https://inevitable.zone/photos/karina-tomczyk.jpg">
+<link rel="canonical" href="https://inevitable.zone/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one white canvas framed by hairlines (as in the reference), quiet sections divided by 0.5px rules; brand ring from the logo as the only ornament. Light theme only. */
+:root{
+  --ink:#0B1F3A; --ink-soft:#3E4A5C; --ink-mute:#7A8394; --rule:#E4E5EC; --rule-strong:#C9CCD8;
+  --paper:#FFFFFF; --ground:#F6F6FA; --tint:#EEEDF7; --accent:#5A3FF0; --accent-deep:#2E2A8C;
+  --serif:"Lora",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+html[data-lang="en"] .pl{display:none!important}
+html:not([data-lang="en"]) .en{display:none!important}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+img{display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance;letter-spacing:-.01em;color:var(--ink)}
+p{margin:0}
+.canvas{max-width:1180px;margin:0 auto;background:var(--paper);border-left:.5px solid var(--rule);border-right:.5px solid var(--rule)}
+.in{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}
+.label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+.sec{padding-block:96px;border-top:.5px solid var(--rule)}
+.sec-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px 64px;align-items:end;margin-bottom:56px}
+.sec-head>*{min-width:0}
+.sec-head h2{font-size:44px;line-height:1.15;margin-top:14px}
+.sec-head p{font-size:17px;color:var(--ink-soft);max-width:58ch}
+
+/* top bar */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:.5px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px}
+.logo img{height:38px;width:auto}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:14px;color:var(--ink-soft);border-bottom:.5px solid transparent;padding-bottom:2px;transition:border-color .2s,color .2s}
+nav a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+.tools{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:.5px solid var(--rule-strong)}
+.lang button{background:none;border:0;padding:6px 10px;font:500 11px var(--sans);letter-spacing:.1em;color:var(--ink-mute);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;background:var(--ink);color:#fff;border:.5px solid var(--ink);text-decoration:none;font:500 14px var(--sans);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.btn.line{background:transparent;color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.menu{display:none;background:none;border:.5px solid var(--rule-strong);padding:7px 12px;font:500 13px var(--sans);color:var(--ink);cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:48px;align-items:end;padding-block:72px 0}
+.hero>*{min-width:0}
+.hero-text{padding-bottom:72px}
+.hero .label{margin-bottom:28px;color:var(--accent);letter-spacing:.14em}
+.hero h1{font-size:58px;line-height:1.12;margin-bottom:28px}
+.hero h1 em{font-style:italic;color:var(--accent-deep)}
+.hero-sub{font-size:18px;line-height:1.7;color:var(--ink-soft);max-width:520px}
+.hero-sub span{display:block}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px}
+.about>*{min-width:0}
+.thesis{font-family:var(--serif);font-size:30px;line-height:1.35}
+.thesis em{color:var(--accent-deep)}
+.motto{margin-top:32px;padding-top:24px;border-top:.5px solid var(--rule);font-family:var(--serif);font-style:italic;font-size:19px;color:var(--ink-soft)}
+.motto small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;color:var(--ink-mute);margin-top:8px}
+.pillars{display:grid;gap:0;border-top:.5px solid var(--rule)}
+.pillar{padding:22px 0;border-bottom:.5px solid var(--rule);display:grid;grid-template-columns:40px minmax(0,1fr);gap:16px}
+.pillar i{font-style:normal;font-family:var(--serif);font-size:20px;color:var(--accent)}
+.pillar h3{font-family:var(--sans);font-weight:600;font-size:16px;margin-bottom:4px}
+.pillar p{color:var(--ink-soft);font-size:15px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.stat{border:.5px solid var(--rule);padding:22px}
+.stat b{font-family:var(--serif);font-weight:400;font-size:46px;line-height:1;color:var(--accent-deep);display:block;font-variant-numeric:tabular-nums}
+.stat p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.src{font-size:12px;color:var(--ink-mute);margin-top:12px}
+
+/* expandable tiles (reference pattern) */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+.tiles.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+details.tile{border:.5px solid var(--rule);background:var(--paper);transition:border-color .25s,background .25s;min-width:0}
+details.tile[open]{border-color:var(--rule-strong);grid-column:1/-1}
+details.tile:hover:not([open]){background:var(--ground)}
+details.tile summary{list-style:none;cursor:pointer;padding:36px 32px;display:flex;flex-direction:column;gap:18px;min-height:220px;justify-content:space-between}
+details.tile summary::-webkit-details-marker{display:none}
+.tile-label{font-family:var(--serif);font-size:30px;line-height:1.15}
+.tile-line{font-size:14px;color:var(--ink-mute);margin-top:8px}
+.cue{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute)}
+.cue i{font-style:normal;width:20px;height:20px;border:.5px solid var(--rule-strong);border-radius:50%;display:grid;place-items:center;font-size:14px;line-height:1;transition:transform .25s}
+details.tile[open] .cue i{transform:rotate(45deg);border-color:var(--ink-soft)}
+details.tile[open] .c-closed{display:none}
+details.tile:not([open]) .c-open{display:none}
+.tile-body{padding:0 32px 36px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px}
+.tile-body>*{min-width:0}
+.tile-body p{color:var(--ink-soft)}
+.list{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.list li{break-inside:avoid;padding:9px 0;border-bottom:.5px solid var(--rule);font-size:14.5px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facts span{font-size:12.5px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
+
+/* program */
+.modules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:.5px solid var(--rule);border-left:.5px solid var(--rule);counter-reset:m}
+.modules li{counter-increment:m;padding:24px 22px 28px;border-right:.5px solid var(--rule);border-bottom:.5px solid var(--rule);min-width:0}
+.modules li::before{content:counter(m,decimal-leading-zero);display:block;font-size:11px;letter-spacing:.1em;color:var(--accent);margin-bottom:10px;font-weight:500}
+.modules h3{font-size:20px;line-height:1.25;margin-bottom:6px}
+.modules p{font-size:14px;color:var(--ink-soft)}
+.modules li.wide{grid-column:span 2;background:var(--tint)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;padding-bottom:18px;position:relative}
+.steps li::before{content:"";width:11px;height:11px;border:1.5px solid var(--accent);border-radius:50%;margin:7px 0 0 8px;background:#fff;position:relative;z-index:1}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:13px;top:20px;bottom:0;width:.5px;background:var(--rule-strong)}
+.steps li:last-child::before{background:var(--accent)}
+.steps b{display:block;font-weight:600;font-size:15px}
+.steps span{color:var(--ink-soft);font-size:14.5px}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.member{border:.5px solid var(--rule);display:flex;flex-direction:column;min-width:0}
+.member .ph{background:#ECEDF3;aspect-ratio:4/5;overflow:hidden}
+.member .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.member .tx{padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.member h3{font-size:28px}
+.role{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.member p{font-size:15px;color:var(--ink-soft)}
+.contact-line{margin-top:auto;padding-top:16px;border-top:.5px solid var(--rule);font-size:13.5px;display:grid;gap:2px;user-select:all}
+.contact-line span{user-select:all}
+
+/* competences */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{background:#fff;border:.5px solid var(--rule-strong);padding:8px 14px;font:500 13px var(--sans);color:var(--ink-soft);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.trainers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 20px}
+.tr{min-width:0;display:flex;flex-direction:column;gap:10px}
+.tr .ph{background:#ECEDF3;aspect-ratio:4/5;overflow:hidden;border:.5px solid var(--rule)}
+.tr .ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.tr h3{font-size:21px;line-height:1.2}
+.tr .spec{font-size:13px;color:var(--ink-mute);line-height:1.5}
+.tr details summary{list-style:none;cursor:pointer;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);display:inline-flex;gap:8px;align-items:center}
+.tr details summary::-webkit-details-marker{display:none}
+.tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
+.tr details[open] summary::after{content:"–"}
+.tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
+.unis .label{margin-right:8px}
+.unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
+
+/* quote */
+.quote{padding-block:88px;border-top:.5px solid var(--rule);background:var(--tint)}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:36px;line-height:1.3;max-width:30ch}
+.quote blockquote em{color:var(--accent-deep)}
+
+/* contact */
+.ct{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px}
+.ct>*{min-width:0}
+.direct{margin-top:32px;display:grid;gap:0;border-top:.5px solid var(--rule)}
+.direct div{padding:14px 0;border-bottom:.5px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;font-size:14.5px}
+.direct b{font-weight:600}
+.direct span{color:var(--ink-soft);user-select:all}
+form{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+.f{display:flex;flex-direction:column;gap:8px;min-width:0}
+.f.full{grid-column:1/-1}
+form label,.f>.label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+input,textarea{font:400 16px var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:.5px solid var(--rule-strong);padding:10px 0;border-radius:0;width:100%}
+textarea{min-height:110px;resize:vertical;border:.5px solid var(--rule-strong);padding:12px}
+input:focus,textarea:focus{outline:none;border-color:var(--accent)}
+.topics{display:flex;flex-wrap:wrap;gap:8px}
+.topics input{position:absolute;opacity:0;width:1px;height:1px}
+.topics label{cursor:pointer;border:.5px solid var(--rule-strong);padding:9px 14px;font-size:13px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:400}
+.topics input:checked+label{background:var(--ink);color:#fff;border-color:var(--ink)}
+.topics input:focus-visible+label{outline:2px solid var(--accent);outline-offset:2px}
+.consent{flex-direction:row;align-items:flex-start;gap:12px}
+.consent input{width:auto;margin-top:5px}
+.consent label{text-transform:none;letter-spacing:0;font-size:14px;color:var(--ink-soft);font-weight:400}
+.msg{grid-column:1/-1;border:.5px solid var(--accent);padding:16px 18px;font-size:15px}
+
+footer{border-top:.5px solid var(--rule);padding-block:44px 32px}
+.ft{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:32px;padding-bottom:32px}
+.ft>*{min-width:0}
+.ft img{height:34px;width:auto;margin-bottom:14px}
+.ft p,.ft li{font-size:14px;color:var(--ink-soft)}
+.ft ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.ft a{text-decoration:none}
+.ft a:hover{color:var(--ink)}
+.fb{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-top:20px;border-top:.5px solid var(--rule)}
+
+@media (max-width:1180px){
+  nav ul{display:none}
+  nav ul.open{display:flex;position:fixed;top:calc(76px + env(safe-area-inset-top,0px));left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:.5px solid var(--rule);padding:8px max(24px,env(safe-area-inset-right,0px)) 16px max(24px,env(safe-area-inset-left,0px))}
+  nav ul.open a{display:block;padding:12px 0;border-bottom:.5px solid var(--rule);font-size:16px}
+  .menu{display:inline-block}
+  .tools .btn{display:none}
+  .hero,.about,.sec-head,.ct{grid-template-columns:minmax(0,1fr)}
+  .hero-text{padding-bottom:0}
+  .hero-art{max-width:560px;width:100%;margin:0 auto}
+  .tiles{grid-template-columns:minmax(0,1fr)}
+  .tiles.two{grid-template-columns:minmax(0,1fr)}
+  .modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trainers{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .team{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ft{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .in{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+  .canvas{border:0}
+  .sec{padding-block:64px}
+  .sec-head h2{font-size:32px}
+  .hero{padding-top:44px}
+  .hero h1{font-size:36px}
+  .hero-sub{font-size:16px}
+  .thesis{font-size:23px}
+  details.tile summary{padding:26px 22px;min-height:0}
+  .tile-label{font-size:26px}
+  .tile-body{padding:0 22px 26px;grid-template-columns:minmax(0,1fr)}
+  .list{columns:1}
+  .modules{grid-template-columns:minmax(0,1fr)}
+  .modules li.wide{grid-column:auto}
+  .team{grid-template-columns:minmax(0,1fr)}
+  .member .ph{aspect-ratio:1/1}
+  .trainers{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+  .tr h3{font-size:18px}
+  .quote blockquote{font-size:26px}
+  form{grid-template-columns:minmax(0,1fr)}
+  .stats{gap:12px}
+  .stat b{font-size:36px}
+  .ft{grid-template-columns:minmax(0,1fr)}
+  .logo img{height:30px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+[hidden]{display:none!important}
+img{max-width:100%}
+.f>label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+/* views */
+.view[hidden]{display:none!important}
+.back{display:inline-flex;gap:8px;align-items:center;text-decoration:none;font-size:13px;color:var(--ink-mute);margin-bottom:40px;border-bottom:.5px solid transparent}
+.back:hover{color:var(--ink);border-bottom-color:var(--ink)}
+nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
+/* hero circle */
+.hero-art{position:relative;aspect-ratio:1/1;max-width:100%;margin-bottom:40px}
+.circle{position:absolute;inset:7%;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 35%,#F4F3FB 0,var(--tint) 70%)}
+.circle img{position:absolute;bottom:0;height:86%;width:auto}
+.circle .p-k{left:6%}
+.circle .p-a{right:7%;height:84%}
+.ring{position:absolute;inset:1%;border-radius:50%;background:conic-gradient(from 200deg,var(--accent) 0deg,var(--accent-deep) 120deg,transparent 210deg,transparent 360deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 14px),#000 calc(100% - 13px));mask:radial-gradient(farthest-side,transparent calc(100% - 14px),#000 calc(100% - 13px))}
+/* overview cards */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:.5px solid var(--rule);border-left:.5px solid var(--rule)}
+.card{display:flex;flex-direction:column;gap:8px;padding:26px 24px 28px;border-right:.5px solid var(--rule);border-bottom:.5px solid var(--rule);text-decoration:none;min-height:190px;transition:background .2s;min-width:0}
+.card:hover{background:var(--ground)}
+.card b{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.2}
+.card>span:not(.label){font-size:14px;color:var(--ink-soft)}
+.card i{font-style:normal;margin-top:auto;color:var(--accent);font-size:18px}
+.card.accent{background:var(--tint)}
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+.story>*{min-width:0}
+.st-in,.st-out{display:flex;flex-direction:column;gap:20px}
+.st-out{border:.5px solid var(--rule-strong);padding:28px;background:#fff}
+.story textarea{min-height:0}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hint{font-size:13.5px;color:var(--ink-mute)}
+.sel{user-select:all;color:var(--ink)}
+.st-off{border:.5px solid var(--rule-strong);padding:24px;color:var(--ink-soft)}
+.inbox,.review{margin-top:48px;border:.5px dashed var(--accent);padding:24px;background:#FBFAFF}
+.inbox-head,.review-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:16px}
+.msgitem{border-top:.5px solid var(--rule);padding:16px 0}
+.msgitem b{display:block}
+.msgitem pre{white-space:pre-wrap;font:14px/1.6 var(--sans);color:var(--ink-soft);margin:8px 0 0}
+/* news */
+.news{display:grid;gap:0;border-top:.5px solid var(--rule)}
+.art{display:grid;grid-template-columns:160px minmax(0,1fr);gap:28px;padding:32px 0;border-bottom:.5px solid var(--rule)}
+.art time{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);padding-top:6px}
+.art h3{font-size:28px;line-height:1.25;margin-bottom:12px}
+.art .lead{font-size:17px;color:var(--ink-soft);max-width:68ch}
+.art details{margin-top:14px}
+.art summary{cursor:pointer;list-style:none;font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;gap:8px}
+.art summary::-webkit-details-marker{display:none}
+.art summary::after{content:"+";color:var(--accent);font-size:15px}
+.art details[open] summary::after{content:"–"}
+.art .body p{margin-top:12px;max-width:68ch;color:var(--ink-soft)}
+.art .src{margin-top:16px}
+.art .src a{color:var(--accent-deep)}
+.art .adm{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.art .adm button{font-size:13px;padding:9px 14px}
+.review .art{border-bottom:.5px solid var(--rule);background:transparent}
+.empty{padding:32px 0;color:var(--ink-mute)}
+.tag{display:inline-block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+@media (max-width:1180px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:720px){
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .card{min-height:0}
+  .story{grid-template-columns:minmax(0,1fr)}
+  .row2{grid-template-columns:minmax(0,1fr)}
+  .art{grid-template-columns:minmax(0,1fr);gap:8px}
+  .art h3{font-size:23px}
+}
+
+/* Kacper-style landing */
+.khome{padding-block:64px 32px}
+.khero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center;margin-bottom:64px}
+.khero>*{min-width:0}
+.khero h1{font-size:56px;line-height:1.15;margin:0 0 28px}
+.khero .hero-art{margin:0;max-width:380px;justify-self:end;width:100%}
+.ktiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.ktile{border:.5px solid var(--rule);background:var(--paper);text-decoration:none;padding:40px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:160px;transition:background .25s,border-color .25s;min-width:0}
+.ktile:hover{background:var(--ground);border-color:var(--rule-strong)}
+.ktile:hover .cue i{transform:rotate(90deg);border-color:var(--ink-soft)}
+.ktile .kt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.ktile .tile-label{font-size:36px}
+.ktile .tile-line{margin:0;font-size:13px;letter-spacing:.03em}
+.ktile .cue{white-space:nowrap;flex-shrink:0}
+.ktile.accent{background:var(--tint)}
+.kbottom{margin-top:80px;padding-top:24px;border-top:.5px solid var(--rule);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute)}
+.kbottom span{min-width:0}
+.legal{font-size:12.5px;color:var(--ink-mute);padding-bottom:20px}
+html[data-v="home"] footer{display:none}
+@media (max-width:880px){
+  .khero{grid-template-columns:minmax(0,1fr)}
+  .khero .hero-art{justify-self:center;max-width:320px}
+  .ktiles{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:720px){
+  .khome{padding-block:36px 24px}
+  .khero h1{font-size:34px;line-height:1.2}
+  .ktile{padding:28px 22px;flex-direction:column;align-items:flex-start;min-height:0;gap:18px}
+  .ktile .tile-label{font-size:30px}
+  .kbottom{flex-direction:column;margin-top:56px}
+}
+
+/* luxury landing */
+:root{--gold:#A8843C;--gold-soft:#C9AE72;--gold-wash:#F7F2E7}
+nav a.gold{color:var(--gold);font-weight:600}
+nav a.gold:hover{color:#8C6C2C;border-bottom-color:var(--gold)}
+html[data-v="home"] nav ul:not(.open){display:flex}
+@media (max-width:1180px){html[data-v="home"] nav ul:not(.open){display:none}}
+.lux{overflow-x:clip;border-bottom:.5px solid var(--rule);background:linear-gradient(180deg,#fff 0,#fff 62%,var(--gold-wash) 100%)}
+.lux-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:48px;align-items:center;padding-block:88px 72px}
+.lux-grid>*{min-width:0}
+.lux-eyebrow{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:36px}
+.lux-eyebrow .dot{width:28px;height:.5px;background:var(--gold)}
+.lux-h1{font-size:clamp(46px,6vw,84px);line-height:1.02;letter-spacing:-.025em;margin:0 0 36px;font-weight:400}
+.lux-h1 em{font-style:italic;color:var(--gold)}
+.lux-sub{font-size:19px;line-height:1.7;color:var(--ink-soft);max-width:34em}
+.lux-cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:44px}
+.gold-btn{background:var(--ink);border-color:var(--ink);padding:16px 28px;font-size:15px;letter-spacing:.02em}
+.gold-btn:hover{background:var(--gold);border-color:var(--gold)}
+.lux-link{font-size:14px;color:var(--ink-soft);text-decoration:none;border-bottom:.5px solid var(--gold-soft);padding-bottom:3px}
+.lux-link:hover{color:var(--ink)}
+.lux-art{position:relative;aspect-ratio:1/1.08;width:100%;max-width:520px;justify-self:end}
+.lux-art .halo{position:absolute;inset:-6%;border-radius:50%;background:radial-gradient(circle,rgba(201,174,114,.22) 0,rgba(201,174,114,0) 65%)}
+.lux-art .ring,.lux-art .circle{aspect-ratio:1/1;height:auto;bottom:auto}
+.lux-art .ring{inset:0 0 auto 0;width:100%}
+.gold-ring{background:conic-gradient(from 210deg,var(--gold) 0deg,var(--gold-soft) 140deg,rgba(201,174,114,0) 230deg,rgba(201,174,114,0) 360deg)!important;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px))!important;mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 2px))!important}
+.lux-art .circle{position:absolute;inset:4% 4% auto 4%;width:92%;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 30%,#FFFFFF 0,#F1EEF8 55%,#E7E3F2 100%)}
+.lux-art .circle img{position:absolute;bottom:0;width:auto}
+.lux-art .p-a{right:4%;height:82%;z-index:1}
+.lux-art .p-k{left:5%;height:88%;z-index:2;filter:drop-shadow(8px 0 14px rgba(11,31,58,.18))}
+.lux-names{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:12px;font-family:var(--serif);font-size:17px;color:var(--ink)}
+.lux-names .amp{font-style:italic;color:var(--gold)}
+.creds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:.5px solid var(--rule)}
+.creds>div{padding:28px 24px 32px 0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.creds>div+div{padding-left:24px;border-left:.5px solid var(--rule)}
+.creds b{font-family:var(--serif);font-weight:400;font-size:44px;line-height:1;color:var(--ink)}
+.creds b.w{font-size:19px;line-height:1.25;padding-top:12px}
+.creds span{font-size:13.5px;color:var(--ink-mute)}
+.manifesto{padding-block:96px;text-align:center;border-bottom:.5px solid var(--rule)}
+.gold-label{color:var(--gold);letter-spacing:.22em;font-weight:600}
+.manifesto blockquote{margin:24px auto 0;font-family:var(--serif);font-size:clamp(28px,3.6vw,48px);line-height:1.25;max-width:24ch;letter-spacing:-.01em}
+.manifesto blockquote em{color:var(--gold)}
+.goldtile{background:var(--gold-wash)!important;border-color:var(--gold-soft)!important}
+.goldtile .tile-label{color:var(--ink)}
+.goldtile .cue i{border-color:var(--gold)}
+.khome{padding-block:64px 32px}
+@media (max-width:1040px){.lux-grid{grid-template-columns:minmax(0,1fr)}.lux-art{justify-self:center;max-width:440px}.creds{grid-template-columns:repeat(2,minmax(0,1fr))}.creds>div:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:720px){
+  .lux-grid{padding-block:48px 40px;gap:40px}
+  .lux-h1{font-size:44px}
+  .lux-sub{font-size:16.5px}
+  .creds{grid-template-columns:minmax(0,1fr)}
+  .creds>div,.creds>div+div{padding:20px 0;border-left:0;border-top:.5px solid var(--rule)}
+  .creds>div:first-child{border-top:0}
+  .manifesto{padding-block:64px}
+}
+
+/* ===== refinement: quieter, warmer, editorial ===== */
+:root{--ground:#FAF9F6;--paper:#FFFFFF;--rule:#E6E2DA;--rule-strong:#CFC9BE;--tint:#F4F1EB;--gold:#9A7A3E;--gold-soft:#C2A878;--gold-wash:#F6F2EA;--ink-soft:#3F4652;--ink-mute:#858A92}
+body{background:var(--ground)}
+.canvas{border-color:var(--rule)}
+header{background:rgba(255,255,255,.97);backdrop-filter:none}
+.bar{height:84px}
+nav ul{gap:30px}
+nav a{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+nav a:hover{border-bottom-color:var(--gold)}
+nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+nav a.gold{color:var(--gold);font-weight:600}
+.langbox{display:flex;flex-direction:column;align-items:flex-end;gap:7px}
+.lang{border:0;gap:2px}
+.lang button{padding:3px 6px;font-size:10.5px;letter-spacing:.18em;background:none!important;color:var(--ink-mute);border-bottom:.5px solid transparent}
+.lang button[aria-pressed="true"]{color:var(--ink)!important;border-bottom-color:var(--gold)}
+.contact-link{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--ink);font-weight:500}
+.contact-link:hover{color:var(--gold)}
+/* buttons: quiet, tailored */
+.btn{background:transparent;color:var(--ink);border:.5px solid var(--ink);padding:16px 30px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.gold-btn{background:var(--ink);color:#fff;padding:18px 34px}
+.gold-btn:hover{background:transparent;color:var(--ink);border-color:var(--ink)}
+.lux-link{font-size:13px;border-bottom-color:var(--rule-strong)}
+/* hero */
+.lux{background:#fff}
+.lux-grid{padding-block:112px 96px}
+.lux-eyebrow{font-size:10.5px;letter-spacing:.28em;font-weight:500;margin-bottom:44px}
+.lux-eyebrow .dot{width:40px;background:var(--gold-soft)}
+.lux-h1{font-size:clamp(46px,5.8vw,82px);line-height:1.04;letter-spacing:-.03em}
+.lux-h1 em{color:var(--gold)}
+.lux-sub{font-size:18px;max-width:31em;color:var(--ink-soft)}
+.lux-art .halo{display:none}
+.gold-ring{background:none!important;-webkit-mask:none!important;mask:none!important;border:.75px solid var(--gold-soft)}
+.lux-art .ring{inset:0 0 auto 0}
+.lux-art .circle{background:#EFEBE4}
+.lux-art .circle img{filter:grayscale(1) contrast(1.04) brightness(1.02)}
+.lux-art .p-k{filter:grayscale(1) contrast(1.04) brightness(1.02)}
+.lux-names{font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans);font-weight:500;gap:14px}
+.lux-names .amp{font-family:var(--serif);font-size:18px;text-transform:none;letter-spacing:0;line-height:1}
+/* credentials */
+.creds{background:#fff}
+.creds b{font-size:40px;color:var(--ink)}
+.creds b.w{font-size:18px}
+.creds span{font-size:12.5px;letter-spacing:.01em}
+/* manifesto */
+.manifesto{padding-block:120px;background:var(--ground)}
+.manifesto blockquote{font-size:clamp(28px,3.4vw,46px);font-style:normal}
+.manifesto blockquote::before{content:"";display:block;width:1px;height:56px;background:var(--gold-soft);margin:0 auto 40px}
+/* index of sections instead of boxes */
+.khome{padding-block:96px 40px;background:#fff}
+.ktiles{gap:0 72px}
+.ktile,.ktile:hover{border:0;border-top:.5px solid var(--rule);background:transparent!important;padding:34px 0 36px;min-height:0;display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:baseline;gap:16px}
+.ktiles .ktile:nth-last-child(-n+2){border-bottom:.5px solid var(--rule)}
+.tnum{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold)}
+.ktile .tile-label{font-size:34px;transition:color .25s}
+.ktile:hover .tile-label{color:var(--gold)}
+.ktile .tile-line{font-size:12.5px;color:var(--ink-mute)}
+.ktile .cue{font-size:10.5px;letter-spacing:.18em}
+.ktile .cue i{border:0;width:auto;height:auto;font-size:0}
+.ktile .cue i::after{content:"→";font-size:15px;color:var(--gold);font-style:normal}
+.ktile:hover .cue i{transform:translateX(4px)}
+.goldtile .tile-label{color:var(--gold)!important}
+.kbottom{margin-top:72px;font-size:10px;letter-spacing:.14em}
+/* inner pages: same restraint */
+.sec-head h2{letter-spacing:-.02em}
+details.tile{border-color:var(--rule)}
+.member,.tr .ph,.stat{border-color:var(--rule)}
+.member .ph,.tr .ph{background:#EFEBE4}
+.member .ph img,.tr .ph img{filter:grayscale(1) contrast(1.04);transition:filter .5s}
+.member:hover .ph img,.tr:hover .ph img{filter:grayscale(0)}
+.role,.label{letter-spacing:.16em}
+.role{color:var(--gold)}
+.modules li::before{color:var(--gold)}
+.modules li.wide,.card.accent,.quote{background:var(--tint)}
+.steps li::before{border-color:var(--gold)}
+.steps li:last-child::before{background:var(--gold)}
+.filters button[aria-pressed="true"]{background:var(--ink)}
+.thesis em,.quote blockquote em,.hero h1 em{color:var(--gold)}
+.pillar i{color:var(--gold)}
+.stat b{color:var(--ink)}
+.inbox,.review{border-color:var(--gold-soft);background:var(--gold-wash)}
+@media (max-width:1180px){.langbox{flex-direction:row;align-items:center;gap:14px}}
+@media (max-width:720px){
+  .bar{height:72px}
+  .lux-grid{padding-block:56px 48px}
+  .lux-h1{font-size:42px}
+  .ktiles{gap:0}
+  .ktiles .ktile:nth-last-child(2){border-bottom:0}
+  .ktile,.ktile:hover{grid-template-columns:32px minmax(0,1fr);padding:26px 0}
+  .ktile .cue{grid-column:2}
+  .ktile .tile-label{font-size:28px}
+  .manifesto{padding-block:80px}
+  .langbox{gap:10px}
+  .lux-names{font-size:11px}
+}
+.tr details summary::after,.art summary::after,.path summary::after{color:var(--gold)!important}
+.filters{gap:22px;border-bottom:.5px solid var(--rule);padding-bottom:0}
+.filters button{border:0;background:none!important;padding:0 0 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)!important;border-bottom:1px solid transparent;margin-bottom:-.5px}
+.filters button[aria-pressed="true"]{color:var(--ink)!important;border-bottom-color:var(--gold)}
+.lux-art{max-width:560px}
+.cue i{border-color:var(--rule-strong)}
+a.back{letter-spacing:.06em}
+
+/* history */
+.hist{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:96px;align-items:start}
+.hist>*{min-width:0}
+.hist-h{font-size:clamp(34px,3.8vw,54px);line-height:1.12;letter-spacing:-.025em;margin:22px 0 36px}
+.hist-h em{color:var(--gold)}
+.hist-body p{font-size:17px;line-height:1.8;color:var(--ink-soft);max-width:36em;margin-bottom:18px}
+.hist-body p:first-child::first-letter{font-family:var(--serif);float:left;font-size:64px;line-height:.86;padding:6px 10px 0 0;color:var(--gold)}
+.hist-body em{font-family:var(--serif);color:var(--ink)}
+.timeline{list-style:none;margin:58px 0 0;padding:0;border-left:.5px solid var(--gold-soft)}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:20px;padding:0 0 34px 28px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-4px;top:12px;width:7px;height:7px;border-radius:50%;background:#fff;border:.75px solid var(--gold)}
+.timeline li:last-child::before{background:var(--gold)}
+.timeline b{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1;color:var(--ink)}
+.timeline div{font-size:13.5px;line-height:1.6;color:var(--ink-mute);padding-top:4px}
+@media (max-width:1040px){.hist{grid-template-columns:minmax(0,1fr);gap:24px}.timeline{margin-top:24px}}
+@media (max-width:720px){.timeline li{grid-template-columns:72px minmax(0,1fr);gap:14px;padding-left:22px}.timeline b{font-size:26px}}
+
+/* colour photos again */
+.lux-art .circle img,.lux-art .p-k,.member .ph img,.tr .ph img,.member:hover .ph img,.tr:hover .ph img{filter:none!important}
+.lux-art .p-k{filter:drop-shadow(10px 0 18px rgba(11,31,58,.14))!important}
+/* vision */
+.vision{padding-block:120px 72px;background:#fff;border-bottom:0}
+.vision-text{font-family:var(--serif);font-size:clamp(26px,3vw,40px);line-height:1.35;letter-spacing:-.015em;max-width:30ch;margin-top:26px;color:var(--ink)}
+.vision-text em{color:var(--gold)}
+/* intellectual flow */
+.flow{padding-block:48px 120px;background:#fff;border-bottom:.5px solid var(--rule)}
+.flow-head h2{font-size:clamp(30px,3vw,42px);line-height:1.15;margin:18px 0 64px;letter-spacing:-.02em}
+.flow-head h2 em{color:var(--gold)}
+.fl-wrap{position:relative}
+.fl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 28px;position:relative}
+.fl::before{content:"";position:absolute;left:0;right:0;top:7px;height:.5px;background:var(--gold-soft)}
+.fl-step{position:relative;padding-top:40px;min-width:0}
+.fl-dot{position:absolute;top:0;left:0;width:15px;height:15px;border-radius:50%;background:#fff;border:.75px solid var(--gold)}
+.fl-step:last-child .fl-dot{background:var(--gold)}
+.fl-n{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);display:block;margin-bottom:10px}
+.fl-step h3{font-size:26px;line-height:1.2;margin-bottom:12px}
+.fl-step p{font-size:14px;line-height:1.65;color:var(--ink-soft)}
+.fl-loop{display:block;width:100%;height:70px;margin-top:28px}
+.fl-loop-label{text-align:center;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin-top:-18px;background:#fff;width:max-content;max-width:100%;margin-left:auto;margin-right:auto;padding:0 14px;position:relative}
+@media (max-width:980px){
+  .fl{grid-template-columns:minmax(0,1fr);gap:0;border-left:.5px solid var(--gold-soft);margin-left:7px}
+  .fl::before{display:none}
+  .fl-step{padding:0 0 36px 30px}
+  .fl-dot{left:-8px;top:4px}
+  .fl-loop{display:none}
+  .fl-loop-label{text-align:left;margin:0;padding:0 0 0 30px;width:auto}
+}
+@media (max-width:720px){.vision{padding-block:72px 40px}.flow{padding-block:32px 72px}.flow-head h2{margin-bottom:40px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="canvas in bar" style="border:0;background:transparent">
+    <a class="logo" href="#top" aria-label="Inevitable Zone Institute"><img src="logo.png" alt="Inevitable Zone" width="440" height="143"></a>
+    <nav aria-label="Menu">
+      <ul id="nav">
+        <li><a href="#oferta"><span class="pl">Oferta</span><span class="en">Services</span></a></li>
+        <li><a href="#program"><span class="pl">Program</span><span class="en">Programme</span></a></li>
+        <li><a href="#kompetencje"><span class="pl">Kompetencje</span><span class="en">Competences</span></a></li>
+        <li><a href="#news">Psychology News</a></li>
+        <li><a class="gold" href="#story">Tell me a story</a></li>
+        <li><a href="#o-nas">About us</a></li>
+      </ul>
+    </nav>
+    <div class="tools">
+      <div class="langbox">
+        <div class="lang" role="group" aria-label="Język / Language">
+          <button type="button" id="lpl" aria-pressed="true">PL</button><button type="button" id="len" aria-pressed="false">EN</button>
+        </div>
+        <a class="contact-link" href="#kontakt"><span class="pl">Kontakt</span><span class="en">Contact</span></a>
+      </div>
+      <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main class="canvas" id="top">
+
+  <div class="view" data-view="home">
+  <section class="lux">
+    <div class="in lux-grid">
+      <div class="lux-text">
+        <p class="lux-eyebrow"><span>Inevitable Zone Institute</span><span class="dot"></span><span>Human Reflection of Business</span></p>
+        <h1 class="lux-h1"><span class="pl">Każda strategia przechodzi przez <em>ludzki&nbsp;umysł.</em></span><span class="en">Every strategy passes through <em>the human&nbsp;mind.</em></span></h1>
+        <p class="lux-sub"><span class="pl">Pracujemy z umysłem przywództwa: z tym, jak liderzy myślą, czują i decydują pod presją. Psychologia biznesu dla zarządów, liderów i zespołów, które oczekują więcej niż szkolenia.</span><span class="en">We work with the mind behind leadership: how leaders think, feel and decide under pressure. Business psychology for boards, leaders and teams who expect more than training.</span></p>
+        <div class="lux-cta">
+          <a class="btn gold-btn" href="#kontakt"><span class="pl">Umów rozmowę z założycielami</span><span class="en">Speak with the founders</span></a>
+          <a class="lux-link" href="#story"><span class="pl">albo opowiedz nam swoją historię</span><span class="en">or tell us your story</span> →</a>
+        </div>
+      </div>
+      <div class="lux-art">
+        <div class="halo" aria-hidden="true"></div>
+        <div class="ring gold-ring" aria-hidden="true"></div>
+        <div class="circle">
+          <img class="p-a" src="photos/adam-bugaj-cutout.png" alt="Adam Bugaj" width="397" height="535">
+          <img class="p-k" src="photos/karina-tomczyk-cutout.png" alt="Karina Tomczyk" width="520" height="636">
+        </div>
+        <p class="lux-names"><span>Karina Tomczyk</span><span class="amp">&amp;</span><span>Adam Bugaj</span></p>
+      </div>
+    </div>
+    <div class="in creds">
+      <div><b>20+</b><span class="pl">lat doświadczenia założycieli w psychologii i zarządzaniu</span><span class="en">years of the founders’ experience in psychology and management</span></div>
+      <div><b>16</b><span class="pl">ekspertów: doktorzy psychologii, lekarze, wykładowcy</span><span class="en">experts: doctors of psychology, physicians, lecturers</span></div>
+      <div><b class="w">SWPS · Koźmiński · Akademia Sztuki Wojennej</b><span class="pl">uczelnie, na których wykładają nasi eksperci</span><span class="en">universities where our experts teach</span></div>
+      <div><b class="w">TEDx</b><span class="pl">wystąpienia naszych ekspertów</span><span class="en">talks by our experts</span></div>
+    </div>
+  </section>
+  <section class="in vision">
+    <p class="label gold-label"><span class="pl">Wizja</span><span class="en">Vision</span></p>
+    <p class="vision-text pl">Widzimy organizacje, w których rozwój ludzi jest tak samo oczywistą częścią zarządzania jak strategia i finanse. Liderzy rozumieją, jak działa <em>umysł pod presją</em>, a zespoły mają zaufanie, odwagę i energię, by dowozić trudne cele.</p>
+    <p class="vision-text en">We see organisations where developing people is as natural a part of management as strategy and finance. Where leaders understand how <em>the mind works under pressure</em>, and teams have the trust, courage and energy to deliver difficult goals.</p>
+  </section>
+  <section class="in flow">
+    <div class="flow-head">
+      <p class="label gold-label"><span class="pl">Jak podchodzimy</span><span class="en">How we approach it</span></p>
+      <h2><span class="pl">Najpierw rozumienie. <em>Potem</em> program.</span><span class="en">Understanding first. <em>Then</em> the programme.</span></h2>
+    </div>
+    <div class="fl-wrap">
+      <ol class="fl">
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">01</span><h3><span class="pl">Wymagania</span><span class="en">Requirements</span></h3><p class="pl">Rozmowa z zarządem i HR: cel biznesowy, kontekst, ograniczenia. Ustalamy, co ma się zmienić i po czym to poznamy.</p><p class="en">A conversation with the board and HR: business goal, context, constraints. We agree what must change and how we will recognise it.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">02</span><h3><span class="pl">Dowód</span><span class="en">Evidence</span></h3><p class="pl">Zbieramy dane: wywiady, obserwację, narzędzia diagnostyczne i wyniki badań naukowych. Hipoteza musi mieć oparcie w faktach.</p><p class="en">We gather evidence: interviews, observation, diagnostic tools and research findings. Every hypothesis must rest on facts.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">03</span><h3><span class="pl">Weryfikacja</span><span class="en">Verification</span></h3><p class="pl">Diagnozę konfrontujemy z klientem i wspólnie zatwierdzamy kryteria sukcesu, zanim cokolwiek zaprojektujemy.</p><p class="en">We test the diagnosis with the client and agree success criteria together before designing anything.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">04</span><h3><span class="pl">Przygotowanie</span><span class="en">Preparation</span></h3><p class="pl">Dobieramy ekspertów i projektujemy program dla tej jednej organizacji. Nic z półki.</p><p class="en">We select the experts and design a programme for this one organisation. Nothing off the shelf.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">05</span><h3><span class="pl">Zajęcia</span><span class="en">Delivery</span></h3><p class="pl">Warsztaty, mentoring i sesje eksperckie na realnych sytuacjach uczestników, prowadzone przez praktyków.</p><p class="en">Workshops, mentoring and expert sessions built on participants’ real situations, led by practitioners.</p></li>
+      </ol>
+      <svg class="fl-loop" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M900 4 C 900 52, 860 60, 800 60 L 200 60 C 140 60, 100 52, 100 4" fill="none" stroke="#C2A878" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="3 5"/>
+        <path d="M94 14 L100 3 L106 14" fill="none" stroke="#C2A878" stroke-width="1" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <p class="fl-loop-label"><span class="pl">wnioski z zajęć wracają do kolejnego cyklu</span><span class="en">what we learn in delivery feeds the next cycle</span></p>
+    </div>
+  </section>
+  <section class="in manifesto">
+    <p class="label gold-label"><span class="pl">Nasze przekonanie</span><span class="en">What we believe</span></p>
+    <blockquote>You don’t build a business. You build <em>people</em>. And&nbsp;then people build the business.</blockquote>
+  </section>
+  <section class="in khome">
+    <div class="hist">
+      <div class="hist-text">
+        <p class="label gold-label"><span class="pl">Kawałek historii</span><span class="en">A little history</span></p>
+        <h2 class="hist-h"><span class="pl">Dwie perspektywy, <em>jedno spojrzenie</em> na&nbsp;organizację.</span><span class="en">Two perspectives, <em>one view</em> of the&nbsp;organisation.</span></h2>
+        <div class="hist-body pl">
+          <p>Karina przez ponad dwadzieścia lat pracowała z ludźmi w organizacjach: jako psycholożka, trenerka, mentorka i konsultantka kryzysowa. Uczyła psychologii pozytywnej i przywództwa przyszłości na Uniwersytecie SWPS i w Akademii Leona Koźmińskiego.</p>
+          <p>Adam przez dwadzieścia lat budował i prowadził organizacje technologiczne. Jako członek zarządu spółki giełdowej odpowiadał za 650 osób i za HR, więc z bliska widział, jak decyzje zarządu przechodzą przez ludzi.</p>
+          <p>Ona znała organizację od strony człowieka. On znał człowieka od strony organizacji. Z tego połączenia powstała idea <em>Human Reflection of Business</em>, a w 2024 roku Inevitable Zone.</p>
+        </div>
+        <div class="hist-body en">
+          <p>For more than twenty years Karina worked with people inside organisations as a psychologist, trainer, mentor and crisis consultant. She taught positive psychology and future leadership at SWPS University and Kozminski University.</p>
+          <p>For twenty years Adam built and ran technology organisations. As a board member of a listed company he was responsible for 650 people and for HR, and saw up close how board decisions travel through people.</p>
+          <p>She knew the organisation from the human side. He knew people from the organisation’s side. That combination became the idea of <em>Human Reflection of Business</em>, and in 2024, Inevitable Zone.</p>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li><b>20+</b><div><span class="pl">lat Kariny w psychologii, szkoleniach i interwencji kryzysowej</span><span class="en">years of Karina’s work in psychology, training and crisis intervention</span></div></li>
+        <li><b>650</b><div><span class="pl">osób w organizacji, za którą Adam odpowiadał w zarządzie spółki giełdowej</span><span class="en">people in the organisation Adam was responsible for on a listed company’s board</span></div></li>
+        <li><b>2024</b><div><span class="pl">17 lipca: rejestracja INEVITABLE ZONE sp. z o.o. w Krakowie</span><span class="en">17 July: INEVITABLE ZONE sp. z o.o. registered in Kraków</span></div></li>
+        <li><b>2025</b><div><span class="pl">Human Reflection of Business: pierwsza edycja oferty programów i sesji eksperckich</span><span class="en">Human Reflection of Business: first edition of our programmes and expert sessions</span></div></li>
+        <li><b>2026</b><div><span class="pl">Instytut: szesnastu ekspertów i program High-Performance Culture of Autonomy &amp; Accountability</span><span class="en">The Institute: sixteen experts and the High-Performance Culture of Autonomy &amp; Accountability programme</span></div></li>
+      </ol>
+    </div>
+    <div class="kbottom"><span>inevitable.zone · <a href="polityka-prywatnosci.html" style="color:inherit"><span class="pl">Polityka prywatności</span><span class="en">Privacy policy</span></a></span><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span><span class="en">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków, Poland · KRS 0001116611 · VAT ID PL6793304174 · REGON 529168282</span></div>
+  </section>
+  </div>
+  <section class="in sec view" id="o-nas" data-view="o-nas" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="about">
+      <div>
+        <p class="label"><span class="pl">O nas</span><span class="en">About us</span></p>
+        <p class="thesis pl" style="margin-top:18px">Inevitable Zone to przestrzeń, w której <em>psychologia spotyka technologię</em>, a człowiek wraca do centrum biznesu.</p>
+        <p class="thesis en" style="margin-top:18px">Inevitable Zone is where <em>psychology meets technology</em> and people return to the centre of business.</p>
+        <p class="pl" style="margin-top:22px;color:var(--ink-soft)">Pomagamy organizacjom rozwijać liderów, przeprowadzać transformacje i budować odporne zespoły w czasach niepewności. Nie uczymy teorii. Wdrażamy praktykę, która zostaje w organizacji na długo.</p>
+        <p class="en" style="margin-top:22px;color:var(--ink-soft)">We help organisations develop leaders, carry out transformations and build resilient teams in uncertain times. We don’t teach theory. We put in place practice that stays in the organisation for the long term.</p>
+        <p class="motto">You don’t build a business. You build people. And then people build the business.<small>Karina Tomczyk &amp; Adam Bugaj</small></p>
+        <div class="stats">
+          <div class="stat"><b>40%</b><p class="pl">nowo mianowanych menedżerów traci stanowisko w ciągu pierwszych 18 miesięcy.</p><p class="en">of newly appointed managers lose their position within the first 18 months.</p></div>
+          <div class="stat"><b>20%</b><p class="pl">rocznej pensji menedżera to średni koszt nieudanego obsadzenia stanowiska.</p><p class="en">of a manager’s annual salary is the average cost of a failed appointment.</p></div>
+        </div>
+        <p class="src"><span class="pl">Źródło: Polska Agencja Rozwoju Przedsiębiorczości</span><span class="en">Source: Polish Agency for Enterprise Development (PARP)</span></p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><i>i</i><div>
+          <h3><span class="pl">Psychologia i transformacja cyfrowa w jednym podejściu</span><span class="en">Psychology and digital transformation in one approach</span></h3>
+          <p class="pl">Łączymy psychologię pozytywną, zarządzanie emocjami i nowoczesne podejście do technologii i organizacji. Wspieramy ludzi na poziomie emocji, kompetencji i zaangażowania.</p>
+          <p class="en">We combine positive psychology, emotion management and a modern approach to technology and organisations, supporting people at the level of emotions, skills and engagement.</p></div></div>
+        <div class="pillar"><i>ii</i><div>
+          <h3><span class="pl">Zespół multidyscyplinarny</span><span class="en">A multidisciplinary team</span></h3>
+          <p class="pl">Lekarze psychiatrzy, psycholodzy, badacze, neurocopywriterzy, mentorzy liderów i specjaliści sztucznej inteligencji. Od szkolenia sił specjalnych po zarządzanie spółką giełdową.</p>
+          <p class="en">Psychiatrists, psychologists, researchers, neurocopywriters, leadership mentors and artificial intelligence specialists. From training special forces to running a listed company.</p></div></div>
+        <div class="pillar"><i>iii</i><div>
+          <h3><span class="pl">Żadnych szkoleń z półki</span><span class="en">Nothing off the shelf</span></h3>
+          <p class="pl">Proces rozwoju projektujemy na podstawie audytu organizacji, specyfiki branży i wyzwań liderów. Pracujemy ze stresem, emocjami, zmianą i wypaleniem. Budujemy odporność, nie chwilową motywację.</p>
+          <p class="en">We design each development process from an audit of the organisation, its industry and its leaders’ challenges. We work with stress, emotions, change and burnout, building resilience rather than short-lived motivation.</p></div></div>
+        <div class="pillar"><i>iv</i><div>
+          <h3><span class="pl">Model PERMAH i cyfrowy mindset</span><span class="en">The PERMAH model and a digital mindset</span></h3>
+          <p class="pl">Fundamentem jest model psychologii pozytywnej PERMAH: emocje, zaangażowanie, relacje, sens, osiągnięcia, zdrowie. Uzupełniamy go o zarządzanie umysłem w epoce cyfrowego przebodźcowania.</p>
+          <p class="en">Our foundation is the PERMAH model of positive psychology: emotions, engagement, relationships, meaning, accomplishment and health, extended with managing the mind in an age of digital overload.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="in sec view" id="oferta" data-view="oferta" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="sec-head">
+      <div><p class="label"><span class="pl">Oferta</span><span class="en">Services</span></p><h2><span class="pl">Trzy sposoby współpracy</span><span class="en">Three ways to work with us</span></h2></div>
+      <p><span class="pl">Każdą współpracę zaczynamy od rozmowy diagnostycznej. Format, ekspertów i zakres dobieramy do wyzwania organizacji.</span><span class="en">Every engagement starts with a diagnostic conversation. We match format, experts and scope to the organisation’s challenge.</span></p>
+    </div>
+    <div class="tiles">
+      <details class="tile">
+        <summary>
+          <div><div class="tile-label"><span class="pl">Szkolenia i warsztaty</span><span class="en">Training &amp; workshops</span></div><p class="tile-line"><span class="pl">zespoły i liderzy, stacjonarnie i online</span><span class="en">teams and leaders, on-site and online</span></p></div>
+          <span class="cue"><span class="c-closed pl">zobacz tematy</span><span class="c-closed en">see topics</span><span class="c-open pl">zwiń</span><span class="c-open en">close</span><i>+</i></span>
+        </summary>
+        <div class="tile-body">
+          <div><p class="pl">Cykle rozwojowe, warsztaty, gry szkoleniowe i power speeche. Łączymy wiedzę psychologiczną z ćwiczeniami opartymi na realnych sytuacjach z pracy uczestników.</p><p class="en">Development cycles, workshops, training games and power speeches. We combine psychological knowledge with exercises based on participants’ real work situations.</p>
+          <div class="facts"><span>Akademia Mentora</span><span>Managerskie Espresso</span><span>First Time Manager</span><span>Human Skills Gardens</span></div></div>
+          <ul class="list">
+            <li><span class="pl">Twój wewnętrzny pozytywny psycholog</span><span class="en">Your inner positive psychologist</span></li>
+            <li><span class="pl">Oko w oko z własnym umysłem</span><span class="en">Eye to eye with your own mind</span></li>
+            <li><span class="pl">Gramy razem: efektywna współpraca</span><span class="en">We play together: effective cooperation</span></li>
+            <li><span class="pl">Wojskowa wytrzymałość psychiczna</span><span class="en">Military mental toughness</span></li>
+            <li>Resilient team</li>
+            <li><span class="pl">Zarządzanie sobą w zmianie</span><span class="en">Self-management through change</span></li>
+            <li>Growth mindset &amp; life-long learning</li>
+            <li><span class="pl">Komunikacja na plus</span><span class="en">Positive communication</span></li>
+            <li><span class="pl">Stres pod kontrolą</span><span class="en">Stress under control</span></li>
+            <li><span class="pl">Apteczka pierwszej pomocy psychologicznej</span><span class="en">Psychological first-aid kit</span></li>
+            <li><span class="pl">Profesjonalne prezentacje i wystąpienia</span><span class="en">Professional presentations &amp; public speaking</span></li>
+            <li><span class="pl">Sztuczna inteligencja w pracy zespołu</span><span class="en">Artificial intelligence in teamwork</span></li>
+          </ul>
+        </div>
+      </details>
+      <details class="tile">
+        <summary>
+          <div><div class="tile-label"><span class="pl">Mentoring indywidualny</span><span class="en">Individual mentoring</span></div><p class="tile-line"><span class="pl">jedna osoba, jedna ciągła rozmowa</span><span class="en">one person, one ongoing conversation</span></p></div>
+          <span class="cue"><span class="c-closed pl">zobacz przebieg</span><span class="c-closed en">see the process</span><span class="c-open pl">zwiń</span><span class="c-open en">close</span><i>+</i></span>
+        </summary>
+        <div class="tile-body">
+          <div><p class="pl">Indywidualne managerskie warsztaty mentoringowe dla menedżerów i dyrektorów. Praca z ich najważniejszymi potrzebami i wyzwaniami, z ekspertem dobranym do problemu.</p><p class="en">Individual management mentoring for managers and directors, working on their most important needs and challenges with an expert matched to the issue.</p></div>
+          <ol class="steps">
+            <li><div><b><span class="pl">Rozmowa diagnostyczna</span><span class="en">Diagnostic conversation</span></b><span class="pl">Cel mentoringu ustalony z liderem i organizacją.</span><span class="en">Mentoring goal agreed with the leader and the organisation.</span></div></li>
+            <li><div><b><span class="pl">Dobór eksperta</span><span class="en">Choosing the expert</span></b><span class="pl">Psycholog, mentor biznesowy lub konsultant kryzysowy.</span><span class="en">Psychologist, business mentor or crisis consultant.</span></div></li>
+            <li><div><b><span class="pl">Cykl sesji jeden na jeden</span><span class="en">One-to-one sessions</span></b><span class="pl">Praca na bieżących decyzjach i sytuacjach lidera.</span><span class="en">Working on the leader’s current decisions and situations.</span></div></li>
+            <li><div><b><span class="pl">Podsumowanie i kolejny krok</span><span class="en">Review and next step</span></b><span class="pl">Co się zmieniło i co lider rozwija dalej.</span><span class="en">What has changed and what the leader develops next.</span></div></li>
+          </ol>
+        </div>
+      </details>
+      <details class="tile">
+        <summary>
+          <div><div class="tile-label"><span class="pl">Sesje eksperckie i interwencje kryzysowe</span><span class="en">Expert sessions &amp; crisis intervention</span></div><p class="tile-line"><span class="pl">gdy liczy się czas</span><span class="en">when time matters</span></p></div>
+          <span class="cue"><span class="c-closed pl">zobacz szczegóły</span><span class="c-closed en">see details</span><span class="c-open pl">zwiń</span><span class="c-open en">close</span><i>+</i></span>
+        </summary>
+        <div class="tile-body">
+          <div><p class="pl">Interwencja kryzysowa przywraca równowagę psychiczną i zdolność samodzielnego radzenia sobie osobie dotkniętej kryzysem osobistym, zawodowym lub zdrowotnym. Zapobiega przejściu ostrej reakcji w stan chronicznej niewydolności.</p><p class="en">Crisis intervention restores psychological balance and the ability to cope independently for a person affected by a personal, professional or health crisis, preventing an acute reaction from turning into a chronic one.</p></div>
+          <div><div class="facts"><span class="pl">4 spotkania po 90 minut</span><span class="en">4 sessions of 90 minutes</span><span class="pl">online lub na miejscu</span><span class="en">online or on-site</span><span class="pl">certyfikowani konsultanci kryzysowi</span><span class="en">certified crisis consultants</span></div>
+          <p class="pl" style="margin-top:18px">Sesje eksperckie: krótkie, intensywne spotkania z ekspertem dla zarządu lub zespołu, np. przy zmianie organizacyjnej, wypaleniu czy wdrażaniu sztucznej inteligencji.</p><p class="en" style="margin-top:18px">Expert sessions: short, focused meetings with an expert for a board or team, for example during organisational change, burnout or the introduction of artificial intelligence.</p></div>
+        </div>
+      </details>
+    </div>
+  </section>
+  <section class="in sec view" id="program" data-view="program" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="sec-head">
+      <div><p class="label"><span class="pl">Program flagowy</span><span class="en">Flagship programme</span></p><h2>High-Performance Culture of <em>Autonomy &amp; Accountability</em></h2></div>
+      <p><span class="pl">Proces, w którym uczestnicy przechodzą od zrozumienia własnego umysłu do świadomego przywództwa. Moduły dobieramy i układamy pod diagnozę organizacji.</span><span class="en">A process that takes participants from understanding their own minds to conscious leadership. We select and sequence modules based on the organisation’s diagnosis.</span></p>
+    </div>
+    <ol class="modules">
+      <li><h3><span class="pl">Gramy razem</span><span class="en">We play together</span></h3><p class="pl">Gra o ekonomicznych zasadach współpracy i efektywności.</p><p class="en">A game on the economics of cooperation and effectiveness.</p></li>
+      <li><h3><span class="pl">Oko w oko z własnym umysłem</span><span class="en">Eye to eye with your mind</span></h3><p class="pl">Jak działają nasze emocje i logika.</p><p class="en">How our emotions and logic work.</p></li>
+      <li><h3><span class="pl">Twój wewnętrzny pozytywny psycholog</span><span class="en">Your inner positive psychologist</span></h3><p class="pl">Narzędzia psychologii pozytywnej dla skuteczności.</p><p class="en">Positive psychology tools for effectiveness.</p></li>
+      <li><h3>Growth mindset &amp; life-long learning</h3><p class="pl">Nastawienie, które pomaga mierzyć się z porażką.</p><p class="en">A mindset that helps you face setbacks.</p></li>
+      <li><h3><span class="pl">Zarządzanie sobą w zmianie</span><span class="en">Self-management through change</span></h3><p class="pl">Jak przechodzić przez zmiany, nawet bolesne.</p><p class="en">Moving through change, even when it hurts.</p></li>
+      <li><h3><span class="pl">Wirus stresu</span><span class="en">The stress virus</span></h3><p class="pl">Radzenie sobie ze stresem i budowanie stresoodporności.</p><p class="en">Coping with stress and building stress resilience.</p></li>
+      <li><h3><span class="pl">Komunikacja na plus</span><span class="en">Positive communication</span></h3><p class="pl">Jak rozmawiać, by ludzie rozumieli, czuli i działali.</p><p class="en">Talking so people understand, feel and act.</p></li>
+      <li><h3><span class="pl">5 dysfunkcji pracy zespołowej</span><span class="en">5 dysfunctions of a team</span></h3><p class="pl">Narzędzia do codziennego użytku w zespole.</p><p class="en">Tools for everyday teamwork.</p></li>
+      <li><h3>The drive</h3><p class="pl">Jak działa motywacja i jak zachować energię lidera.</p><p class="en">How motivation works and how leaders keep their energy.</p></li>
+      <li><h3>A human leader</h3><p class="pl">Zaufanie, wsparcie i empatia w zespole.</p><p class="en">Trust, support and empathy in a team.</p></li>
+      <li class="wide"><h3>1on1 support</h3><p class="pl">Sesje mentoringowe i interwencje kryzysowe dla indywidualnych wyzwań uczestników programu.</p><p class="en">Mentoring sessions and crisis interventions for participants’ individual challenges.</p></li>
+    </ol>
+  </section>
+  <section class="in sec view" id="zespol" data-view="o-nas" hidden>
+    <div class="sec-head">
+      <div><p class="label"><span class="pl">Nasz zespół</span><span class="en">Our team</span></p><h2><span class="pl">Ludzie, którzy prowadzą Inevitable Zone</span><span class="en">The people who run Inevitable Zone</span></h2></div>
+      <p><span class="pl">To z nami rozmawiają Państwo od pierwszego kontaktu do zakończenia programu.</span><span class="en">We are your point of contact from the first conversation to the end of the programme.</span></p>
+    </div>
+    <div class="team">
+      <article class="member">
+        <div class="ph"><img src="photos/karina-tomczyk.jpg" alt="Karina Tomczyk" width="600" height="750"></div>
+        <div class="tx">
+          <p class="role"><span class="pl">Współzałożycielka · psycholożka · mentorka</span><span class="en">Co-founder · psychologist · mentor</span></p>
+          <h3>Karina Tomczyk</h3>
+          <p class="pl">Psycholożka z ponad 20-letnim doświadczeniem pracy z korporacjami, mentorka i konsultantka kryzysowa w biznesie. Wykładowczyni psychologii pozytywnej i przywództwa przyszłości na Uniwersytecie SWPS oraz psychologii biznesu w Akademii Leona Koźmińskiego. Autorka metody MIND-RETREAT, współtwórczyni idei Human Reflection of Business.</p>
+          <p class="en">A psychologist with over 20 years of experience working with corporations, a mentor and business crisis consultant. Lecturer in positive psychology and future leadership at SWPS University and in business psychology at Kozminski University. Creator of the MIND-RETREAT method and co-creator of the Human Reflection of Business idea.</p>
+          <div class="contact-line"><span>karina.tomczyk@inevitable.zone</span><span>+48 604 519 550</span></div>
+        </div>
+      </article>
+      <article class="member">
+        <div class="ph"><img src="photos/adam-bugaj.jpg" alt="Adam Bugaj" width="600" height="750"></div>
+        <div class="tx">
+          <p class="role"><span class="pl">Współzałożyciel · mentor · ekspert biznesu</span><span class="en">Co-founder · mentor · business expert</span></p>
+          <h3>Adam Bugaj</h3>
+          <p class="pl">Ponad 20 lat w zarządzaniu organizacjami technologicznymi. Jako współprezes i członek zarządu spółki notowanej na Giełdzie Papierów Wartościowych (Ailleron S.A.) odpowiadał za organizację liczącą 650 osób oraz za HR. Absolwent MBA, specjalista psychologii zarządzania i lider transformacji kulturowej.</p>
+          <p class="en">Over 20 years leading technology organisations. As co-president and board member of a company listed on the Warsaw Stock Exchange (Ailleron S.A.), he oversaw an organisation of 650 people and its HR function. MBA graduate, management psychology specialist and leader of cultural transformation.</p>
+          <div class="contact-line"><span>adam.bugaj@inevitable.zone</span><span>+48 668 300 305</span></div>
+        </div>
+      </article>
+      <article class="member">
+        <div class="ph"><img src="photos/rafal-obstawski.jpg" alt="Rafał Obstawski" width="600" height="750"></div>
+        <div class="tx">
+          <p class="role">Training &amp; Office Support</p>
+          <h3>Rafał Obstawski</h3>
+          <p class="pl">Absolwent Wydziału Prawa i Administracji Uczelni Łazarskiego. Organizuje eventy szkoleniowo-rekreacyjne i wprowadza metody aktywnej integracji podczas szkoleń. Dba o przebieg wszystkich projektów zespołu Inevitable Zone, od logistyki po technologię.</p>
+          <p class="en">A graduate of the Faculty of Law and Administration at Lazarski University. He organises training and recreational events and brings active integration methods into workshops, making sure every Inevitable Zone project runs smoothly, from logistics to technology.</p>
+          <div class="contact-line"><span>rafal.obstawski@inevitable.zone</span><span>+48 793 669 950</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="in sec view" id="kompetencje" data-view="kompetencje" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="sec-head">
+      <div><p class="label"><span class="pl">Kompetencje</span><span class="en">Competences</span></p><h2><span class="pl">Nasi trenerzy i eksperci</span><span class="en">Our trainers and experts</span></h2></div>
+      <p><span class="pl">Doktorzy psychologii, lekarze, wykładowcy akademiccy, była oficer służb specjalnych i prelegenci TEDx. Nie uczą tego, czego sami nie praktykują.</span><span class="en">Doctors of psychology, physicians, university lecturers, a former special services officer and TEDx speakers. They don’t teach what they don’t practise.</span></p>
+    </div>
+    <div class="filters" role="group" aria-label="Obszar">
+      <button type="button" data-f="all" aria-pressed="true"><span class="pl">Wszyscy</span><span class="en">All</span></button>
+      <button type="button" data-f="mind" aria-pressed="false"><span class="pl">Odporność i zdrowie psychiczne</span><span class="en">Resilience &amp; mental health</span></button>
+      <button type="button" data-f="lead" aria-pressed="false"><span class="pl">Przywództwo i mentoring</span><span class="en">Leadership &amp; mentoring</span></button>
+      <button type="button" data-f="comm" aria-pressed="false"><span class="pl">Komunikacja i wpływ</span><span class="en">Communication &amp; influence</span></button>
+      <button type="button" data-f="tech" aria-pressed="false"><span class="pl">Technologia i AI</span><span class="en">Technology &amp; AI</span></button>
+    </div>
+    <div class="trainers" id="trainers">
+      <article class="tr" data-c="mind"><div class="ph"><img src="photos/anna-werner-maliszewska.jpg" alt="dr Anna Werner-Maliszewska" width="600" height="750"></div><h3>dr Anna Werner-Maliszewska</h3><p class="spec"><span class="pl">Wojskowa odporność psychiczna</span><span class="en">Military mental resilience</span></p><details><summary>Bio</summary><p class="pl">Doktor psychologii, przewodnicząca Polskiego Towarzystwa Psychologii Pozytywnej, była oficer służb specjalnych. Szkoliła z odporności psychicznej wojska specjalne. Twórczyni metody Trening Odwagi. Wykłada m.in. w Akademii Sztuki Wojennej i na Uniwersytecie SWPS.</p><p class="en">PhD in psychology, president of the Polish Positive Psychology Association and a former special services officer. She has trained special forces in mental resilience and created the Courage Training method. Lectures at the War Studies University and SWPS University.</p></details></article>
+      <article class="tr" data-c="tech"><div class="ph"><img src="photos/dominik-skowronski.jpg" alt="dr Dominik Skowroński" width="600" height="750"></div><h3>dr Dominik Skowroński</h3><p class="spec"><span class="pl">Sztuczna inteligencja w biznesie, storytelling</span><span class="en">AI in business, storytelling</span></p><details><summary>Bio</summary><p class="pl">Wykładowca programu MBA Uniwersytetu Łódzkiego, prelegent TEDx, profesor wizytujący na RheinMain University w Wiesbaden. Autor książki „Pomiar autonomii organizacyjnej”.</p><p class="en">Lecturer on the University of Lodz MBA programme, TEDx speaker and visiting professor at RheinMain University in Wiesbaden. Author of “Measuring Organizational Autonomy”.</p></details></article>
+      <article class="tr" data-c="comm"><div class="ph"><img src="photos/alicja-sekret.jpg" alt="Alicja Sekret" width="600" height="750"></div><h3>Alicja Sekret</h3><p class="spec"><span class="pl">Wystąpienia publiczne, prosty język</span><span class="en">Public speaking, plain language</span></p><details><summary>Bio</summary><p class="pl">Ekspertka komunikacji z ponad 15-letnim doświadczeniem. Wykładowczyni School of Ideas Uniwersytetu SWPS, prelegentka TEDx i ING. Przeszkoliła ponad 1000 osób, w tym kandydatów na Microsoft Certified Trainers.</p><p class="en">Communication expert with over 15 years of experience. Lecturer at SWPS University’s School of Ideas, TEDx and ING speaker. She has trained over 1,000 people, including Microsoft Certified Trainer candidates.</p></details></article>
+      <article class="tr" data-c="mind"><div class="ph"><img src="photos/bartlomiej-janiak.jpg" alt="Bartłomiej Janiak" width="600" height="750"></div><h3>Bartłomiej Janiak</h3><p class="spec"><span class="pl">Wypalenie zawodowe, inteligencja emocjonalna</span><span class="en">Burnout, emotional intelligence</span></p><details><summary>Bio</summary><p class="pl">Trener i coach z ponad 10-letnim doświadczeniem, absolwent coachingu profesjonalnego w Akademii Leona Koźmińskiego. Certyfikowany interwent kryzysowy.</p><p class="en">Trainer and coach with over 10 years of experience, graduate of professional coaching at Kozminski University. Certified crisis interventionist.</p></details></article>
+      <article class="tr" data-c="mind"><div class="ph"><img src="photos/ewa-drozdowicz-jastrzebska.jpg" alt="lek. Ewa Drozdowicz-Jastrzębska" width="600" height="750"></div><h3>lek. Ewa Drozdowicz-Jastrzębska</h3><p class="spec"><span class="pl">Psychiatria, zdrowie psychiczne w pracy</span><span class="en">Psychiatry, mental health at work</span></p><details><summary>Bio</summary><p class="pl">Specjalistka psychiatra, kierowniczka Poradni Nerwic i Lęku Centrum Terapii Dialog w Warszawie. Prowadziła szkolenia o zdrowiu psychicznym m.in. dla Uniwersytetu SWPS, Avon i T-Mobile.</p><p class="en">Psychiatrist and head of the Anxiety Clinic at Centrum Terapii Dialog in Warsaw. She has delivered mental health training for SWPS University, Avon and T-Mobile, among others.</p></details></article>
+      <article class="tr" data-c="mind"><div class="ph"><img src="photos/barbara-pieklo.jpg" alt="dr inż. Barbara Piekło" width="600" height="750"></div><h3>dr inż. Barbara Piekło</h3><p class="spec"><span class="pl">Dietetyka i odporność mentalna</span><span class="en">Nutrition and mental resilience</span></p><details><summary>Bio</summary><p class="pl">Doktor nauk o żywieniu człowieka, od 14 lat pracuje w szpitalu. Pokazuje, jak odżywiać mózg i ciało, by poprawić koncentrację i efektywność, bez diet i restrykcji.</p><p class="en">PhD in human nutrition with 14 years of hospital practice. She shows how to nourish brain and body to improve focus and effectiveness, without diets or restrictions.</p></details></article>
+      <article class="tr" data-c="mind"><div class="ph"><img src="photos/halina-piasecka.jpg" alt="Halina Piasecka" width="600" height="750"></div><h3>Halina Piasecka</h3><p class="spec"><span class="pl">Stres, dialog motywujący, dobrostan</span><span class="en">Stress, motivational dialogue, wellbeing</span></p><details><summary>Bio</summary><p class="pl">Psycholożka i trenerka z 20-letnim doświadczeniem, pracująca w nurcie psychologii pozytywnej. Coach z certyfikacją ICF. Tworzy programy dobrostanu i przeciwdziałania wypaleniu.</p><p class="en">Psychologist and trainer with 20 years of experience in positive psychology. ICF-certified coach who designs wellbeing and burnout-prevention programmes.</p></details></article>
+      <article class="tr" data-c="lead"><div class="ph"><img src="photos/agnieszka-bilinska.jpg" alt="Agnieszka Bilińska" width="600" height="750"></div><h3>Agnieszka Bilińska</h3><p class="spec"><span class="pl">Executive mentoring i coaching</span><span class="en">Executive mentoring and coaching</span></p><details><summary>Bio</summary><p class="pl">Executive coach i akredytowana superwizorka coachingu (EMCC Senior Practitioner). Karierę zaczynała w PwC, członkini zarządów i rad nadzorczych. Absolwentka Yale School of Management Executive Education.</p><p class="en">Executive coach and accredited coaching supervisor (EMCC Senior Practitioner). Began her career at PwC; board and supervisory board member. Yale School of Management Executive Education alumna.</p></details></article>
+      <article class="tr" data-c="lead"><div class="ph"><img src="photos/tomasz-manugiewicz.jpg" alt="Tomasz Manugiewicz" width="600" height="750"></div><h3>Tomasz Manugiewicz</h3><p class="spec"><span class="pl">Przywództwo i transformacja</span><span class="en">Leadership and transformation</span></p><details><summary>Bio</summary><p class="pl">Dyrektor generalny polskiego centrum inżynieryjnego globalnej firmy IT, autor książki „Executive Agile”. Wykłada na AGH i Uniwersytecie Jagiellońskim. Ponad 200 wystąpień jako mówca.</p><p class="en">Managing director of a global IT company’s Polish engineering centre and author of “Executive Agile”. Lectures at AGH and the Jagiellonian University; over 200 talks as a speaker.</p></details></article>
+      <article class="tr" data-c="lead"><div class="ph"><img src="photos/tomasz-gulak.jpg" alt="Tomasz Gulak" width="600" height="750"></div><h3>Tomasz Gulak</h3><p class="spec"><span class="pl">Rozwój osobisty, podejmowanie decyzji</span><span class="en">Personal development, decision-making</span></p><details><summary>Bio</summary><p class="pl">Coach i mówca, założyciel Fundacji Wyjdź Przed Szereg, autor książki „Punkt Zwrotny #1”. Prowadzi warsztaty dla polskich i międzynarodowych organizacji.</p><p class="en">Coach and speaker, founder of the Wyjdź Przed Szereg Foundation and author of “Turning Point #1”. Runs workshops for Polish and international organisations.</p></details></article>
+      <article class="tr" data-c="comm"><div class="ph"><img src="photos/bogumil-wrobel.jpg" alt="Bogumił Wróbel" width="600" height="750"></div><h3>Bogumił Wróbel</h3><p class="spec"><span class="pl">Negocjacje strategiczne</span><span class="en">Strategic negotiation</span></p><details><summary>Bio</summary><p class="pl">Twórca systemu Inteligentna Przewaga, certyfikowany w Harvard Negotiation Mastery. Drugie miejsce na świecie w kategorii Relationship Building w The Negotiation Challenge 2025. Od 25 lat wspiera zarządy w negocjacjach o wysokiej stawce.</p><p class="en">Creator of the Intelligent Advantage system, certified in Harvard Negotiation Mastery. Ranked second worldwide for Relationship Building at The Negotiation Challenge 2025. 25 years supporting boards in high-stakes negotiations.</p></details></article>
+      <article class="tr" data-c="comm"><div class="ph"><img src="photos/natalia-sinillo.jpg" alt="Natalia Siniłło" width="600" height="750"></div><h3>Natalia Siniłło</h3><p class="spec"><span class="pl">Komunikacja, zarządzanie konfliktem</span><span class="en">Communication, conflict management</span></p><details><summary>Bio</summary><p class="pl">Andragog, coach i trenerka z ponad 13-letnim doświadczeniem w biznesie, w tym 8 lat na stanowiskach menedżerskich. Absolwentka UW, EY Academy of Business i Erickson Coaching International.</p><p class="en">Adult educator, coach and trainer with over 13 years in business, 8 of them in management. Graduate of the University of Warsaw, EY Academy of Business and Erickson Coaching International.</p></details></article>
+      <article class="tr" data-c="comm"><div class="ph"><img src="photos/joanna-burdek.jpg" alt="Joanna Burdek" width="600" height="750"></div><h3>Joanna Burdek</h3><p class="spec"><span class="pl">Neurokomunikacja, strategia marki</span><span class="en">Neuro-communication, brand strategy</span></p><details><summary>Bio</summary><p class="pl">Współautorka pierwszej w Polsce książki „Neurocopywriting”, strateżka marki z 17-letnim doświadczeniem w marketingu. Wykłada na Uniwersytecie Papieskim.</p><p class="en">Co-author of Poland’s first book on neurocopywriting and a brand strategist with 17 years in marketing. Lectures at the Pontifical University.</p></details></article>
+      <article class="tr" data-c="comm"><div class="ph"><img src="photos/pawel-prokopczuk.jpg" alt="Paweł Prokopczuk" width="600" height="750"></div><h3>Paweł Prokopczuk</h3><p class="spec"><span class="pl">Komunikacja i wystąpienia publiczne</span><span class="en">Communication and public speaking</span></p><details><summary>Bio</summary><p class="pl">Zawodowy aktor, absolwent Akademii Teatralnej w Warszawie. Ponad 20 lat pracy trenerskiej i ponad 2000 dni szkoleniowych z komunikacji, sprzedaży i negocjacji.</p><p class="en">Professional actor and graduate of the Theatre Academy in Warsaw. Over 20 years as a trainer and more than 2,000 training days in communication, sales and negotiation.</p></details></article>
+      <article class="tr" data-c="tech"><div class="ph"><img src="photos/maciej-chrzanowski.jpg" alt="dr Maciej Chrzanowski" width="600" height="750"></div><h3>dr Maciej Chrzanowski</h3><p class="spec"><span class="pl">Współpraca człowieka ze sztuczną inteligencją</span><span class="en">Human–AI collaboration</span></p><details><summary>Bio</summary><p class="pl">Szkolenia i doradztwo z AI i automatyzacji w oparciu o autorski model kompetencji cyfrowych. Autor programu Technology-Powered Management. Wykłada m.in. w Akademii Leona Koźmińskiego.</p><p class="en">Training and consulting on AI and automation based on his own digital competence model. Author of the Technology-Powered Management programme; lectures at Kozminski University.</p></details></article>
+      <article class="tr" data-c="tech"><div class="ph"><img src="photos/kamil-porembinski.jpg" alt="Kamil Porembiński" width="600" height="750"></div><h3>Kamil Porembiński</h3><p class="spec"><span class="pl">Cyberbezpieczeństwo</span><span class="en">Cybersecurity</span></p><details><summary>Bio</summary><p class="pl">Architekt systemów IT i ekspert cyberbezpieczeństwa, założyciel firmy The Camels i zespołu DevOps QLOS. Uczy cyberbezpieczeństwa zespoły nietechniczne.</p><p class="en">IT systems architect and cybersecurity expert, founder of The Camels and the QLOS DevOps team. Teaches cybersecurity to non-technical teams.</p></details></article>
+    </div>
+    <div class="unis"><span class="label"><span class="pl">Wykładają m.in. na</span><span class="en">Teaching at</span></span><span>Uniwersytet SWPS</span><span>Akademia Leona Koźmińskiego</span><span>Akademia Sztuki Wojennej</span><span>Uniwersytet Warszawski</span><span>Uniwersytet Łódzki</span><span>Uniwersytet Jagielloński</span><span>AGH</span></div>
+  </section>
+  <section class="in sec view" id="news" data-view="news" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="sec-head">
+      <div><p class="label">Psychology News</p><h2><span class="pl">Psychologia pracy i przywództwa, na bieżąco</span><span class="en">Workplace and leadership psychology, as it happens</span></h2></div>
+      <p><span class="pl">Co kilka dni wybieramy jedno badanie z psychologii pracy, przywództwa lub dobrostanu i krótko piszemy, co z niego wynika dla firm.</span><span class="en">Every few days we pick one study in workplace, leadership or wellbeing psychology and briefly explain what it means for organisations.</span></p>
+    </div>
+    <div id="n-list" class="news"><p class="empty" id="n-empty"><span class="pl">Pierwszy artykuł pojawi się tutaj po zatwierdzeniu.</span><span class="en">The first article will appear here once approved.</span></p></div>
+  </section>
+  <section class="in sec view" id="story" data-view="story" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="sec-head">
+      <div><p class="label">Tell me a story</p><h2><span class="pl">Opowiedz nam, co się dzieje</span><span class="en">Tell us what is happening</span></h2></div>
+      <p><span class="pl">Napisz swoimi słowami, z czym mierzy się Twój zespół lub Ty. Nie musi być ładnie. Przygotujemy z tego uporządkowaną wiadomość, którą możesz poprawić i wysłać do nas.</span><span class="en">Write in your own words what you or your team are facing. It doesn’t need to be polished. We’ll turn it into a clear message you can edit and send to us.</span></p>
+    </div>
+    <div class="story">
+      <div class="st-in">
+        <div class="f"><label for="s-text"><span class="pl">Twoja historia</span><span class="en">Your story</span></label>
+          <textarea id="s-text" rows="9" placeholder="Np. Od pół roku zespół sprzedaży pracuje pod dużą presją, dwóch liderów jest na granicy wypalenia, a my wdrażamy nowy system…"></textarea></div>
+        <div class="row2">
+          <div class="f"><label for="s-name"><span class="pl">Imię i nazwisko</span><span class="en">Full name</span></label><input id="s-name" autocomplete="name"></div>
+          <div class="f"><label for="s-company"><span class="pl">Firma i stanowisko</span><span class="en">Company and role</span></label><input id="s-company" autocomplete="organization"></div>
+        </div>
+        <div class="actions"><button class="btn" id="s-go" type="button"><span class="pl">Przygotuj wiadomość</span><span class="en">Prepare my message</span></button><span class="hint" id="s-status"></span></div>
+      </div>
+      <div class="st-out" id="s-out" hidden>
+        <p class="label"><span class="pl">Wiadomość gotowa do wysłania</span><span class="en">Message ready to send</span></p>
+        <div class="f"><label for="s-subj"><span class="pl">Temat</span><span class="en">Subject</span></label><input id="s-subj"></div>
+        <div class="f"><label for="s-body"><span class="pl">Treść</span><span class="en">Message</span></label><textarea id="s-body" rows="14"></textarea></div>
+        <div class="actions">
+          <button class="btn" id="s-send" type="button"><span class="pl">Wyślij do zespołu Inevitable Zone</span><span class="en">Send to the Inevitable Zone team</span></button>
+          <button class="btn line" id="s-copy" type="button"><span class="pl">Kopiuj</span><span class="en">Copy</span></button>
+        </div>
+        <p class="hint" id="s-sent"></p>
+        <p class="hint"><span class="pl">Możesz też wysłać ją e-mailem na adres</span><span class="en">You can also email it to</span> <span class="sel">karina.tomczyk@inevitable.zone</span> · <span class="sel">adam.bugaj@inevitable.zone</span></p>
+      </div>
+    </div>
+  </section>
+  <section class="in sec view" id="kontakt" data-view="kontakt" hidden>
+    <a class="back" href="#home"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span><span class="en">Home</span></a>
+    <div class="ct">
+      <div>
+        <p class="label"><span class="pl">Kontakt</span><span class="en">Contact</span></p>
+        <h2 style="font-size:40px;line-height:1.15;margin-top:14px"><span class="pl">Porozmawiajmy o Państwa zespole</span><span class="en">Let’s talk about your team</span></h2>
+        <p style="margin-top:18px;color:var(--ink-soft)"><span class="pl">Po niezobowiązującej konsultacji wstępnej przygotujemy indywidualną propozycję i wycenę.</span><span class="en">After a no-obligation introductory consultation, we prepare an individual proposal and quote.</span></p>
+        <div class="direct">
+          <div><b>Karina Tomczyk</b><span>+48 604 519 550</span><span style="grid-column:1/-1">karina.tomczyk@inevitable.zone</span></div>
+          <div><b>Adam Bugaj</b><span>+48 668 300 305</span><span style="grid-column:1/-1">adam.bugaj@inevitable.zone</span></div>
+          <div><b>Rafał Obstawski</b><span>+48 793 669 950</span><span style="grid-column:1/-1">rafal.obstawski@inevitable.zone</span></div>
+        </div>
+      </div>
+      <form id="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact"><p hidden><label>Nie wypełniaj: <input name="bot-field"></label></p>
+        <div class="f full"><span class="label" id="tl"><span class="pl">Czego dotyczy rozmowa</span><span class="en">What would you like to discuss</span></span>
+          <div class="topics" role="group" aria-labelledby="tl">
+            <input type="checkbox" id="t1" value="Program dla zespołu"><label for="t1"><span class="pl">Program dla zespołu</span><span class="en">Team programme</span></label>
+            <input type="checkbox" id="t2" value="Mentoring dla lidera"><label for="t2"><span class="pl">Mentoring dla lidera</span><span class="en">Leader mentoring</span></label>
+            <input type="checkbox" id="t3" value="Interwencja kryzysowa"><label for="t3"><span class="pl">Interwencja kryzysowa</span><span class="en">Crisis intervention</span></label>
+            <input type="checkbox" id="t4" value="Sesja ekspercka"><label for="t4"><span class="pl">Sesja ekspercka</span><span class="en">Expert session</span></label>
+          </div></div>
+        <div class="f"><label for="name"><span class="pl">Imię i nazwisko</span><span class="en">Full name</span></label><input id="name" name="name" autocomplete="name"></div>
+        <div class="f"><label for="role"><span class="pl">Stanowisko</span><span class="en">Job title</span></label><input id="role" name="role" autocomplete="organization-title"></div>
+        <div class="f"><label for="company"><span class="pl">Firma</span><span class="en">Company</span></label><input id="company" name="company" autocomplete="organization"></div>
+        <div class="f"><label for="email"><span class="pl">Służbowy e-mail</span><span class="en">Work email</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
+        <div class="f full"><label for="msg"><span class="pl">Krótko o wyzwaniu</span><span class="en">Your challenge in brief</span></label><textarea id="msg" name="message"></textarea></div>
+        <div class="f full consent"><input type="checkbox" id="consent" name="consent" value="tak"><label for="consent"><span class="pl">Wyrażam zgodę na kontakt w sprawie mojego zapytania.</span><span class="en">I agree to be contacted about my enquiry.</span></label></div>
+        <div class="f full"><button class="btn" type="submit" style="justify-self:start;width:max-content"><span class="pl">Wyślij zapytanie</span><span class="en">Send enquiry</span></button></div>
+        <p class="msg" id="out" hidden></p>
+      </form>
+    </div>
+  </section>
+  <footer class="in">
+    <div class="ft">
+      <div><img src="logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
+      <div><p class="label"><span class="pl">Oferta</span><span class="en">Services</span></p><ul><li><a href="#oferta"><span class="pl">Szkolenia i warsztaty</span><span class="en">Training &amp; workshops</span></a></li><li><a href="#oferta">Mentoring</a></li><li><a href="#program">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="#o-nas"><span class="pl">O nas</span><span class="en">About us</span></a></li><li><a href="#zespol"><span class="pl">Zespół</span><span class="en">Team</span></a></li><li><a href="#kompetencje"><span class="pl">Kompetencje</span><span class="en">Competences</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span><span class="en">Contact</span></p><ul><li>inevitable.zone</li><li><a href="#kontakt"><span class="pl">Formularz</span><span class="en">Enquiry form</span></a></li></ul></div>
+    </div>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span><span class="en">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków, Poland · KRS 0001116611 · VAT ID PL6793304174 · REGON 529168282</span></p>
+    <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span><span class="en">Privacy policy</span></a></div>
+  </footer>
+</main>
+
+<form name="story" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="story"><input name="bot-field"><input name="name"><input name="company"><input name="subject"><textarea name="message"></textarea><textarea name="original"></textarea><input name="lang">
+</form>
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field"><input name="topics"><input name="name"><input name="role"><input name="company"><input name="email"><textarea name="message"></textarea><input name="consent"><input name="lang">
+</form>
+<script>
+
+(function(){
+  const root=document.documentElement;
+  const $=id=>document.getElementById(id);
+  const lang=()=>root.getAttribute('data-lang')||'pl';
+  const listeners=[];
+  const setLang=l=>{root.setAttribute('data-lang',l);root.lang=l;
+    $('lpl').setAttribute('aria-pressed',l==='pl');$('len').setAttribute('aria-pressed',l==='en');
+    try{localStorage.setItem('iz-lang',l)}catch(e){}
+    listeners.forEach(f=>f())};
+  let start='pl';try{start=localStorage.getItem('iz-lang')||'pl'}catch(e){}
+  if(location.hash==='#en')start='en';
+  setLang(start);
+  $('lpl').onclick=()=>setLang('pl');$('len').onclick=()=>setLang('en');
+
+  /* menu */
+  const menu=$('menu'),nav=$('nav');
+  menu.onclick=()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)};
+  nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}});
+
+  /* router: each section is its own page */
+  const views=[...document.querySelectorAll('[data-view]')];
+  const names=views.map(v=>v.dataset.view);
+  function route(){
+    let h=location.hash.replace('#','');if(h==='zespol')h='o-nas';
+    if(!names.includes(h))h='home';
+    views.forEach(v=>v.hidden=v.dataset.view!==h);root.setAttribute('data-v',h);
+    nav.querySelectorAll('a').forEach(a=>a.getAttribute('href')==='#'+h?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+    window.scrollTo(0,0);
+    if(h==='story')initStory();
+  }
+  window.addEventListener('hashchange',route);
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=a.getAttribute('href').slice(1);
+    if(names.includes(t)){e.preventDefault();if(location.hash==='#'+t)route();else location.hash=t;}});
+  route();
+
+  /* trainer filters */
+  const fb=[...document.querySelectorAll('.filters button')];
+  fb.forEach(b=>b.onclick=()=>{fb.forEach(x=>x.setAttribute('aria-pressed',x===b));const f=b.dataset.f;
+    document.querySelectorAll('#trainers .tr').forEach(t=>t.hidden=!(f==='all'||t.dataset.c===f))});
+
+  /* ---------- helpers ---------- */
+  const fmtDate=d=>{try{return new Date(d).toLocaleDateString(lang()==='en'?'en-GB':'pl-PL',{day:'numeric',month:'long',year:'numeric'})}catch(e){return d}};
+  const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const pick=(a,k)=>a[k+'_'+lang()]||a[k+'_pl']||a[k+'_en']||'';
+  const safeUrl=u=>/^https:\/\//.test(u||'')?u:'';
+  const encode=data=>Object.keys(data).map(k=>encodeURIComponent(k)+'='+encodeURIComponent(data[k])).join('&');
+  const postForm=data=>fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:encode(data)}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status)});
+
+  /* ---------- contact form: Netlify Forms ---------- */
+  const form=$('form'),out=$('out');
+  const T={pl:{miss:'Uzupełnij: ',name:'imię i nazwisko',company:'firmę',email:'e-mail',bad:'Sprawdź adres e-mail: brakuje znaku @ lub domeny.',consent:'Zaznacz zgodę na kontakt, abyśmy mogli odpowiedzieć.',sending:'Wysyłam…',ok:n=>'Dziękujemy, '+n+'. Odezwiemy się wkrótce.',fail:'Nie udało się wysłać. Napisz proszę bezpośrednio na adam.bugaj@inevitable.zone.'},
+           en:{miss:'Please fill in: ',name:'full name',company:'company',email:'email',bad:'Check the email address: it is missing an @ or a domain.',consent:'Please tick the consent box so we can reply.',sending:'Sending…',ok:n=>'Thank you, '+n+'. We will be in touch shortly.',fail:'Sending failed. Please write directly to adam.bugaj@inevitable.zone.'}};
+  form.addEventListener('submit',async e=>{e.preventDefault();const t=T[lang()];out.hidden=false;
+    if(form.querySelector('[name="bot-field"]').value)return;
+    const miss=['name','company','email'].filter(id=>!$(id).value.trim());
+    if(miss.length){out.textContent=t.miss+miss.map(m=>t[m]).join(', ')+'.';$(miss[0]).focus();return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('email').value)){out.textContent=t.bad;return}
+    if(!$('consent').checked){out.textContent=t.consent;return}
+    out.textContent=t.sending;
+    const topics=['t1','t2','t3','t4'].filter(id=>$(id).checked).map(id=>$(id).value).join(', ');
+    try{await postForm({'form-name':'contact',topics,name:$('name').value,role:$('role').value,company:$('company').value,email:$('email').value,message:$('msg').value,consent:'tak',lang:lang()});
+      out.textContent=t.ok($('name').value.trim().split(' ')[0]);form.reset();}
+    catch(err){out.textContent=t.fail}});
+
+  /* ---------- Psychology News: approved articles from news.json ---------- */
+  let pub=[];
+  function artHTML(a){
+    const body=pick(a,'body').split(/\n\s*\n/).map(p=>'<p>'+esc(p)+'</p>').join('');
+    const url=safeUrl(a.source_url);const L=lang()==='en';
+    return '<article class="art"><time>'+esc(fmtDate(a.date))+'</time><div>'+((a.tag_pl||a.tag)?'<span class="tag">'+esc(pick(a,'tag')||a.tag)+'</span>':'')+
+      '<h3>'+esc(pick(a,'title'))+'</h3><p class="lead">'+esc(pick(a,'lead'))+'</p>'+
+      '<details><summary>'+(L?'Read more':'Czytaj więcej')+'</summary><div class="body">'+body+'</div></details>'+
+      (url?'<p class="src hint">'+(L?'Source: ':'Źródło: ')+'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(a.source_name||url)+'</a></p>':'')+'</div></article>';
+  }
+  function renderNews(){
+    const sorted=[...pub].sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+    $('n-list').innerHTML=sorted.length?sorted.map(artHTML).join(''):'<p class="empty">'+(lang()==='en'?'New articles are on their way.':'Nowe artykuły już wkrótce.')+'</p>';
+  }
+  listeners.push(renderNews);
+  fetch('news.json',{cache:'no-cache'}).then(r=>r.ok?r.json():[]).then(d=>{pub=Array.isArray(d)?d:[];renderNews()}).catch(()=>renderNews());
+  renderNews();
+
+  /* ---------- Tell me a story: Netlify Function + Netlify Forms ---------- */
+  function initStory(){}
+  $('s-go').onclick=async()=>{
+    const st=$('s-status');const text=$('s-text').value.trim();const L=lang()==='en';
+    if(text.length<20){st.textContent=L?'Write a few sentences first.':'Napisz najpierw kilka zdań.';return}
+    st.textContent=L?'Writing…':'Piszę…';$('s-go').disabled=true;
+    try{
+      const r=await fetch('/.netlify/functions/story',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({story:text,name:$('s-name').value,company:$('s-company').value,lang:lang()})});
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      const j=await r.json();
+      $('s-subj').value=j.subject||'';$('s-body').value=j.body||'';
+      $('s-out').hidden=false;st.textContent='';$('s-sent').textContent='';
+      $('s-out').scrollIntoView({behavior:'smooth',block:'start'});
+    }catch(err){
+      // fallback: prepare a simple, editable draft from the visitor's own words
+      $('s-subj').value=(L?'Our situation: ':'Nasza sytuacja: ')+($('s-company').value||$('s-name').value||'').trim();
+      $('s-body').value=(L?'Dear Inevitable Zone team,\n\n':'Dzień dobry,\n\n')+text+'\n\n'+(L?'Kind regards,\n':'Z wyrazami szacunku,\n')+$('s-name').value;
+      $('s-out').hidden=false;st.textContent=L?'The writing assistant is unavailable right now, so we prepared a simple draft for you to edit.':'Asystent pisania jest chwilowo niedostępny, więc przygotowaliśmy prosty szkic do poprawienia.';
+    }finally{$('s-go').disabled=false}
+  };
+  $('s-copy').onclick=()=>{const t=$('s-subj').value+'\n\n'+$('s-body').value;const L=lang()==='en';
+    const done=()=>{$('s-sent').textContent=L?'Copied.':'Skopiowano.'};
+    try{navigator.clipboard.writeText(t).then(done,()=>{$('s-body').select()})}catch(e){$('s-body').select()}};
+  $('s-send').onclick=async()=>{const L=lang()==='en';const msg=$('s-sent');
+    if(!$('s-body').value.trim()){return}
+    msg.textContent=L?'Sending…':'Wysyłam…';
+    try{await postForm({'form-name':'story',name:$('s-name').value,company:$('s-company').value,subject:$('s-subj').value,message:$('s-body').value,original:$('s-text').value,lang:lang()});
+      msg.textContent=L?'Sent. Thank you, we will get back to you.':'Wysłane. Dziękujemy, odezwiemy się.';}
+    catch(err){msg.textContent=L?'Could not send. Please copy the message and email it to us.':'Nie udało się wysłać. Skopiuj wiadomość i wyślij ją do nas e-mailem.'}};
+})();
+
+</script>
+</body>
+</html>
