@@ -623,6 +623,20 @@ section.view:not(#zespol){padding-top:44px!important}
 section.view .back{margin-bottom:28px}
 section.view{scroll-margin-top:400px}
 @media (max-width:720px){section.view:not(#zespol){padding-top:28px!important}section.view .back{margin-bottom:20px}}
+
+/* soft bio: expands on hover (desktop) or tap (touch), collapses smoothly */
+.tr details.sb>summary{pointer-events:auto}
+.tr details.sb .bio-w{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s cubic-bezier(.4,0,.2,1),opacity .35s ease}
+.tr details.sb .bio-w>div{overflow:hidden;min-height:0}
+.tr details.sb.on .bio-w{grid-template-rows:1fr;opacity:1}
+.tr details.sb summary::after{content:"+"!important;display:inline-block;transition:transform .35s ease}
+.tr details.sb.on summary::after{content:"–"!important}
+@media (hover:hover) and (pointer:fine){
+  .tr:hover details.sb .bio-w{grid-template-rows:1fr;opacity:1;transition-delay:.12s}
+  .tr:hover details.sb summary::after{content:"–"!important}
+  .tr details.sb summary{cursor:default}
+}
+@media (prefers-reduced-motion:reduce){.tr details.sb .bio-w{transition:none}}
 </style>
 </head>
 <body>
@@ -1118,17 +1132,20 @@ section.view{scroll-margin-top:400px}
 })();
 
 
-/* hover bio: opens on hover over the trainer, closes only with the minus */
-(()=>{const box=document.getElementById('trainers');if(!box)return;
-  const canHover=window.matchMedia('(hover:hover) and (pointer:fine)');
-  box.addEventListener('mouseover',e=>{if(!canHover.matches)return;
-    const tr=e.target.closest('.tr');if(!tr||tr.contains(e.relatedTarget))return;
-    const d=tr.querySelector('details');if(d&&!d.open&&!d.dataset.shut){d.open=true;d.dataset.t=Date.now()}});
-  box.addEventListener('mouseout',e=>{const tr=e.target.closest('.tr');if(!tr||tr.contains(e.relatedTarget))return;
-    const d=tr.querySelector('details');if(d)delete d.dataset.shut});
-  box.addEventListener('click',e=>{const sm=e.target.closest('.tr summary');if(!sm)return;const d=sm.parentElement;
-    if(d.open&&Date.now()-(+d.dataset.t||0)<350){e.preventDefault();return}
-    if(d.open)d.dataset.shut='1'});
+
+/* soft bio: details kept open, content height animated via CSS */
+(()=>{const fine=window.matchMedia('(hover:hover) and (pointer:fine)');
+  document.querySelectorAll('.tr details').forEach(d=>{
+    const w=document.createElement('div');w.className='bio-w';const inner=document.createElement('div');w.appendChild(inner);
+    [...d.children].filter(c=>c.tagName!=='SUMMARY').forEach(c=>inner.appendChild(c));d.appendChild(w);
+    d.open=true;d.classList.add('sb');
+    const sm=d.querySelector('summary');sm.setAttribute('aria-expanded','false');
+    sm.addEventListener('click',e=>{e.preventDefault();if(fine.matches)return;
+      const on=d.classList.toggle('on');sm.setAttribute('aria-expanded',on)});
+    const tr=d.closest('.tr');
+    tr.addEventListener('mouseenter',()=>{if(fine.matches)sm.setAttribute('aria-expanded','true')});
+    tr.addEventListener('mouseleave',()=>{if(fine.matches)sm.setAttribute('aria-expanded','false')});
+  });
 })();
 </script>
 </body>
