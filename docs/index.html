@@ -9,7 +9,13 @@
 <meta property="og:url" content="https://inevitable.zone/">
 <meta property="og:title" content="Inevitable Zone Institute">
 <meta property="og:description" content="Każda strategia przechodzi przez ludzki umysł. Psychologia biznesu dla zarządów, liderów i zespołów.">
-<meta property="og:image" content="https://inevitable.zone/photos/karina-tomczyk.jpg">
+<meta property="og:image" content="https://inevitable.zone/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Inevitable Zone – Human Reflection of Business">
+<meta property="og:site_name" content="Inevitable Zone Institute">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://inevitable.zone/og-image.png">
 <link rel="canonical" href="https://inevitable.zone/">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <link rel="shortcut icon" href="favicon.ico">
@@ -647,6 +653,16 @@ section.view{scroll-margin-top:400px}
 .n-pager .n-nums button{min-width:32px;letter-spacing:.04em;border-bottom:.5px solid transparent}
 .n-pager .n-nums button[aria-current]{border-bottom-color:var(--ink)}
 @media (max-width:480px){.n-pager{gap:6px}.n-pager button{font-size:11px;letter-spacing:.08em}.n-pager .n-nums{gap:2px}}
+
+/* hero trio: Ania, Karina (centre), Bartek */
+.lux-art .circle.trio img.q{position:absolute;bottom:0;width:auto;height:70%;filter:drop-shadow(6px 0 12px rgba(11,31,58,.14))!important;transform:none}
+.lux-art .circle.trio img.q-a{left:-7%;right:auto;z-index:1}
+.lux-art .circle.trio img.q-b{right:-9%;left:auto;z-index:2}
+.lux-art .circle.trio img.q-k{left:50%;right:auto;transform:translateX(-50%);height:80%;z-index:3}
+.lux-names.trio-names{flex-direction:column;align-items:center;gap:9px;bottom:-10px}
+.trio-names .ln{display:flex;gap:12px;align-items:center;white-space:nowrap}
+.lux-names.trio-names{font-size:10.5px!important;letter-spacing:.14em!important}
+@media (max-width:480px){.trio-names .ln+.ln{flex-direction:column;gap:9px}.trio-names .ln+.ln .amp{display:none}.lux-art{aspect-ratio:1/1.28!important}.lux-names.trio-names{bottom:0}}
 </style>
 </head>
 <body>
@@ -691,11 +707,12 @@ section.view{scroll-margin-top:400px}
       </div>
       <div class="lux-art">
         <svg class="hero-arc" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="heroarc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B3FFE"/><stop offset="1" stop-color="#0E1F3A"/></linearGradient><mask id="heromask"><rect width="1000" height="1000" fill="#fff"/><circle cx="506" cy="508" r="446" fill="#000"/></mask></defs><circle cx="500" cy="500" r="452" fill="url(#heroarc)" mask="url(#heromask)"/></svg>
-        <div class="circle">
-          <img class="p-a" src="photos/adam-bugaj-cutout.png" alt="Adam Bugaj" width="397" height="535">
-          <img class="p-k" src="photos/karina-tomczyk-cutout.png" alt="Karina Tomczyk" width="520" height="636">
+        <div class="circle trio">
+          <img class="q q-a" src="photos/anna-werner-maliszewska-cutout.png" alt="Anna Werner-Maliszewska" width="546" height="674">
+          <img class="q q-b" src="photos/bartlomiej-janiak-cutout.png" alt="Bartłomiej Janiak" width="543" height="675">
+          <img class="q q-k" src="photos/karina-tomczyk-cutout.png" alt="Karina Tomczyk" width="520" height="636">
         </div>
-        <p class="lux-names"><span>Karina Tomczyk</span><span class="amp">&amp;</span><span>Adam Bugaj</span></p>
+        <p class="lux-names trio-names"><span class="ln"><span>Karina Tomczyk</span></span><span class="ln"><span>Anna Werner-Maliszewska</span><span class="amp">·</span><span>Bartłomiej Janiak</span></span></p>
       </div>
     </div>
     <div class="in creds">
