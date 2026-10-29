@@ -637,6 +637,16 @@ section.view{scroll-margin-top:400px}
   .tr details.sb summary{cursor:default}
 }
 @media (prefers-reduced-motion:reduce){.tr details.sb .bio-w{transition:none}}
+
+/* news paging */
+.n-pager{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:28px}
+.n-pager button{background:none;border:0;padding:8px 4px;font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:color .2s}
+.n-pager button:hover:not(:disabled){color:var(--gold)}
+.n-pager button:disabled{color:var(--ink-mute);opacity:.45;cursor:default}
+.n-pager .n-nums{display:flex;gap:6px}
+.n-pager .n-nums button{min-width:32px;letter-spacing:.04em;border-bottom:.5px solid transparent}
+.n-pager .n-nums button[aria-current]{border-bottom-color:var(--ink)}
+@media (max-width:480px){.n-pager{gap:6px}.n-pager button{font-size:11px;letter-spacing:.08em}.n-pager .n-nums{gap:2px}}
 </style>
 </head>
 <body>
@@ -1105,9 +1115,18 @@ section.view{scroll-margin-top:400px}
       '<details><summary>'+(L?'Read more':'Czytaj więcej')+'</summary><div class="body">'+body+'</div></details>'+
       (url?'<p class="src hint">'+(L?'Source: ':'Źródło: ')+'<a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(a.source_name||url)+'</a></p>':'')+'</div></article>';
   }
+  /* news paging: 3 articles per page */
+  let nPage=1;const N_PER=3;
+  const pageOf=a=>{const pages=Math.max(1,Math.ceil(a.length/N_PER));nPage=Math.min(Math.max(1,nPage),pages);return a.slice((nPage-1)*N_PER,nPage*N_PER)};
+  function pager(total){const pages=Math.ceil(total/N_PER);if(pages<=1)return '';const L=lang()==='en';let h='<nav class="n-pager" aria-label="'+(L?'Article pages':'Strony artykułów')+'">';
+    h+='<button type="button" data-np="'+(nPage-1)+'"'+(nPage===1?' disabled':'')+'>← '+(L?'Newer':'Nowsze')+'</button><span class="n-nums">';
+    for(let i=1;i<=pages;i++)h+='<button type="button" data-np="'+i+'"'+(i===nPage?' aria-current="page"':'')+'>'+i+'</button>';
+    h+='</span><button type="button" data-np="'+(nPage+1)+'"'+(nPage===pages?' disabled':'')+'>'+(L?'Older':'Starsze')+' →</button></nav>';return h}
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-np]');if(!b||b.disabled)return;nPage=+b.dataset.np;renderNews();
+    window.scrollTo({top:0,behavior:'smooth'})});
   function renderNews(){
     const sorted=[...pub].sort((a,b)=>String(b.date).localeCompare(String(a.date)));
-    $('n-list').innerHTML=sorted.length?sorted.map(artHTML).join(''):'<p class="empty">'+(lang()==='en'?'New articles are on their way.':'Nowe artykuły już wkrótce.')+'</p>';
+    $('n-list').innerHTML=sorted.length?pageOf(sorted).map(artHTML).join('')+pager(sorted.length):'<p class="empty">'+(lang()==='en'?'New articles are on their way.':'Nowe artykuły już wkrótce.')+'</p>';
   }
   listeners.push(renderNews);
   fetch('news.json',{cache:'no-cache'}).then(r=>r.ok?r.json():[]).then(d=>{pub=Array.isArray(d)?d:[];renderNews()}).catch(()=>renderNews());
