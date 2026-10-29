@@ -842,12 +842,25 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 
   /* ---------- Tell me a story: Netlify Function + Netlify Forms ---------- */
   if($('s-go')){
-  $('s-go').onclick=()=>{
+  /* writing assistant: set the Cloudflare Worker address here; empty = simple draft without the model */
+  const STORY_API='';
+  $('s-go').onclick=async()=>{
     const st=$('s-status');const text=$('s-text').value.trim();const L=lang()==='en';
     if(text.length<20){st.textContent=L?'Write a few sentences first.':'Napisz najpierw kilka zdań.';return}
+    if(STORY_API){
+      st.textContent=L?'Polishing your text…':'Redagujemy Twój tekst…';$('s-go').disabled=true;
+      try{
+        const r=await fetch(STORY_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({story:text,name:$('s-name').value,company:$('s-company').value,lang:lang()})});
+        if(!r.ok)throw new Error('HTTP '+r.status);
+        const j=await r.json();if(!j.body)throw new Error('empty');
+        $('s-subj').value=j.subject||'';$('s-body').value=j.body;
+        $('s-out').hidden=false;st.textContent='';$('s-sent').textContent='';$('s-go').disabled=false;
+        $('s-out').scrollIntoView({behavior:'smooth',block:'start'});return;
+      }catch(err){st.textContent=L?'The writing assistant is unavailable right now, so here is a simple draft to edit.':'Asystent jest chwilowo niedostępny, więc przygotowaliśmy prosty szkic do poprawienia.';$('s-go').disabled=false}
+    }
     $('s-subj').value=(L?'Our situation: ':'Nasza sytuacja: ')+($('s-company').value||$('s-name').value||'').trim();
     $('s-body').value=(L?'Dear Inevitable Zone team,\n\n':'Dzień dobry,\n\n')+text+'\n\n'+(L?'Kind regards,\n':'Z wyrazami szacunku,\n')+$('s-name').value+($('s-company').value?'\n'+$('s-company').value:'');
-    $('s-out').hidden=false;st.textContent='';$('s-sent').textContent='';
+    $('s-out').hidden=false;if(!STORY_API)st.textContent='';$('s-sent').textContent='';
     $('s-out').scrollIntoView({behavior:'smooth',block:'start'});
   };
   $('s-copy').onclick=()=>{const t=$('s-subj').value+'\n\n'+$('s-body').value;const L=lang()==='en';
