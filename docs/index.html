@@ -1061,15 +1061,16 @@ section.view{scroll-margin-top:400px}
   const views=[...document.querySelectorAll('[data-view]')];
   const names=views.map(v=>v.dataset.view);
   function route(){
-    let h=location.hash.replace('#','');if(h==='zespol')h='o-nas';
+    let h=location.hash.replace('#','');if(h==='top'||h==='home'){try{history.replaceState(null,'',location.pathname+location.search)}catch(_){}h='home'}if(h==='zespol')h='o-nas';
     if(!names.includes(h))h='home';
     views.forEach(v=>v.hidden=v.dataset.view!==h);root.setAttribute('data-v',h);
     nav.querySelectorAll('a').forEach(a=>a.getAttribute('href')==='#'+h?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
     window.scrollTo({top:0,left:0,behavior:'instant'});requestAnimationFrame(()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
     if(h==='story')initStory();
   }
-  window.addEventListener('hashchange',route);
+  window.addEventListener('hashchange',route);window.addEventListener('popstate',route);
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=a.getAttribute('href').slice(1);
+    if(t==='top'||t==='home'){e.preventDefault();/* clean home url */if(location.hash){try{history.pushState(null,'',location.pathname+location.search)}catch(_){}}route();return}
     if(names.includes(t)){e.preventDefault();if(location.hash==='#'+t)route();else location.hash=t;}});
   try{history.scrollRestoration='manual'}catch(e){}
   window.addEventListener('load',()=>window.scrollTo({top:0,left:0,behavior:'instant'}));
