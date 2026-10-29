@@ -1136,7 +1136,7 @@ section.view{scroll-margin-top:400px}
   /* news paging: 3 articles per page */
   let nPage=1;const N_PER=3;
   const pageOf=a=>{const pages=Math.max(1,Math.ceil(a.length/N_PER));nPage=Math.min(Math.max(1,nPage),pages);return a.slice((nPage-1)*N_PER,nPage*N_PER)};
-  function pager(total){const pages=Math.ceil(total/N_PER);if(pages<=1)return '';const L=lang()==='en';let h='<nav class="n-pager" aria-label="'+(L?'Article pages':'Strony artykułów')+'">';
+  function pager(total){const pages=Math.max(1,Math.ceil(total/N_PER));/* pager always visible */const L=lang()==='en';let h='<nav class="n-pager" aria-label="'+(L?'Article pages':'Strony artykułów')+'">';
     h+='<button type="button" data-np="'+(nPage-1)+'"'+(nPage===1?' disabled':'')+'>← '+(L?'Newer':'Nowsze')+'</button><span class="n-nums">';
     for(let i=1;i<=pages;i++)h+='<button type="button" data-np="'+i+'"'+(i===nPage?' aria-current="page"':'')+'>'+i+'</button>';
     h+='</span><button type="button" data-np="'+(nPage+1)+'"'+(nPage===pages?' disabled':'')+'>'+(L?'Older':'Starsze')+' →</button></nav>';return h}
