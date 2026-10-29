@@ -1,5 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://inevitable.zone/</loc></url>
-  <url><loc>https://inevitable.zone/polityka-prywatnosci.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://inevitable.zone/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/"/>
+  </url>
+  <url><loc>https://inevitable.zone/oferta/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/oferta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/oferta/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/services/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/oferta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/oferta/"/>
+  </url>
+  <url><loc>https://inevitable.zone/program/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/program/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/programme/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/program/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/programme/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/program/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/programme/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/program/"/>
+  </url>
+  <url><loc>https://inevitable.zone/kompetencje/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/kompetencje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/competences/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/kompetencje/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/competences/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/kompetencje/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/competences/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/kompetencje/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/"/>
+  </url>
+  <url><loc>https://inevitable.zone/tell-me-a-story/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/tell-me-a-story/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/tell-me-a-story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/tell-me-a-story/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/tell-me-a-story/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/tell-me-a-story/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/tell-me-a-story/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/tell-me-a-story/"/>
+  </url>
+  <url><loc>https://inevitable.zone/o-nas/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/o-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/o-nas/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/about-us/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/o-nas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/o-nas/"/>
+  </url>
+  <url><loc>https://inevitable.zone/kontakt/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/kontakt/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/contact/</loc><lastmod>2026-10-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/kontakt/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/2026-10-22-apa-stress-uncertainty/</loc><lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/2026-10-22-apa-stress-uncertainty/</loc><lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-22-apa-stress-uncertainty/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/2026-10-19-hr-whitewashing-policy-gap/</loc><lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/2026-10-19-hr-whitewashing-policy-gap/</loc><lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-19-hr-whitewashing-policy-gap/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/2026-10-19-burnout-system-friction/</loc><lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-19-burnout-system-friction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-19-burnout-system-friction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-19-burnout-system-friction/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/2026-10-19-burnout-system-friction/</loc><lastmod>2026-10-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-19-burnout-system-friction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-19-burnout-system-friction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-19-burnout-system-friction/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/2026-10-14-ai-occupation-insecurity/</loc><lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/2026-10-14-ai-occupation-insecurity/</loc><lastmod>2026-10-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-10-14-ai-occupation-insecurity/"/>
+  </url>
+  <url><loc>https://inevitable.zone/psychology-news/2026-09-07-gptw-india-ai-burnout/</loc><lastmod>2026-09-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+  </url>
+  <url><loc>https://inevitable.zone/en/psychology-news/2026-09-07-gptw-india-ai-burnout/</loc><lastmod>2026-09-07</lastmod>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://inevitable.zone/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inevitable.zone/en/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inevitable.zone/psychology-news/2026-09-07-gptw-india-ai-burnout/"/>
+  </url>
 </urlset>

@@ -1,5 +1,6 @@
 [
  {
+  "slug": "2026-10-22-apa-stress-uncertainty",
   "date": "2026-10-22",
   "tag": "Stress",
   "tag_pl": "Stres i niepewność",
@@ -14,20 +15,7 @@
   "source_url": "https://www.apa.org/pubs/reports/stress-in-america/2026"
  },
  {
-  "date": "2026-10-19",
-  "tag": "Burnout",
-  "tag_pl": "Wypalenie",
-  "tag_en": "Burnout",
-  "title_pl": "Wypalenie zaczyna się w systemie, nie w człowieku",
-  "title_en": "Burnout starts in the system, not in the person",
-  "lead_pl": "Nowy raport z Australii wskazuje, że tarcie organizacyjne – źle zaprojektowane narzędzia, biurokracja i niejasne oczekiwania – silnie wiąże się z wypaleniem. Równie mocno działa poczucie braku bezpieczeństwa zatrudnienia.",
-  "lead_en": "A new Australian report links organisational friction – poorly designed tools, bureaucracy and unclear expectations – strongly with burnout. A sense of job insecurity proves just as powerful.",
-  "body_pl": "Raport „The State of Workplace Burnout”, przygotowany przez think tank Infinite Potential we współpracy z Beyond Blue i UTS Business School, objął 999 respondentów z Australii. Wypalenie zdefiniowano zgodnie z ujęciem WHO: jako zjawisko zawodowe obejmujące wyczerpanie, dystans lub cynizm wobec pracy oraz spadek poczucia skuteczności. Objawy wypalenia zgłasza ponad co trzeci pracownik.\n\nKluczowym czynnikiem okazało się to, co autorzy nazywają tarciem systemowym: nieintuicyjne systemy, długie procedury, niejasne oczekiwania i spotkania bez celu. Osoby pracujące w środowisku o wysokim poziomie takiego tarcia znacznie częściej doświadczają wypalenia. Badaczka z UTS podkreśla, że problem leży w projekcie pracy, a nie w odporności jednostki.\n\nDrugi silny sygnał dotyczy bezpieczeństwa. Wśród osób, które nie czują się pewnie w swojej pracy, wypalenie zgłasza 68 proc., wobec 20 proc. wśród tych, które czują się bardzo bezpiecznie. Autorzy zwracają też uwagę na dużą rozpiętość między organizacjami o bardzo niskim i bardzo wysokim poziomie wypalenia. Niezależna ekspertka z Griffith University przypomina, że próba jest stosunkowo niewielka, więc wyniki warto traktować jako kierunkowe.\n\nCo z tego wynika dla organizacji: programy dobrostanu nie zrównoważą codziennego tarcia. Zarząd i HR powinni najpierw przeprowadzić audyt tego, co spowalnia ludzi – procesów, narzędzi, rytuałów spotkań – oraz jasno komunikować kierunek zmian, zwłaszcza w okresie niepewności. To zwykle najtańsza i najszybsza interwencja w obszarze wypalenia.",
-  "body_en": "The State of Workplace Burnout report, prepared by the think tank Infinite Potential with Beyond Blue and UTS Business School, surveyed 999 Australian respondents. Burnout was defined in line with the WHO: an occupational phenomenon combining exhaustion, mental distance or cynicism towards work, and reduced professional efficacy. More than one in three workers report experiencing it.\n\nThe key driver turned out to be what the authors call system friction: clumsy systems, lengthy procedures, unclear expectations and pointless meetings. People in workplaces with high levels of such friction are far more likely to burn out. A UTS researcher stresses that the problem lies in how work is designed, not in individual resilience.\n\nThe second strong signal concerns security. Among workers who do not feel secure in their job, 68 per cent report burnout, compared with 20 per cent of those who feel very secure. The authors also note a wide gap between organisations with very low and very high burnout rates. An independent expert from Griffith University points out that the sample is relatively small, so the results are best read as directional.\n\nWhat this means for organisations: wellbeing programmes cannot offset daily friction. Boards and HR should first audit what slows people down – processes, tools, meeting rituals – and communicate the direction of change clearly, especially in uncertain times. It is usually the cheapest and fastest burnout intervention available.",
-  "source_name": "ABC News (Australia), 19 października 2026 – raport „The State of Workplace Burnout” (Infinite Potential, Beyond Blue, UTS Business School)",
-  "source_url": "https://www.abc.net.au/news/2026-10-19/environmental-and-workplace-factors-make-burnout-more-likely/107273764"
- },
- {
+  "slug": "2026-10-19-hr-whitewashing-policy-gap",
   "date": "2026-10-19",
   "tag": "Culture",
   "tag_pl": "Kultura organizacyjna",
@@ -42,6 +30,22 @@
   "source_url": "https://hrreview.co.uk/hr-news/wellbeing-news/more-than-half-of-workers-see-gap-between-wellbeing-policies-and-reality/391822"
  },
  {
+  "slug": "2026-10-19-burnout-system-friction",
+  "date": "2026-10-19",
+  "tag": "Burnout",
+  "tag_pl": "Wypalenie",
+  "tag_en": "Burnout",
+  "title_pl": "Wypalenie zaczyna się w systemie, nie w człowieku",
+  "title_en": "Burnout starts in the system, not in the person",
+  "lead_pl": "Nowy raport z Australii wskazuje, że tarcie organizacyjne – źle zaprojektowane narzędzia, biurokracja i niejasne oczekiwania – silnie wiąże się z wypaleniem. Równie mocno działa poczucie braku bezpieczeństwa zatrudnienia.",
+  "lead_en": "A new Australian report links organisational friction – poorly designed tools, bureaucracy and unclear expectations – strongly with burnout. A sense of job insecurity proves just as powerful.",
+  "body_pl": "Raport „The State of Workplace Burnout”, przygotowany przez think tank Infinite Potential we współpracy z Beyond Blue i UTS Business School, objął 999 respondentów z Australii. Wypalenie zdefiniowano zgodnie z ujęciem WHO: jako zjawisko zawodowe obejmujące wyczerpanie, dystans lub cynizm wobec pracy oraz spadek poczucia skuteczności. Objawy wypalenia zgłasza ponad co trzeci pracownik.\n\nKluczowym czynnikiem okazało się to, co autorzy nazywają tarciem systemowym: nieintuicyjne systemy, długie procedury, niejasne oczekiwania i spotkania bez celu. Osoby pracujące w środowisku o wysokim poziomie takiego tarcia znacznie częściej doświadczają wypalenia. Badaczka z UTS podkreśla, że problem leży w projekcie pracy, a nie w odporności jednostki.\n\nDrugi silny sygnał dotyczy bezpieczeństwa. Wśród osób, które nie czują się pewnie w swojej pracy, wypalenie zgłasza 68 proc., wobec 20 proc. wśród tych, które czują się bardzo bezpiecznie. Autorzy zwracają też uwagę na dużą rozpiętość między organizacjami o bardzo niskim i bardzo wysokim poziomie wypalenia. Niezależna ekspertka z Griffith University przypomina, że próba jest stosunkowo niewielka, więc wyniki warto traktować jako kierunkowe.\n\nCo z tego wynika dla organizacji: programy dobrostanu nie zrównoważą codziennego tarcia. Zarząd i HR powinni najpierw przeprowadzić audyt tego, co spowalnia ludzi – procesów, narzędzi, rytuałów spotkań – oraz jasno komunikować kierunek zmian, zwłaszcza w okresie niepewności. To zwykle najtańsza i najszybsza interwencja w obszarze wypalenia.",
+  "body_en": "The State of Workplace Burnout report, prepared by the think tank Infinite Potential with Beyond Blue and UTS Business School, surveyed 999 Australian respondents. Burnout was defined in line with the WHO: an occupational phenomenon combining exhaustion, mental distance or cynicism towards work, and reduced professional efficacy. More than one in three workers report experiencing it.\n\nThe key driver turned out to be what the authors call system friction: clumsy systems, lengthy procedures, unclear expectations and pointless meetings. People in workplaces with high levels of such friction are far more likely to burn out. A UTS researcher stresses that the problem lies in how work is designed, not in individual resilience.\n\nThe second strong signal concerns security. Among workers who do not feel secure in their job, 68 per cent report burnout, compared with 20 per cent of those who feel very secure. The authors also note a wide gap between organisations with very low and very high burnout rates. An independent expert from Griffith University points out that the sample is relatively small, so the results are best read as directional.\n\nWhat this means for organisations: wellbeing programmes cannot offset daily friction. Boards and HR should first audit what slows people down – processes, tools, meeting rituals – and communicate the direction of change clearly, especially in uncertain times. It is usually the cheapest and fastest burnout intervention available.",
+  "source_name": "ABC News (Australia), 19 października 2026 – raport „The State of Workplace Burnout” (Infinite Potential, Beyond Blue, UTS Business School)",
+  "source_url": "https://www.abc.net.au/news/2026-10-19/environmental-and-workplace-factors-make-burnout-more-likely/107273764"
+ },
+ {
+  "slug": "2026-10-14-ai-occupation-insecurity",
   "date": "2026-10-14",
   "tag": "AI",
   "tag_pl": "AI i ludzie",
@@ -56,6 +60,7 @@
   "source_url": "https://news.wsu.edu/press-release/2026/10/14/workers-who-fear-ai-replacement-show-worse-workplace-behavior/"
  },
  {
+  "slug": "2026-09-07-gptw-india-ai-burnout",
   "date": "2026-09-07",
   "tag": "AI",
   "tag_pl": "Sztuczna inteligencja i ludzie",
