@@ -663,6 +663,15 @@ section.view{scroll-margin-top:400px}
 .trio-names .ln{display:flex;gap:12px;align-items:center;white-space:nowrap}
 .lux-names.trio-names{font-size:10.5px!important;letter-spacing:.14em!important}
 @media (max-width:480px){.trio-names .ln+.ln{flex-direction:column;gap:9px}.trio-names .ln+.ln .amp{display:none}.lux-art{aspect-ratio:1/1.28!important}.lux-names.trio-names{bottom:0}}
+
+/* no names under hero photo */
+.lux-art .lux-names{display:none!important}
+.lux-art,.lux-art[class]{aspect-ratio:1/1!important}
+@media (max-width:480px){.lux-art,.lux-art[class]{aspect-ratio:1/1!important}}
+/* arc swing: gentle pendulum of the crescent around the photo */
+@keyframes arcswing{0%{transform:rotate(-7deg)}100%{transform:rotate(7deg)}}
+.lux-art .hero-arc{transform-origin:50% 50%;animation:arcswing 6s ease-in-out infinite alternate;will-change:transform}
+@media (prefers-reduced-motion:reduce){.lux-art .hero-arc{animation:none}}
 </style>
 </head>
 <body>
