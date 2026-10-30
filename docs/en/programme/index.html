@@ -693,6 +693,20 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .art-full .body{margin-top:26px;max-width:720px}
 @media (max-width:720px){.art-full{grid-template-columns:1fr}}
 .art-cta{margin-top:34px}
+
+/* module teaser: title at rest, short description slides in on hover (always visible on touch) */
+.modules li{position:relative;padding:0!important;transition:background .35s}
+.modules li .mod{display:block;padding:24px 22px 26px;min-height:184px}
+.modules li::before{position:absolute;left:22px;top:24px}
+.modules li .mod h3{margin-top:24px}
+.modules li .teaser{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .45s cubic-bezier(.4,0,.2,1),opacity .35s}
+.modules li .teaser>div{overflow:hidden}
+.modules li:hover{background:#F6F4EF}
+.modules li.wide:hover{background:#E9E6F3}
+.modules li:hover .teaser{grid-template-rows:1fr;opacity:1}
+@media (hover:none){.modules li .teaser{grid-template-rows:1fr;opacity:1}.modules li .mod{min-height:0}}
+@media (max-width:720px){.modules li .mod{min-height:0}}
+@media (prefers-reduced-motion:reduce){.modules li .teaser{transition:none}}
 </style>
 </head>
 <body>
@@ -733,17 +747,17 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       <p><span class="en">A process that takes participants from understanding their own minds to conscious leadership. We select and sequence modules based on the organisation’s diagnosis.</span></p>
     </div>
     <ol class="modules">
-      <li><h3><span class="en">We play together</span></h3><p class="en">A game on the economics of cooperation and effectiveness.</p></li>
-      <li><h3><span class="en">Eye to eye with your mind</span></h3><p class="en">How our emotions and logic work.</p></li>
-      <li><h3><span class="en">Your inner positive psychologist</span></h3><p class="en">Positive psychology tools for effectiveness.</p></li>
-      <li><h3>Growth mindset &amp; life-long learning</h3><p class="en">A mindset that helps you face setbacks.</p></li>
-      <li><h3><span class="en">Self-management through change</span></h3><p class="en">Moving through change, even when it hurts.</p></li>
-      <li><h3><span class="en">The stress virus</span></h3><p class="en">Coping with stress and building stress resilience.</p></li>
-      <li><h3><span class="en">Positive communication</span></h3><p class="en">Talking so people understand, feel and act.</p></li>
-      <li><h3><span class="en">5 dysfunctions of a team</span></h3><p class="en">Tools for everyday teamwork.</p></li>
-      <li><h3>The drive</h3><p class="en">How motivation works and how leaders keep their energy.</p></li>
-      <li><h3>A human leader</h3><p class="en">Trust, support and empathy in a team.</p></li>
-      <li class="wide"><h3>1on1 support</h3><p class="en">Mentoring sessions and crisis interventions for participants’ individual challenges.</p></li>
+      <li><div class="mod"><h3><span class="en">We play together</span></h3><div class="teaser"><div><p class="en">A game on the economics of cooperation and effectiveness.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">Eye to eye with your mind</span></h3><div class="teaser"><div><p class="en">How our emotions and logic work.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">Your inner positive psychologist</span></h3><div class="teaser"><div><p class="en">Positive psychology tools for effectiveness.</p></div></div></div></li>
+      <li><div class="mod"><h3>Growth mindset &amp; life-long learning</h3><div class="teaser"><div><p class="en">A mindset that helps you face setbacks.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">Self-management through change</span></h3><div class="teaser"><div><p class="en">Moving through change, even when it hurts.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">The stress virus</span></h3><div class="teaser"><div><p class="en">Coping with stress and building stress resilience.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">Positive communication</span></h3><div class="teaser"><div><p class="en">Talking so people understand, feel and act.</p></div></div></div></li>
+      <li><div class="mod"><h3><span class="en">5 dysfunctions of a team</span></h3><div class="teaser"><div><p class="en">Tools for everyday teamwork.</p></div></div></div></li>
+      <li><div class="mod"><h3>The drive</h3><div class="teaser"><div><p class="en">How motivation works and how leaders keep their energy.</p></div></div></div></li>
+      <li><div class="mod"><h3>A human leader</h3><div class="teaser"><div><p class="en">Trust, support and empathy in a team.</p></div></div></div></li>
+      <li class="wide"><div class="mod"><h3>1on1 support</h3><div class="teaser"><div><p class="en">Mentoring sessions and crisis interventions for participants’ individual challenges.</p></div></div></div></li>
     </ol>
   </section>
   
