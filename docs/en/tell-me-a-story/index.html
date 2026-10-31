@@ -23,7 +23,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="pl_PL">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://inevitable.zone/#organization", "name": "Inevitable Zone Institute", "legalName": "INEVITABLE ZONE sp. z o.o.", "alternateName": "Inevitable Zone", "url": "https://inevitable.zone/", "logo": "https://inevitable.zone/logo.png", "image": "https://inevitable.zone/og-image.png", "slogan": "Human Reflection of Business", "description": "Business psychology for boards, leaders and teams. Development programmes, mentoring and crisis interventions led by doctors of psychology, lecturers and business practitioners.", "address": {"@type": "PostalAddress", "streetAddress": "Kącik 4", "postalCode": "30-549", "addressLocality": "Kraków", "addressCountry": "PL"}, "taxID": "6793304174", "email": "adam.bugaj@inevitable.zone", "founder": [{"@type": "Person", "name": "Karina Tomczyk"}, {"@type": "Person", "name": "Adam Bugaj"}], "knowsAbout": ["business psychology", "leadership", "management mentoring", "psychological resilience", "crisis intervention", "communication", "workplace wellbeing", "people and artificial intelligence"]}, {"@type": "WebSite", "@id": "https://inevitable.zone/#website", "url": "https://inevitable.zone/", "name": "Inevitable Zone Institute", "inLanguage": ["pl", "en"], "publisher": {"@id": "https://inevitable.zone/#organization"}}, {"@type": "WebPage", "@id": "https://inevitable.zone/en/tell-me-a-story/", "url": "https://inevitable.zone/en/tell-me-a-story/", "name": "Tell us your story · Inevitable Zone Institute", "description": "Write in your own words what your team is facing. We help turn it into a message you can edit and send to us.", "inLanguage": "en", "isPartOf": {"@id": "https://inevitable.zone/#website"}, "about": {"@id": "https://inevitable.zone/#organization"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://inevitable.zone/en/"}, {"@type": "ListItem", "position": 2, "name": "Tell me a story", "item": "https://inevitable.zone/en/tell-me-a-story/"}]}]}</script>
-<script>window.IZ_ALT={"pl": "/tell-me-a-story/", "en": "/en/tell-me-a-story/"};window.IZ_ROUTES={"pl": {"home": "/", "oferta": "/oferta/", "program": "/program/", "kompetencje": "/kompetencje/", "news": "/psychology-news/", "story": "/tell-me-a-story/", "o-nas": "/o-nas/", "kontakt": "/kontakt/", "zespol": "/o-nas/"}, "en": {"home": "/en/", "oferta": "/en/services/", "program": "/en/programme/", "kompetencje": "/en/competences/", "news": "/en/psychology-news/", "story": "/en/tell-me-a-story/", "o-nas": "/en/about-us/", "kontakt": "/en/contact/", "zespol": "/en/about-us/"}};</script>
+<script>window.IZ_ALT={"pl": "/tell-me-a-story/", "en": "/en/tell-me-a-story/"};window.IZ_ROUTES={"pl": {"home": "/", "oferta": "/oferta/", "program": "/program/", "kompetencje": "/kompetencje/", "news": "/psychology-news/", "story": "/tell-me-a-story/", "o-nas": "/o-nas/", "kontakt": "/kontakt/", "szkolenia": "/szkolenia/", "zespol": "/o-nas/"}, "en": {"home": "/en/", "oferta": "/en/services/", "program": "/en/programme/", "kompetencje": "/en/competences/", "news": "/en/psychology-news/", "story": "/en/tell-me-a-story/", "o-nas": "/en/about-us/", "kontakt": "/en/contact/", "szkolenia": "/en/training/", "zespol": "/en/about-us/"}};</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -707,6 +707,41 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 @media (hover:none){.modules li .teaser{grid-template-rows:1fr;opacity:1}.modules li .mod{min-height:0}}
 @media (max-width:720px){.modules li .mod{min-height:0}}
 @media (prefers-reduced-motion:reduce){.modules li .teaser{transition:none}}
+
+/* training catalogue and training pages */
+.modules li a.mod{display:block;padding:24px 22px 26px;min-height:184px;color:inherit;text-decoration:none}
+.modules li .more{display:inline-block;margin-top:12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.cat-h{font-size:26px;line-height:1.2;letter-spacing:-.01em;margin:72px 0 22px}
+.sec-head+.cat-h{margin-top:40px}
+.modules.cat li::before{display:none}
+.modules.cat li a.mod h3{margin-top:0}
+.modules.cat li a.mod{min-height:214px}
+.tile-more{margin-top:18px}
+.trn{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:72px;align-items:start}
+.trn>*{min-width:0}
+.trn h1{font-size:clamp(34px,4.2vw,56px);line-height:1.08;letter-spacing:-.025em;margin:14px 0 10px}
+.trn-sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--gold);margin-bottom:6px}
+.trn-intro p{font-size:18px;line-height:1.7;color:var(--ink-soft);margin-top:18px;max-width:64ch}
+.trn-main h2{font-size:26px;line-height:1.2;margin:44px 0 14px;letter-spacing:-.01em}
+.trn-list{list-style:none;margin:0;padding:0;border-top:.5px solid var(--rule)}
+.trn-list li{padding:14px 0 14px 28px;border-bottom:.5px solid var(--rule);position:relative;color:var(--ink-soft);line-height:1.6}
+.trn-list li::before{content:"";position:absolute;left:4px;top:22px;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--accent)}
+.trn-aside{position:sticky;top:140px;display:flex;flex-direction:column;gap:22px}
+.trn-aside .keyfacts{display:grid;border-top:.5px solid var(--rule)}
+.trn-aside .keyfacts div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:.5px solid var(--rule);font-size:14.5px}
+.trn-aside .keyfacts b{font-weight:600}.trn-aside .keyfacts span{color:var(--ink-soft)}
+.trn-note{font-size:14px;color:var(--ink-soft)}
+.trn-note a,.trn-mod a{color:var(--ink);text-decoration:none;border-bottom:.5px solid var(--rule-strong)}
+.trn-note a:hover,.trn-mod a:hover{border-color:var(--ink)}
+.trn-mod{font-size:13px;letter-spacing:.04em}
+.trn-aside .btn{text-align:center}
+.trn-rel{margin-top:88px;padding-top:32px;border-top:.5px solid var(--rule)}
+.trn-rel h2{font-size:22px;margin-bottom:16px}
+.trn-rel .links{display:flex;flex-wrap:wrap;gap:10px}
+.trn-rel .links a{font-size:13.5px;border:.5px solid var(--rule-strong);padding:9px 14px;text-decoration:none;color:var(--ink);transition:border-color .2s}
+.trn-rel .links a:hover{border-color:var(--ink)}
+@media (max-width:900px){.trn{grid-template-columns:minmax(0,1fr);gap:40px}.trn-aside{position:static}}
+@media (max-width:720px){.cat-h{font-size:22px;margin-top:52px}.modules.cat li a.mod{min-height:0}.trn-intro p{font-size:16.5px}}
 </style>
 </head>
 <body>
@@ -777,7 +812,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="en">Services</span></p><ul><li><a href="/en/services/"><span class="en">Training &amp; workshops</span></a></li><li><a href="/en/services/">Mentoring</a></li><li><a href="/en/programme/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label"><span class="en">Services</span></p><ul><li><a href="/en/training/"><span class="en">Training &amp; workshops</span></a></li><li><a href="/en/services/">Mentoring</a></li><li><a href="/en/programme/">High-Performance Culture</a></li></ul></div>
       <div><p class="label">Inevitable Zone</p><ul><li><a href="/en/about-us/"><span class="en">About us</span></a></li><li><a href="/en/about-us/#zespol"><span class="en">Team</span></a></li><li><a href="/en/competences/"><span class="en">Competences</span></a></li></ul></div>
       <div><p class="label"><span class="en">Contact</span></p><ul><li>inevitable.zone</li><li><a href="/en/contact/"><span class="en">Enquiry form</span></a></li></ul></div>
     </div>

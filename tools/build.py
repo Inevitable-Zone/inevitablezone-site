@@ -32,6 +32,7 @@ PATHS = {
     'story':       {'pl': '/tell-me-a-story/',  'en': '/en/tell-me-a-story/'},
     'o-nas':       {'pl': '/o-nas/',            'en': '/en/about-us/'},
     'kontakt':     {'pl': '/kontakt/',          'en': '/en/contact/'},
+    'szkolenia':   {'pl': '/szkolenia/',        'en': '/en/training/'},
 }
 ORDER = ['home', 'oferta', 'program', 'kompetencje', 'news', 'story', 'o-nas', 'kontakt']
 
@@ -390,8 +391,123 @@ def write(path, text):
     return full
 
 
+# ---------------------------------------------------------------- training catalogue (src/catalog.json)
+CATALOG_META = {
+    'pl': ('Katalog szkoleń i warsztatów z psychologii biznesu · Inevitable Zone',
+           'Szkolenia i warsztaty dla liderów i zespołów: odporność psychiczna, stres, zmiana, komunikacja, przywództwo i mentoring. Zwykle 1 dzień, do 20 osób, stacjonarnie lub online.'),
+    'en': ('Business psychology training and workshops catalogue · Inevitable Zone',
+           'Training and workshops for leaders and teams: resilience, stress, change, communication, leadership and mentoring. Usually 1 day, up to 20 people, on-site or online.'),
+}
+UI = {
+    'pl': {'catalog': 'Katalog szkoleń', 'label': 'Szkolenia', 'h1': 'Katalog szkoleń i warsztatów',
+           'lead': 'Każde szkolenie dopasowujemy do organizacji po rozmowie diagnostycznej. Zwykle trwa jeden dzień, prowadzimy je dla grup do 20 osób, stacjonarnie lub online, także jako webinar albo power speech.',
+           'more': 'Zobacz szkolenie →', 'ask': 'Zapytaj o to szkolenie', 'experts': 'Prowadzących dobieramy z zespołu ekspertów Inevitable Zone.',
+           'experts_link': 'Poznaj ekspertów', 'module': 'Część programu High-Performance Culture, moduł', 'related': 'Inne szkolenia w tej grupie',
+           'offer': 'Oferta'},
+    'en': {'catalog': 'Training catalogue', 'label': 'Training', 'h1': 'Training and workshops catalogue',
+           'lead': 'We tailor every training to the organisation after a diagnostic conversation. It usually lasts one day, for groups of up to 20 people, on-site or online, and can also run as a webinar or power speech.',
+           'more': 'See the training →', 'ask': 'Ask about this training', 'experts': 'Trainers are selected from the Inevitable Zone expert team.',
+           'experts_link': 'Meet the experts', 'module': 'Part of the High-Performance Culture programme, module', 'related': 'Other training in this group',
+           'offer': 'Services'},
+}
+MODULE_MAP = {'01': 'gramy-razem', '02': 'oko-w-oko-z-samym-soba', '03': 'twoj-wewnetrzny-pozytywny-psycholog',
+              '04': 'growth-mindset', '05': 'zarzadzanie-soba-w-zmianie', '06': 'wirus-stresu', '07': 'komunikacja-na-plus',
+              '08': '5-dysfunkcji-pracy-zespolowej', '09': 'the-drive', '10': 'a-human-leader', '11': 'sesje-mentoringowe'}
+
+
+def load_catalog():
+    try:
+        with open(os.path.join(ROOT, 'src', 'catalog.json'), encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return None
+
+
+def t_url(item, lang):
+    return PATHS['szkolenia'][lang] + (item['slug'] if lang == 'pl' else item['slug_en']) + '/'
+
+
+def tile(item, lang):
+    e = H.escape
+    return ('<li><a class="mod" href="%s"><h3>%s</h3><div class="teaser"><div><p>%s</p><span class="more">%s</span></div></div></a></li>'
+            % (t_url(item, lang), e(item['title_' + lang]), e(item['teaser_' + lang]), UI[lang]['more']))
+
+
+def catalog_section(cat, lang):
+    u = UI[lang]
+    out = ['<section class="in sec view" id="oferta" data-view="oferta">',
+           '    <a class="back" href="%s"><span aria-hidden="true">←</span> %s</a>' % (PATHS['oferta'][lang], u['offer']),
+           '    <div class="sec-head"><div><p class="label">%s</p><h1>%s</h1></div><p>%s</p></div>' % (u['label'], u['h1'], u['lead'])]
+    for g in cat['groups']:
+        items = [i for i in cat['items'] if i['group'] == g['id']]
+        if not items:
+            continue
+        out.append('    <h2 class="cat-h">%s</h2>' % H.escape(g[lang]))
+        out.append('    <ol class="modules cat">' + ''.join(tile(i, lang) for i in items) + '</ol>')
+    out.append('  </section>')
+    return '\n'.join(out)
+
+
+def training_section(item, cat, lang):
+    e = H.escape
+    u = UI[lang]
+    g = next(x for x in cat['groups'] if x['id'] == item['group'])
+    intro = ''.join('<p>%s</p>' % e(p) for p in item.get('intro_' + lang, []))
+    def lst(key):
+        pts = item.get(key + '_' + lang) or []
+        if not pts:
+            return ''
+        return '<h2>%s</h2><ul class="trn-list">%s</ul>' % (e(item.get(key + '_title_' + lang, '')), ''.join('<li>%s</li>' % e(x) for x in pts))
+    fmt = item.get('format_' + lang) or cat['default_format'][lang]
+    facts = ''.join('<div><b>%s</b><span>%s</span></div>' % (e(k), e(v)) for k, v in fmt)
+    mod = ''
+    if item.get('module') and MODULE_MAP.get(item['module']):
+        mod = '<p class="trn-mod"><a href="%s">%s %s →</a></p>' % (PATHS['program'][lang], u['module'], item['module'])
+    sub = ('<p class="trn-sub">%s</p>' % e(item['subtitle_' + lang])) if item.get('subtitle_' + lang) else ''
+    rel = [i for i in cat['items'] if i['group'] == item['group'] and i['slug'] != item['slug']]
+    rel_html = ''
+    if rel:
+        rel_html = '<div class="trn-rel"><h2>%s</h2><div class="links">%s</div></div>' % (
+            u['related'], ''.join('<a href="%s">%s</a>' % (t_url(i, lang), e(i['title_' + lang])) for i in rel))
+    return ('<section class="in sec view" id="oferta" data-view="oferta">\n'
+            '    <a class="back" href="%s"><span aria-hidden="true">←</span> %s</a>\n'
+            '    <div class="trn"><div class="trn-main"><p class="label">%s</p><h1>%s</h1>%s<div class="trn-intro">%s</div>%s%s</div>'
+            '<aside class="trn-aside"><div class="keyfacts">%s</div><p class="trn-note">%s <a href="%s">%s →</a></p>%s'
+            '<a class="btn gold-btn" href="%s">%s</a></aside></div>\n    %s\n  </section>') % (
+        PATHS['szkolenia'][lang], u['catalog'], e(g[lang]), e(item['title_' + lang]), sub, intro, lst('points'), lst('points2'),
+        facts, u['experts'], PATHS['kompetencje'][lang], u['experts_link'], mod, PATHS['kontakt'][lang], u['ask'], rel_html)
+
+
+def link_program_modules(page, cat, lang):
+    if not cat:
+        return page
+    by = {i['slug']: i for i in cat['items']}
+    a = page.find('<ol class="modules">')
+    if a == -1:
+        return page
+    b = page.index('</ol>', a)
+    seg = page[a:b]
+    n = [0]
+    def rep(m):
+        n[0] += 1
+        it = by.get(MODULE_MAP.get('%02d' % n[0], ''))
+        if not it:
+            return m.group(0)
+        return m.group(1) + '<a class="mod" href="%s">' % t_url(it, lang) + m.group(2) + '<span class="more">%s</span></div></div></a></li>' % UI[lang]['more']
+    seg = re.sub(r'(<li(?: class="wide")?>)<div class="mod">(.*?)</div></div></div></li>', rep, seg, flags=re.S)
+    return page[:a] + seg + page[b:]
+
+
+def section_swap(base, html):
+    page = keep_views(base, {'oferta'})
+    off = page.index('<body')
+    s, e = find_spans(page[off:], lambda t, at: at.get('data-view') == 'oferta')[0]
+    return page[:off + s] + html + page[off + e:]
+
+
 def build():
     tpl, news = load()
+    cat = load_catalog()
     today = datetime.date.today().isoformat()
     sitemap = []
     written = []
@@ -409,6 +525,8 @@ def build():
                 extra = services_ld(page, lang)
             if view == 'kompetencje':
                 extra = people_ld(page)
+            if view == 'program':
+                page = link_program_modules(page, cat, lang)
             if view == 'news':
                 st = news_static(news, lang)
                 if st:
@@ -437,6 +555,31 @@ def build():
             written.append(write(url, page))
             if lang == 'pl':
                 sitemap.append((alt, a.get('date') or today))
+        # training catalogue and training pages
+        if cat:
+            url = PATHS['szkolenia'][lang]
+            alt = {l: PATHS['szkolenia'][l] for l in LANGS}
+            title, desc = CATALOG_META[lang]
+            page = section_swap(base, catalog_section(cat, lang))
+            crumbs = [(CRUMB['home'][lang], PATHS['home'][lang]), (UI[lang]['catalog'], url)]
+            lst = {'@type': 'ItemList', 'name': UI[lang]['h1'], 'itemListElement': [
+                {'@type': 'ListItem', 'position': k + 1, 'url': SITE + t_url(i, lang), 'name': i['title_' + lang]} for k, i in enumerate(cat['items'])]}
+            page = set_head(page, lang, 'szkolenia', url, alt, title, desc, graph(lang, url, title, desc, crumbs, [lst]), routes_js(lang, alt))
+            written.append(write(url, page))
+            sitemap.append((alt, today))
+            for it in cat['items']:
+                url = t_url(it, lang)
+                alt = {l: t_url(it, l) for l in LANGS}
+                title = it['title_' + lang] + (' – ' + it['subtitle_' + lang] if it.get('subtitle_' + lang) else '') + ' · Inevitable Zone'
+                desc = it['teaser_' + lang] + ' ' + (' '.join(it.get('intro_' + lang, []))[:150]).rsplit(' ', 1)[0] + '…'
+                page = section_swap(base, training_section(it, cat, lang))
+                crumbs = [(CRUMB['home'][lang], PATHS['home'][lang]), (UI[lang]['catalog'], PATHS['szkolenia'][lang]), (it['title_' + lang], url)]
+                course = {'@type': 'Course', 'name': it['title_' + lang], 'description': it['teaser_' + lang], 'url': SITE + url,
+                          'inLanguage': lang, 'provider': {'@id': ORG_ID}, 'teaches': it.get('points_' + lang, [])[:6]}
+                page = set_head(page, lang, 'szkolenia', url, alt, title, desc, graph(lang, url, title, desc, crumbs, [course]), routes_js(lang, alt))
+                written.append(write(url, page))
+                if lang == 'pl':
+                    sitemap.append((alt, today))
     # sitemap with language alternates
     out = ['<?xml version="1.0" encoding="UTF-8"?>',
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
