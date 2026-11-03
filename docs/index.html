@@ -742,6 +742,14 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .trn-rel .links a:hover{border-color:var(--ink)}
 @media (max-width:900px){.trn{grid-template-columns:minmax(0,1fr);gap:40px}.trn-aside{position:static}}
 @media (max-width:720px){.cat-h{font-size:22px;margin-top:52px}.modules.cat li a.mod{min-height:0}.trn-intro p{font-size:16.5px}}
+
+/* hero six: 6 random experts in the circle (back row 3, front row 3) */
+.lux-art .circle.six img.q{position:absolute;width:auto;transform:translateX(-50%);filter:drop-shadow(5px 0 12px rgba(11,31,58,.14))!important;transition:opacity .6s ease}
+.lux-art .circle.six img.q1,.lux-art .circle.six img.q2,.lux-art .circle.six img.q3{height:46%;bottom:26%;z-index:1}
+.lux-art .circle.six img.q4,.lux-art .circle.six img.q5,.lux-art .circle.six img.q6{height:56%;bottom:0;z-index:2}
+.lux-art .circle.six img.q1{left:24%}.lux-art .circle.six img.q2{left:50%;bottom:29%}.lux-art .circle.six img.q3{left:76%}
+.lux-art .circle.six img.q4{left:16%}.lux-art .circle.six img.q5{left:50%;z-index:3;height:60%}.lux-art .circle.six img.q6{left:84%}
+.lux-art .circle.six.loading img.q{opacity:0}
 </style>
 </head>
 <body>
@@ -786,10 +794,13 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       </div>
       <div class="lux-art">
         <svg class="hero-arc" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="heroarc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B3FFE"/><stop offset="1" stop-color="#0E1F3A"/></linearGradient><mask id="heromask"><rect width="1000" height="1000" fill="#fff"/><circle cx="506" cy="508" r="446" fill="#000"/></mask></defs><circle cx="500" cy="500" r="452" fill="url(#heroarc)" mask="url(#heromask)"/></svg>
-        <div class="circle trio">
-          <img class="q q-a" src="/photos/anna-werner-maliszewska-cutout.webp" alt="Anna Werner-Maliszewska" width="546" height="674">
-          <img class="q q-b" src="/photos/bartlomiej-janiak-cutout.webp" alt="Bartłomiej Janiak" width="543" height="675">
-          <img class="q q-k" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk" width="520" height="636">
+        <div class="circle six" id="hero-six">
+          <img class="q q1" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk">
+          <img class="q q2" src="/photos/anna-werner-maliszewska-cutout.webp" alt="dr Anna Werner-Maliszewska">
+          <img class="q q3" src="/photos/dominik-skowronski-cutout.webp" alt="dr Dominik Skowroński">
+          <img class="q q4" src="/photos/alicja-sekret-cutout.webp" alt="Alicja Sekret">
+          <img class="q q5" src="/photos/bartlomiej-janiak-cutout.webp" alt="Bartłomiej Janiak">
+          <img class="q q6" src="/photos/ewa-drozdowicz-jastrzebska-cutout.webp" alt="lek. Ewa Drozdowicz-Jastrzębska">
         </div>
         <p class="lux-names trio-names"><span class="ln"><span>Karina Tomczyk</span></span><span class="ln"><span>Anna Werner-Maliszewska</span><span class="amp">·</span><span>Bartłomiej Janiak</span></span></p>
       </div>
@@ -1013,6 +1024,16 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
     tr.addEventListener('mouseenter',()=>{if(fine.matches)sm.setAttribute('aria-expanded','true')});
     tr.addEventListener('mouseleave',()=>{if(fine.matches)sm.setAttribute('aria-expanded','false')});
   });
+})();
+
+/* hero six: pick 6 random experts on each visit */
+(()=>{const c=document.getElementById('hero-six');if(!c)return;
+  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
+  const pick=[...P].sort(()=>Math.random()-.5).slice(0,6);
+  const imgs=[...c.querySelectorAll('img.q')];
+  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
+  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
+  setTimeout(()=>c.classList.remove('loading'),1500);
 })();
 </script>
 </body>
