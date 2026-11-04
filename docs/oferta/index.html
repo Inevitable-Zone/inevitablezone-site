@@ -1004,7 +1004,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 /* hero six: pick 6 random experts on each visit */
 (()=>{const c=document.getElementById('hero-six');if(!c)return;
   const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  const pick=[...P].sort(()=>Math.random()-.5).slice(0,6);
+  /* Karina always in the front row, centre (q5); the other five are random */
+  const K=P.find(p=>p[0]==='karina-tomczyk');
+  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
+  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
   const imgs=[...c.querySelectorAll('img.q')];
   c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
   imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});

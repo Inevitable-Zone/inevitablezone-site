@@ -788,11 +788,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       <div class="lux-art">
         <svg class="hero-arc" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="heroarc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B3FFE"/><stop offset="1" stop-color="#0E1F3A"/></linearGradient><mask id="heromask"><rect width="1000" height="1000" fill="#fff"/><circle cx="506" cy="508" r="446" fill="#000"/></mask></defs><circle cx="500" cy="500" r="452" fill="url(#heroarc)" mask="url(#heromask)"/></svg>
         <div class="circle six" id="hero-six">
-          <img class="q q1" src="photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk">
+          <img class="q q1" src="photos/adam-bugaj-cutout.webp" alt="Adam Bugaj">
           <img class="q q2" src="photos/anna-werner-maliszewska-cutout.webp" alt="dr Anna Werner-Maliszewska">
           <img class="q q3" src="photos/dominik-skowronski-cutout.webp" alt="dr Dominik Skowroński">
           <img class="q q4" src="photos/alicja-sekret-cutout.webp" alt="Alicja Sekret">
-          <img class="q q5" src="photos/bartlomiej-janiak-cutout.webp" alt="Bartłomiej Janiak">
+          <img class="q q5" src="photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk">
           <img class="q q6" src="photos/ewa-drozdowicz-jastrzebska-cutout.webp" alt="lek. Ewa Drozdowicz-Jastrzębska">
         </div>
         <p class="lux-names trio-names"><span class="ln"><span>Karina Tomczyk</span></span><span class="ln"><span>Anna Werner-Maliszewska</span><span class="amp">·</span><span>Bartłomiej Janiak</span></span></p>
@@ -1276,7 +1276,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 /* hero six: pick 6 random experts on each visit */
 (()=>{const c=document.getElementById('hero-six');if(!c)return;
   const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  const pick=[...P].sort(()=>Math.random()-.5).slice(0,6);
+  /* Karina always in the front row, centre (q5); the other five are random */
+  const K=P.find(p=>p[0]==='karina-tomczyk');
+  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
+  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
   const imgs=[...c.querySelectorAll('img.q')];
   c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
   imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
