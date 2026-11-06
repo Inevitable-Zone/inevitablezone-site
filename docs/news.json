@@ -15,6 +15,21 @@
   "source_url": "https://www.smu.edu/news/research/american-jobs-bring-more-stress-more-autonomy"
  },
  {
+  "slug": "2026-10-28-gallup-engagement-clarity",
+  "date": "2026-10-28",
+  "tag": "Engagement",
+  "tag_pl": "Zaangażowanie",
+  "tag_en": "Engagement",
+  "title_pl": "Zaangażowanie spada, gdy znika jasność oczekiwań",
+  "title_en": "Engagement falls when clarity of expectations fades",
+  "lead_pl": "Według Gallupa zaangażowanie pracowników w USA spadło do 29%, najniżej od 2011 roku. Najmocniej spadło wśród osób pracujących zdalnie i hybrydowo w firmach wdrażających AI.",
+  "lead_en": "Gallup reports that US employee engagement has fallen to 29%, the lowest level since 2011. The sharpest drop was among remote and hybrid employees in organisations adopting AI.",
+  "body_pl": "Gallup przebadał 21 648 dorosłych z Gallup Panel w sierpniu 2026 roku. W trzecim kwartale zaangażowanych było 29% pracowników, o dwa punkty mniej niż kwartał wcześniej. Aktywnie niezaangażowanych było 18%, a 53% stanowili ci, którzy po prostu wykonują swoją pracę, bez emocjonalnego związku z nią.\n\nZa spadkiem stoją przede wszystkim dwa podstawowe elementy relacji z pracą. Tylko 46% badanych zdecydowanie zgadza się, że wie, czego się od nich oczekuje, wobec 49% w pierwszej połowie roku i 61% w 2015 roku. Odsetek osób, które czują, że ktoś w pracy troszczy się o nie jako o ludzi, spadł z 40% do 37%.\n\nNajwyraźniej widać to tam, gdzie zmiana jest najszybsza. W firmach wdrażających AI zaangażowanie pracowników w pełni zdalnych spadło z 38% do 33%, a hybrydowych z 37% do 33%. Jednocześnie wcześniejsza analiza Gallupa pokazała, że gdy AI idzie w parze z jasnym planem i aktywnym wsparciem przełożonego, zaangażowanie sięga 53%. Sama technologia nie wystarcza; decyduje to, jak ludzie rozumieją swoją rolę obok niej.\n\nCo z tego wynika dla organizacji: wdrożenie AI zmienia zakres ról szybciej, niż zmieniają się rozmowy o oczekiwaniach. Warto dla każdej roli opisać, jak AI wpływa na pracę i jak będą oceniane wyniki, a menedżerów zespołów zdalnych i hybrydowych przygotować do regularnych rozmów, które tę jasność przywracają. Zaangażowanie warto mierzyć równolegle z efektami AI, a nie dopiero po nich.",
+  "body_en": "Gallup surveyed 21,648 adults from the Gallup Panel in August 2026. In the third quarter, 29% of employees were engaged, two points fewer than the previous quarter. 18% were actively disengaged, and 53% were not engaged: doing their job without an emotional connection to it.\n\nThe decline is driven above all by two basic elements of how people relate to their work. Only 46% strongly agree that they know what is expected of them, down from 49% in the first half of the year and 61% in 2015. The share who feel someone at work cares about them as a person fell from 40% to 37%.\n\nThe effect is clearest where change is fastest. In organisations adopting AI, engagement among fully remote employees fell from 38% to 33%, and among hybrid employees from 37% to 33%. Yet an earlier Gallup analysis showed that when AI comes with a clear plan and active manager support, engagement reaches 53%. Technology alone is not enough; what matters is how people understand their role alongside it.\n\nWhat this means for organisations: AI changes the scope of roles faster than conversations about expectations change. It is worth describing, role by role, how AI affects the work and how performance will be assessed, and preparing managers of remote and hybrid teams for regular conversations that restore that clarity. Engagement should be measured alongside the effects of AI, not after them.",
+  "source_name": "Gallup, 28 października 2026 – analiza J. Hartera (Gallup), badanie Gallup Panel, n = 21 648, sierpień 2026",
+  "source_url": "https://www.gallup.com/workplace/716117/employee-engagement-below-30-first-time-years.aspx"
+ },
+ {
   "slug": "2026-10-22-apa-stress-uncertainty",
   "date": "2026-10-22",
   "tag": "Stress",
