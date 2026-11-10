@@ -743,6 +743,12 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .lux-art .circle.six img.q1{left:24%}.lux-art .circle.six img.q2{left:50%;bottom:29%}.lux-art .circle.six img.q3{left:76%}
 .lux-art .circle.six img.q4{left:16%}.lux-art .circle.six img.q5{left:50%;z-index:3;height:60%}.lux-art .circle.six img.q6{left:84%}
 .lux-art .circle.six.loading img.q{opacity:0}
+
+/* tell me a story: e-mail, consent, honeypot */
+.story .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
+.story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
+.story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
 </style>
 </head>
 <body>
@@ -1077,8 +1083,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <p class="label"><span class="pl">Wiadomość gotowa do wysłania</span><span class="en">Message ready to send</span></p>
         <div class="f"><label for="s-subj"><span class="pl">Temat</span><span class="en">Subject</span></label><input id="s-subj"></div>
         <div class="f"><label for="s-body"><span class="pl">Treść</span><span class="en">Message</span></label><textarea id="s-body" rows="14"></textarea></div>
+        <div class="f"><label for="s-email"><span class="pl">Twój e-mail służbowy (odpowiemy na ten adres)</span><span class="en">Your work email (we will reply to this address)</span></label><input id="s-email" type="email" autocomplete="email"></div>
+        <div class="f hp" aria-hidden="true"><label for="s-web">Website</label><input id="s-web" tabindex="-1" autocomplete="off"></div>
+        <label class="ck"><input type="checkbox" id="s-consent"> <span class="pl">Zgadzam się na kontakt w sprawie tej wiadomości. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</span><span class="en">I agree to be contacted about this message. See the <a href="polityka-prywatnosci.html">privacy policy</a>.</span></label>
         <div class="actions">
-          <button class="btn" id="s-send" type="button"><span class="pl">Wyślij e-mailem do zespołu</span><span class="en">Email it to the team</span></button>
+          <button class="btn" id="s-send" type="button"><span class="pl">Wyślij do zespołu</span><span class="en">Send to the team</span></button>
           <button class="btn line" id="s-copy" type="button"><span class="pl">Kopiuj</span><span class="en">Copy</span></button>
         </div>
         <p class="hint" id="s-sent"></p>
@@ -1226,7 +1235,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 
   /* ---------- Tell me a story: Netlify Function + Netlify Forms ---------- */
   if($('s-go')){
-  /* writing assistant: set the Cloudflare Worker address here; empty = simple draft without the model */
+  /* writing assistant + server-side e-mail: Cloudflare Worker address (without trailing slash); empty = simple draft and mail app */
   const STORY_API='';
   $('s-go').onclick=async()=>{
     const st=$('s-status');const text=$('s-text').value.trim();const L=lang()==='en';
@@ -1234,7 +1243,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
     if(STORY_API){
       st.textContent=L?'Polishing your text…':'Redagujemy Twój tekst…';$('s-go').disabled=true;
       try{
-        const r=await fetch(STORY_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({story:text,name:$('s-name').value,company:$('s-company').value,lang:lang()})});
+        const r=await fetch(STORY_API+'/story',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({story:text,name:$('s-name').value,company:$('s-company').value,lang:lang()})});
         if(!r.ok)throw new Error('HTTP '+r.status);
         const j=await r.json();if(!j.body)throw new Error('empty');
         $('s-subj').value=j.subject||'';$('s-body').value=j.body;
@@ -1250,9 +1259,20 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   $('s-copy').onclick=()=>{const t=$('s-subj').value+'\n\n'+$('s-body').value;const L=lang()==='en';
     const done=()=>{$('s-sent').textContent=L?'Copied.':'Skopiowano.'};
     try{navigator.clipboard.writeText(t).then(done,()=>{$('s-body').select()})}catch(e){$('s-body').select()}};
-  $('s-send').onclick=()=>{const L=lang()==='en';if(!$('s-body').value.trim())return;
-    location.href=mailto($('s-subj').value,$('s-body').value);
-    $('s-sent').textContent=L?'We opened your email app with the message. If it did not open, copy it and send it to adam.bugaj@inevitable.zone.':'Otworzyliśmy Twój program pocztowy z wiadomością. Jeśli się nie otworzył, skopiuj ją i wyślij na adam.bugaj@inevitable.zone.';};
+  const viaMail=L=>{location.href=mailto($('s-subj').value,$('s-body').value);
+    $('s-sent').textContent=L?'We opened your email app with the message. If it did not open, copy it and send it to adam.bugaj@inevitable.zone.':'Otworzyliśmy Twój program pocztowy z wiadomością. Jeśli się nie otworzył, skopiuj ją i wyślij na adam.bugaj@inevitable.zone.'};
+  $('s-send').onclick=async()=>{const L=lang()==='en';const msg=$('s-sent');if(!$('s-body').value.trim())return;
+    if(!STORY_API){viaMail(L);return}
+    const email=$('s-email').value.trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent=L?'Please give a valid email address so we can reply.':'Podaj poprawny adres e-mail, abyśmy mogli odpowiedzieć.';$('s-email').focus();return}
+    if(!$('s-consent').checked){msg.textContent=L?'Please tick the consent box so we can reply.':'Zaznacz zgodę na kontakt, abyśmy mogli odpowiedzieć.';return}
+    msg.textContent=L?'Sending…':'Wysyłam…';$('s-send').disabled=true;
+    try{
+      const r=await fetch(STORY_API+'/send',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:$('s-name').value,company:$('s-company').value,email,subject:$('s-subj').value,body:$('s-body').value,original:$('s-text').value,lang:lang(),website:$('s-web').value})});
+      if(!r.ok)throw new Error('HTTP '+r.status);
+      msg.textContent=L?'Sent. Thank you – we will reply to '+email+'.':'Wysłane. Dziękujemy – odpowiemy na adres '+email+'.';
+    }catch(err){msg.textContent=L?'Sending failed, so we are opening your email app instead.':'Nie udało się wysłać, więc otwieramy Twój program pocztowy.';setTimeout(()=>viaMail(L),900)}
+    finally{$('s-send').disabled=false}};
   }
 })();
 
