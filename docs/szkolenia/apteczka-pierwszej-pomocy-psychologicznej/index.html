@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -790,8 +796,8 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   
   <section class="in sec view" id="oferta" data-view="oferta">
     <a class="back" href="/szkolenia/"><span aria-hidden="true">←</span> Katalog szkoleń</a>
-    <div class="trn"><div class="trn-main"><p class="label">Zmiana, rozwój i kryzys</p><h1>Apteczka pierwszej pomocy psychologicznej</h1><div class="trn-intro"><p>Pierwsza pomoc to nie tylko medyczne wskazówki, ale też konkretne kroki wsparcia dla osób, które przeżywają silne emocje i stres. Jak w pięciu prostych krokach pomóc tym, którzy w danej chwili najbardziej tego potrzebują?</p><p>Jak w obliczu kryzysu, takiego jak problemy finansowe, śmierć bliskich, poważna choroba czy trudności z akceptacją otoczenia, działa nasza głowa i jakiej pomocy oczekują osoby w kryzysie?</p></div><h2>Na warsztacie</h2><ul class="trn-list"><li>Pomagam mądrze: jak wzmocnić się, by mieć siłę pomagać, bo kryzys to często maraton, a nie sprint</li><li>Podstawowa interwencja kryzysowa: jak działa głowa w kryzysie i jakiej pomocy oczekują osoby w kryzysie</li><li>Nastawienie pierwszej pomocy psychologicznej: jak wspierać innych bez dyplomu psychologa</li></ul></div><aside class="trn-aside"><div class="keyfacts"><div><b>Forma</b><span>warsztat stacjonarny lub online, webinar albo power speech</span></div><div><b>Czas</b><span>zwykle 1 dzień, długość dopasowujemy do organizacji</span></div><div><b>Grupa</b><span>do 20 uczestników</span></div></div><p class="trn-note">Prowadzących dobieramy z zespołu ekspertów Inevitable Zone. <a href="/kompetencje/">Poznaj ekspertów →</a></p><a class="btn gold-btn" href="/kontakt/">Zapytaj o to szkolenie</a></aside></div>
-    <div class="trn-rel"><h2>Inne szkolenia w tej grupie</h2><div class="links"><a href="/szkolenia/zarzadzanie-soba-w-zmianie/">Zarządzanie sobą w zmianie</a><a href="/szkolenia/growth-mindset/">Growth mindset</a><a href="/szkolenia/life-long-learning/">Life-long learning</a><a href="/szkolenia/radzenie-sobie-z-kryzysem/">Radzenie sobie z kryzysem i przeciwnościami losu</a><a href="/szkolenia/interwencja-kryzysowa/">Interwencja kryzysowa</a></div></div>
+    <div class="trn"><div class="trn-main"><p class="label">Zmiana, rozwój i&nbsp;kryzys</p><h1>Apteczka pierwszej pomocy psychologicznej</h1><div class="trn-intro"><p>Pierwsza pomoc to nie tylko medyczne wskazówki, ale też konkretne kroki wsparcia dla osób, które przeżywają silne emocje i&nbsp;stres. Jak w&nbsp;pięciu prostych krokach pomóc tym, którzy w&nbsp;danej chwili najbardziej tego potrzebują?</p><p>Jak w&nbsp;obliczu kryzysu, takiego jak problemy finansowe, śmierć bliskich, poważna choroba czy trudności z&nbsp;akceptacją otoczenia, działa nasza głowa i&nbsp;jakiej pomocy oczekują osoby w&nbsp;kryzysie?</p></div><h2>Na&nbsp;warsztacie</h2><ul class="trn-list"><li>Pomagam mądrze: jak wzmocnić się, by mieć siłę pomagać, bo kryzys to często maraton, a&nbsp;nie sprint</li><li>Podstawowa interwencja kryzysowa: jak działa głowa w&nbsp;kryzysie i&nbsp;jakiej pomocy oczekują osoby w&nbsp;kryzysie</li><li>Nastawienie pierwszej pomocy psychologicznej: jak wspierać innych bez dyplomu psychologa</li></ul></div><aside class="trn-aside"><div class="keyfacts"><div><b>Forma</b><span>warsztat stacjonarny lub online, webinar albo power speech</span></div><div><b>Czas</b><span>zwykle 1 dzień, długość dopasowujemy do&nbsp;organizacji</span></div><div><b>Grupa</b><span>do&nbsp;15 uczestników</span></div></div><p class="trn-note">Prowadzących dobieramy z&nbsp;zespołu ekspertów Inevitable Zone. <a href="/kompetencje/">Poznaj ekspertów →</a></p><a class="btn gold-btn" href="/kontakt/">Zapytaj o&nbsp;to szkolenie</a></aside></div>
+    <div class="trn-rel"><h2>Inne szkolenia w&nbsp;tej grupie</h2><div class="links"><a href="/szkolenia/zarzadzanie-soba-w-zmianie/">Zarządzanie sobą w&nbsp;zmianie</a><a href="/szkolenia/growth-mindset/">Growth mindset</a><a href="/szkolenia/life-long-learning/">Life-long learning</a><a href="/szkolenia/radzenie-sobie-z-kryzysem/">Radzenie sobie z&nbsp;kryzysem i&nbsp;przeciwnościami losu</a><a href="/szkolenia/interwencja-kryzysowa/">Interwencja kryzysowa</a></div></div>
   </section>
   
   
@@ -802,11 +808,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -964,18 +970,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

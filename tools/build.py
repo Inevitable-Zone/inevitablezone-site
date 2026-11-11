@@ -383,8 +383,38 @@ def routes_js(lang, alt):
     return 'window.IZ_ALT=%s;window.IZ_ROUTES=%s;' % (json.dumps(alt), json.dumps(routes))
 
 
+PL_SHORT = re.compile(r'(^|[\s(„«])([aiouwzAIOUWZ]|do|Do|na|Na|od|Od|po|Po|za|Za|ze|Ze|we|We|że|Że|ku|Ku)\s+(?=\S|$)')
+SKIP_TAGS = re.compile(r'(<script\b.*?</script>|<style\b.*?</style>|<textarea\b.*?</textarea>|<head\b.*?</head>)', re.S | re.I)
+
+
+def nbsp_pl(page):
+    """Polish typography: keep one-letter words and short prepositions with the next word (no orphans at line ends)."""
+    if '<html lang="pl"' not in page[:400]:
+        return page
+
+    def text_nodes(chunk):
+        parts = re.split(r'(<[^>]+>)', chunk)
+        for i in range(0, len(parts), 2):
+            t = parts[i]
+            if t.strip():
+                prev = None
+                while prev != t:      # repeated for runs such as "a w domu"
+                    prev, t = t, PL_SHORT.sub(lambda m: m.group(1) + m.group(2) + '&nbsp;', t)
+                parts[i] = t
+        return ''.join(parts)
+
+    out, pos = [], 0
+    for m in SKIP_TAGS.finditer(page):
+        out.append(text_nodes(page[pos:m.start()]))
+        out.append(m.group(0))
+        pos = m.end()
+    out.append(text_nodes(page[pos:]))
+    return ''.join(out)
+
+
 def write(path, text):
-    full = os.path.join(DOCS, path.strip('/'), 'index.html') if path != '/' else os.path.join(DOCS, 'index.html')
+    text = nbsp_pl(text)
+    full =os.path.join(DOCS, path.strip('/'), 'index.html') if path != '/' else os.path.join(DOCS, 'index.html')
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, 'w', encoding='utf-8') as f:
         f.write(text)
@@ -394,18 +424,18 @@ def write(path, text):
 # ---------------------------------------------------------------- training catalogue (src/catalog.json)
 CATALOG_META = {
     'pl': ('Katalog szkoleń i warsztatów z psychologii biznesu · Inevitable Zone',
-           'Szkolenia i warsztaty dla liderów i zespołów: odporność psychiczna, stres, zmiana, komunikacja, przywództwo i mentoring. Zwykle 1 dzień, do 20 osób, stacjonarnie lub online.'),
+           'Szkolenia i warsztaty dla liderów i zespołów: odporność psychiczna, stres, zmiana, komunikacja, przywództwo i mentoring. Zwykle 1 dzień, do 15 osób, stacjonarnie lub online.'),
     'en': ('Business psychology training and workshops catalogue · Inevitable Zone',
-           'Training and workshops for leaders and teams: resilience, stress, change, communication, leadership and mentoring. Usually 1 day, up to 20 people, on-site or online.'),
+           'Training and workshops for leaders and teams: resilience, stress, change, communication, leadership and mentoring. Usually 1 day, up to 15 people, on-site or online.'),
 }
 UI = {
     'pl': {'catalog': 'Katalog szkoleń', 'label': 'Szkolenia', 'h1': 'Katalog szkoleń i warsztatów',
-           'lead': 'Każde szkolenie dopasowujemy do organizacji po rozmowie diagnostycznej. Zwykle trwa jeden dzień, prowadzimy je dla grup do 20 osób, stacjonarnie lub online, także jako webinar albo power speech.',
+           'lead': 'Każde szkolenie dopasowujemy do organizacji po rozmowie diagnostycznej. Zwykle trwa jeden dzień, prowadzimy je dla grup do 15 osób, stacjonarnie lub online, także jako webinar albo power speech.',
            'more': 'Zobacz szkolenie →', 'ask': 'Zapytaj o to szkolenie', 'experts': 'Prowadzących dobieramy z zespołu ekspertów Inevitable Zone.',
            'experts_link': 'Poznaj ekspertów', 'module': 'Część programu High-Performance Culture, moduł', 'related': 'Inne szkolenia w tej grupie',
            'offer': 'Oferta'},
     'en': {'catalog': 'Training catalogue', 'label': 'Training', 'h1': 'Training and workshops catalogue',
-           'lead': 'We tailor every training to the organisation after a diagnostic conversation. It usually lasts one day, for groups of up to 20 people, on-site or online, and can also run as a webinar or power speech.',
+           'lead': 'We tailor every training to the organisation after a diagnostic conversation. It usually lasts one day, for groups of up to 15 people, on-site or online, and can also run as a webinar or power speech.',
            'more': 'See the training →', 'ask': 'Ask about this training', 'experts': 'Trainers are selected from the Inevitable Zone expert team.',
            'experts_link': 'Meet the experts', 'module': 'Part of the High-Performance Culture programme, module', 'related': 'Other training in this group',
            'offer': 'Services'},

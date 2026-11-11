@@ -173,6 +173,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -757,6 +759,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -769,7 +775,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -793,35 +799,31 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       <div class="lux-text">
         <p class="lux-eyebrow"><span>Inevitable Zone Institute</span><span class="dot"></span><span>Human Reflection of Business</span></p>
         <h1 class="lux-h1"><span class="pl">Każda strategia przechodzi przez <em>ludzki&nbsp;umysł.</em></span></h1>
-        <p class="lux-sub"><span class="pl">Pracujemy z umysłem przywództwa: z tym, jak liderzy myślą, czują i decydują pod presją. Psychologia biznesu dla zarządów, liderów i zespołów, które oczekują więcej niż szkolenia.</span></p>
+        <p class="lux-sub"><span class="pl">Pracujemy z&nbsp;umysłem przywództwa: z&nbsp;tym, jak liderzy myślą, czują i&nbsp;decydują pod presją. Psychologia biznesu dla zarządów, liderów i&nbsp;zespołów, które oczekują więcej niż szkolenia.</span></p>
         <div class="lux-cta">
-          <a class="btn gold-btn" href="/kontakt/"><span class="pl">Umów rozmowę z naszymi ekspertami</span></a>
+          <a class="btn gold-btn" href="/kontakt/"><span class="pl">Umów rozmowę z&nbsp;naszymi ekspertami</span></a>
           <a class="lux-link" href="/tell-me-a-story/"><span class="pl">albo opowiedz nam swoją historię</span> →</a>
         </div>
       </div>
       <div class="lux-art">
         <svg class="hero-arc" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="heroarc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B3FFE"/><stop offset="1" stop-color="#0E1F3A"/></linearGradient><mask id="heromask"><rect width="1000" height="1000" fill="#fff"/><circle cx="506" cy="508" r="446" fill="#000"/></mask></defs><circle cx="500" cy="500" r="452" fill="url(#heroarc)" mask="url(#heromask)"/></svg>
-        <div class="circle six" id="hero-six">
-          <img class="q q1" src="/photos/adam-bugaj-cutout.webp" alt="Adam Bugaj">
-          <img class="q q2" src="/photos/anna-werner-maliszewska-cutout.webp" alt="dr Anna Werner-Maliszewska">
-          <img class="q q3" src="/photos/dominik-skowronski-cutout.webp" alt="dr Dominik Skowroński">
-          <img class="q q4" src="/photos/alicja-sekret-cutout.webp" alt="Alicja Sekret">
-          <img class="q q5" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk">
-          <img class="q q6" src="/photos/ewa-drozdowicz-jastrzebska-cutout.webp" alt="lek. Ewa Drozdowicz-Jastrzębska">
+        <div class="circle">
+          <img class="p-a" src="/photos/adam-bugaj-cutout.webp" alt="Adam Bugaj" width="397" height="535">
+          <img class="p-k" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk" width="520" height="636">
         </div>
-        <p class="lux-names trio-names"><span class="ln"><span>Karina Tomczyk</span></span><span class="ln"><span>Anna Werner-Maliszewska</span><span class="amp">·</span><span>Bartłomiej Janiak</span></span></p>
+        <p class="lux-names"><span>Karina Tomczyk</span><span class="amp">&amp;</span><span>Adam Bugaj</span></p>
       </div>
     </div>
     <div class="in creds">
-      <div><b>20+</b><span class="pl">lat doświadczenia w psychologii i zarządzaniu</span></div>
+      <div><b>20+</b><span class="pl">lat doświadczenia w&nbsp;psychologii i&nbsp;zarządzaniu</span></div>
       <div><b>18</b><span class="pl">ekspertów: doktorzy psychologii, lekarze, wykładowcy</span></div>
-      <div><b class="w">SWPS · Koźmiński · Akademia Sztuki Wojennej</b><span class="pl">uczelnie, na których wykładają nasi eksperci</span></div>
+      <div><b class="w">SWPS · Koźmiński · Akademia Sztuki Wojennej</b><span class="pl">uczelnie, na&nbsp;których wykładają nasi eksperci</span></div>
       <div><b class="w">TEDx</b><span class="pl">wystąpienia naszych ekspertów</span></div>
     </div>
   </section>
   <section class="in vision">
     <p class="label gold-label"><span class="pl">Wizja</span></p>
-    <p class="vision-text pl">Widzimy organizacje, w których rozwój ludzi jest tak samo oczywistą częścią zarządzania jak strategia i finanse. Liderzy rozumieją, jak działa <em>umysł pod presją</em>, a zespoły mają zaufanie, odwagę i energię, by dowozić trudne cele.</p>
+    <p class="vision-text pl">Widzimy organizacje, w&nbsp;których rozwój ludzi jest tak samo oczywistą częścią zarządzania jak strategia i&nbsp;finanse. Liderzy rozumieją, jak działa <em>umysł pod presją</em>, a&nbsp;zespoły mają zaufanie, odwagę i&nbsp;energię, by dowozić trudne cele.</p>
     
   </section>
   <section class="in flow">
@@ -831,22 +833,22 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
     </div>
     <div class="fl-wrap">
       <ol class="fl">
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">01</span><h3><span class="pl">Wymagania</span></h3><p class="pl">Rozmowa z zarządem i HR: cel biznesowy, kontekst, ograniczenia. Ustalamy, co ma się zmienić i po czym to poznamy.</p></li>
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">02</span><h3><span class="pl">Dowód</span></h3><p class="pl">Zbieramy dane: wywiady, obserwację, narzędzia diagnostyczne i wyniki badań naukowych. Hipoteza musi mieć oparcie w faktach.</p></li>
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">03</span><h3><span class="pl">Weryfikacja</span></h3><p class="pl">Diagnozę konfrontujemy z klientem i wspólnie zatwierdzamy kryteria sukcesu, zanim cokolwiek zaprojektujemy.</p></li>
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">04</span><h3><span class="pl">Przygotowanie</span></h3><p class="pl">Dobieramy ekspertów i projektujemy program dla tej jednej organizacji. Nic z półki.</p></li>
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">05</span><h3><span class="pl">Zajęcia</span></h3><p class="pl">Warsztaty, mentoring i sesje eksperckie na realnych sytuacjach uczestników, prowadzone przez praktyków.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">01</span><h3><span class="pl">Wymagania</span></h3><p class="pl">Rozmowa z&nbsp;zarządem i&nbsp;HR: cel biznesowy, kontekst, ograniczenia. Ustalamy, co ma się zmienić i&nbsp;po czym to poznamy.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">02</span><h3><span class="pl">Dowód</span></h3><p class="pl">Zbieramy dane: wywiady, obserwację, narzędzia diagnostyczne i&nbsp;wyniki badań naukowych. Hipoteza musi mieć oparcie w&nbsp;faktach.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">03</span><h3><span class="pl">Weryfikacja</span></h3><p class="pl">Diagnozę konfrontujemy z&nbsp;klientem i&nbsp;wspólnie zatwierdzamy kryteria sukcesu, zanim cokolwiek zaprojektujemy.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">04</span><h3><span class="pl">Przygotowanie</span></h3><p class="pl">Dobieramy ekspertów i&nbsp;projektujemy program dla tej jednej organizacji. Nic z&nbsp;gotowych szablonów.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">05</span><h3><span class="pl">Zajęcia</span></h3><p class="pl">Warsztaty, mentoring i&nbsp;sesje eksperckie na&nbsp;realnych sytuacjach uczestników, prowadzone przez praktyków.</p></li>
       </ol>
       <svg class="fl-loop" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
         <path d="M900 4 C 900 52, 860 60, 800 60 L 200 60 C 140 60, 100 52, 100 4" fill="none" stroke="#C2A878" stroke-width="1" vector-effect="non-scaling-stroke" stroke-dasharray="3 5"/>
         <path d="M94 14 L100 3 L106 14" fill="none" stroke="#C2A878" stroke-width="1" vector-effect="non-scaling-stroke"/>
       </svg>
-      <p class="fl-loop-label"><span class="pl">wnioski z zajęć wracają do kolejnego cyklu</span></p>
+      <p class="fl-loop-label"><span class="pl">wnioski z&nbsp;zajęć wracają do&nbsp;kolejnego cyklu</span></p>
     </div>
   </section>
   <section class="in manifesto">
     <p class="label gold-label"><span class="pl">Nasze przekonanie</span></p>
-    <blockquote>You don’t build a business. You build <em>people</em>. And&nbsp;then people build the business.</blockquote>
+    <blockquote><span class="mf-l">You don’t build a&nbsp;business.</span><span class="mf-l">You build <em>people</em>.</span><span class="mf-l">And&nbsp;then people build the&nbsp;business.</span></blockquote>
   </section>
   <section class="in khome">
     <div class="hist">
@@ -854,21 +856,21 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <p class="label gold-label"><span class="pl">Kawałek historii</span></p>
         <h2 class="hist-h"><span class="pl">Dwie perspektywy, <em>jedno spojrzenie</em> na&nbsp;organizację.</span></h2>
         <div class="hist-body pl">
-          <p>Karina przez ponad dwadzieścia lat pracowała z ludźmi w organizacjach: jako psycholożka, trenerka, mentorka i konsultantka kryzysowa. Uczyła psychologii pozytywnej i przywództwa przyszłości na Uniwersytecie SWPS i w Akademii Leona Koźmińskiego.</p>
-          <p>Adam przez dwadzieścia lat budował i prowadził organizacje technologiczne. Jako członek zarządu spółki giełdowej odpowiadał za 650 osób i za HR, więc z bliska widział, jak decyzje zarządu przechodzą przez ludzi.</p>
-          <p>Ona znała organizację od strony człowieka. On znał człowieka od strony organizacji. Z tego połączenia powstała idea <em class="hrb">Human Reflection of Business</em>, a w 2024 roku powstał Inevitable Zone Institute.</p>
+          <p>Karina przez ponad dwadzieścia lat pracowała z&nbsp;ludźmi w&nbsp;organizacjach: jako psycholożka, trenerka, mentorka i&nbsp;konsultantka kryzysowa. Uczyła psychologii pozytywnej i&nbsp;przywództwa przyszłości na&nbsp;Uniwersytecie SWPS i&nbsp;w Akademii Leona Koźmińskiego.</p>
+          <p>Adam przez dwadzieścia lat budował i&nbsp;prowadził organizacje technologiczne. Jako członek zarządu spółki giełdowej odpowiadał za&nbsp;650 osób i&nbsp;za HR, więc z&nbsp;bliska widział, jak decyzje zarządu przechodzą przez ludzi.</p>
+          <p>Ona znała organizację od&nbsp;strony człowieka. On znał człowieka od&nbsp;strony organizacji. Z&nbsp;tego połączenia powstała idea <em class="hrb">Human Reflection of Business</em>, a&nbsp;w 2024 roku powstał Inevitable Zone Institute.</p>
         </div>
         
       </div>
       <ol class="timeline">
-        <li><b>20+</b><div><span class="pl">lat Kariny w psychologii, szkoleniach i interwencji kryzysowej</span></div></li>
-        <li><b>650</b><div><span class="pl">osób w organizacji, za którą Adam odpowiadał w zarządzie spółki giełdowej</span></div></li>
-        <li><b>2024</b><div><span class="pl">17 lipca: rejestracja INEVITABLE ZONE sp. z o.o. w Krakowie</span></div></li>
-        <li><b>2025</b><div><span class="pl">Human Reflection of Business: pierwsza edycja oferty programów i sesji eksperckich</span></div></li>
-        <li><b>2026</b><div><span class="pl">Instytut: osiemnastu ekspertów i program High-Performance Culture of Autonomy &amp; Accountability</span></div></li>
+        <li><b>20+</b><div><span class="pl">lat Kariny w&nbsp;psychologii, szkoleniach i&nbsp;interwencji kryzysowej</span></div></li>
+        <li><b>650</b><div><span class="pl">osób w&nbsp;organizacji, za&nbsp;którą Adam odpowiadał w&nbsp;zarządzie spółki giełdowej</span></div></li>
+        <li><b>2024</b><div><span class="pl">17 lipca: rejestracja INEVITABLE ZONE sp. z&nbsp;o.o. w&nbsp;Krakowie</span></div></li>
+        <li><b>2025</b><div><span class="pl">Human Reflection of Business: pierwsza edycja oferty programów i&nbsp;sesji eksperckich</span></div></li>
+        <li><b>2026</b><div><span class="pl">Instytut: osiemnastu ekspertów i&nbsp;program High-Performance Culture of Autonomy &amp; Accountability</span></div></li>
       </ol>
     </div>
-    <div class="kbottom"><span>inevitable.zone · <a href="/polityka-prywatnosci.html" style="color:inherit"><span class="pl">Polityka prywatności</span></a></span><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></div>
+    <div class="kbottom"><span>inevitable.zone · <a href="/polityka-prywatnosci.html" style="color:inherit"><span class="pl">Polityka prywatności</span></a></span><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></div>
   </section>
   </div>
   
@@ -882,11 +884,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -1044,18 +1046,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

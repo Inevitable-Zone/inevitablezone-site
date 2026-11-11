@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -794,18 +800,18 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   
   <section class="in sec view" id="news" data-view="news">
     <a class="back" href="/psychology-news/"><span aria-hidden="true">←</span> Psychology News</a>
-    <article class="art art-full"><time datetime="2026-10-20">20 października 2026</time><div><span class="tag">Motywacja</span><h1>Nagroda publiczna czy prywatna? Narcyzm zmienia odpowiedź</h1><p class="lead">Badacze z Cornell University sprawdzili, jak pracownicy oceniają nagrody wręczane publicznie i prywatnie. Większość woli dyskretne uznanie, ale osoby o wyższym poziomie narcyzmu częściej wybierają widoczność i prestiżowy tytuł.</p><div class="body"><p>Emily Zitek (ILR School, Cornell University) wraz z Vereną Krause (UCL School of Management) i Alexandrem H. Jordanem (Harvard Medical School, McLean Hospital) przeprowadziła cztery badania ankietowe wśród pracowników zatrudnionych na pełen etat, z udziałem ponad 1000 osób łącznie. Wyniki ukazały się 8 października 2026 r. w czasopiśmie „Social Psychological and Personality Science”. Badacze porównywali te same nagrody w dwóch wersjach: wręczanej prywatnie oraz ogłaszanej przy zespole lub całej firmie.</p><p>Ogólny obraz jest wyraźny: większość pracowników woli uznanie w cztery oczy. Jak podsumowuje Zitek: „Overall people preferred private rewards to public rewards”. Osoby o wyższym poziomie narcyzmu również cenią nagrody prywatne, ale wyraźnie wyżej niż inni oceniają nagrody publiczne. Częściej też wybierają lepszy tytuł stanowiska zamiast wyższego wynagrodzenia.</p><p>Autorzy wiążą tę różnicę z potrzebą statusu: publiczna nagroda podnosi pozycję w oczach innych, a osoby narcystyczne mniej obawiają się zazdrości współpracowników. Badanie opiera się na ankietach i deklarowanych wyborach, więc pokazuje preferencje, a nie zachowanie w realnej sytuacji. Narcyzm mierzono jako cechę osobowości, a nie zaburzenie kliniczne.</p><p>Co z tego wynika dla organizacji: system uznania warto projektować z myślą o różnicach między ludźmi, a nie jednym schematem dla wszystkich. Publiczne wyróżnienia, rankingi i inflacja tytułów mogą przyciągać głównie osoby nastawione na status, a dla większości, która woli dyskretne uznanie, nie muszą być motywujące. Liderzy powinni rozmawiać z pracownikami o tym, jaka forma docenienia jest dla nich ważna, a awanse w tytule łączyć z realną zmianą odpowiedzialności. W przeciwnym razie firma może tracić wiarygodność w oczach zespołu.</p></div><p class="src hint">Źródło: <a href="https://news.cornell.edu/stories/2026/10/workplace-narcissists-crave-more-quiet-raise" target="_blank" rel="noopener">Cornell Chronicle, 20 października 2026 – badanie E. M. Zitek (Cornell University), V. Krause (UCL) i A. H. Jordan (Harvard Medical School), „Social Psychological and Personality Science”</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
+    <article class="art art-full"><time datetime="2026-10-20">20 października 2026</time><div><span class="tag">Motywacja</span><h1>Nagroda publiczna czy prywatna? Narcyzm zmienia odpowiedź</h1><p class="lead">Badacze z&nbsp;Cornell University sprawdzili, jak pracownicy oceniają nagrody wręczane publicznie i&nbsp;prywatnie. Większość woli dyskretne uznanie, ale osoby o&nbsp;wyższym poziomie narcyzmu częściej wybierają widoczność i&nbsp;prestiżowy tytuł.</p><div class="body"><p>Emily Zitek (ILR School, Cornell University) wraz z&nbsp;Vereną Krause (UCL School of Management) i&nbsp;Alexandrem H. Jordanem (Harvard Medical School, McLean Hospital) przeprowadziła cztery badania ankietowe wśród pracowników zatrudnionych na&nbsp;pełen etat, z&nbsp;udziałem ponad 1000 osób łącznie. Wyniki ukazały się 8 października 2026 r. w&nbsp;czasopiśmie „Social Psychological and Personality Science”. Badacze porównywali te same nagrody w&nbsp;dwóch wersjach: wręczanej prywatnie oraz ogłaszanej przy zespole lub całej firmie.</p><p>Ogólny obraz jest wyraźny: większość pracowników woli uznanie w&nbsp;cztery oczy. Jak podsumowuje Zitek: „Overall people preferred private rewards to public rewards”. Osoby o&nbsp;wyższym poziomie narcyzmu również cenią nagrody prywatne, ale wyraźnie wyżej niż inni oceniają nagrody publiczne. Częściej też wybierają lepszy tytuł stanowiska zamiast wyższego wynagrodzenia.</p><p>Autorzy wiążą tę różnicę z&nbsp;potrzebą statusu: publiczna nagroda podnosi pozycję w&nbsp;oczach innych, a&nbsp;osoby narcystyczne mniej obawiają się zazdrości współpracowników. Badanie opiera się na&nbsp;ankietach i&nbsp;deklarowanych wyborach, więc pokazuje preferencje, a&nbsp;nie zachowanie w&nbsp;realnej sytuacji. Narcyzm mierzono jako cechę osobowości, a&nbsp;nie zaburzenie kliniczne.</p><p>Co z&nbsp;tego wynika dla organizacji: system uznania warto projektować z&nbsp;myślą o&nbsp;różnicach między ludźmi, a&nbsp;nie jednym schematem dla wszystkich. Publiczne wyróżnienia, rankingi i&nbsp;inflacja tytułów mogą przyciągać głównie osoby nastawione na&nbsp;status, a&nbsp;dla większości, która woli dyskretne uznanie, nie muszą być motywujące. Liderzy powinni rozmawiać z&nbsp;pracownikami o&nbsp;tym, jaka forma docenienia jest dla nich ważna, a&nbsp;awanse w&nbsp;tytule łączyć z&nbsp;realną zmianą odpowiedzialności. W&nbsp;przeciwnym razie firma może tracić wiarygodność w&nbsp;oczach zespołu.</p></div><p class="src hint">Źródło: <a href="https://news.cornell.edu/stories/2026/10/workplace-narcissists-crave-more-quiet-raise" target="_blank" rel="noopener">Cornell Chronicle, 20 października 2026 – badanie E. M. Zitek (Cornell University), V. Krause (UCL) i&nbsp;A. H. Jordan (Harvard Medical School), „Social Psychological and Personality Science”</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o&nbsp;tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
   </section>
   
   
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -963,18 +969,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

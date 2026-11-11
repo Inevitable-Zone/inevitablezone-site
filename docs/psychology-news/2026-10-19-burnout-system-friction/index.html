@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -794,18 +800,18 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   
   <section class="in sec view" id="news" data-view="news">
     <a class="back" href="/psychology-news/"><span aria-hidden="true">←</span> Psychology News</a>
-    <article class="art art-full"><time datetime="2026-10-19">19 października 2026</time><div><span class="tag">Wypalenie</span><h1>Wypalenie zaczyna się w systemie, nie w człowieku</h1><p class="lead">Nowy raport z Australii wskazuje, że tarcie organizacyjne – źle zaprojektowane narzędzia, biurokracja i niejasne oczekiwania – silnie wiąże się z wypaleniem. Równie mocno działa poczucie braku bezpieczeństwa zatrudnienia.</p><div class="body"><p>Raport „The State of Workplace Burnout”, przygotowany przez think tank Infinite Potential we współpracy z Beyond Blue i UTS Business School, objął 999 respondentów z Australii. Wypalenie zdefiniowano zgodnie z ujęciem WHO: jako zjawisko zawodowe obejmujące wyczerpanie, dystans lub cynizm wobec pracy oraz spadek poczucia skuteczności. Objawy wypalenia zgłasza ponad co trzeci pracownik.</p><p>Kluczowym czynnikiem okazało się to, co autorzy nazywają tarciem systemowym: nieintuicyjne systemy, długie procedury, niejasne oczekiwania i spotkania bez celu. Osoby pracujące w środowisku o wysokim poziomie takiego tarcia znacznie częściej doświadczają wypalenia. Badaczka z UTS podkreśla, że problem leży w projekcie pracy, a nie w odporności jednostki.</p><p>Drugi silny sygnał dotyczy bezpieczeństwa. Wśród osób, które nie czują się pewnie w swojej pracy, wypalenie zgłasza 68 proc., wobec 20 proc. wśród tych, które czują się bardzo bezpiecznie. Autorzy zwracają też uwagę na dużą rozpiętość między organizacjami o bardzo niskim i bardzo wysokim poziomie wypalenia. Niezależna ekspertka z Griffith University przypomina, że próba jest stosunkowo niewielka, więc wyniki warto traktować jako kierunkowe.</p><p>Co z tego wynika dla organizacji: programy dobrostanu nie zrównoważą codziennego tarcia. Zarząd i HR powinni najpierw przeprowadzić audyt tego, co spowalnia ludzi – procesów, narzędzi, rytuałów spotkań – oraz jasno komunikować kierunek zmian, zwłaszcza w okresie niepewności. To zwykle najtańsza i najszybsza interwencja w obszarze wypalenia.</p></div><p class="src hint">Źródło: <a href="https://www.abc.net.au/news/2026-10-19/environmental-and-workplace-factors-make-burnout-more-likely/107273764" target="_blank" rel="noopener">ABC News (Australia), 19 października 2026 – raport „The State of Workplace Burnout” (Infinite Potential, Beyond Blue, UTS Business School)</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
+    <article class="art art-full"><time datetime="2026-10-19">19 października 2026</time><div><span class="tag">Wypalenie</span><h1>Wypalenie zaczyna się w&nbsp;systemie, nie w&nbsp;człowieku</h1><p class="lead">Nowy raport z&nbsp;Australii wskazuje, że&nbsp;tarcie organizacyjne – źle zaprojektowane narzędzia, biurokracja i&nbsp;niejasne oczekiwania – silnie wiąże się z&nbsp;wypaleniem. Równie mocno działa poczucie braku bezpieczeństwa zatrudnienia.</p><div class="body"><p>Raport „The State of Workplace Burnout”, przygotowany przez think tank Infinite Potential we&nbsp;współpracy z&nbsp;Beyond Blue i&nbsp;UTS Business School, objął 999 respondentów z&nbsp;Australii. Wypalenie zdefiniowano zgodnie z&nbsp;ujęciem WHO: jako zjawisko zawodowe obejmujące wyczerpanie, dystans lub cynizm wobec pracy oraz spadek poczucia skuteczności. Objawy wypalenia zgłasza ponad co trzeci pracownik.</p><p>Kluczowym czynnikiem okazało się to, co autorzy nazywają tarciem systemowym: nieintuicyjne systemy, długie procedury, niejasne oczekiwania i&nbsp;spotkania bez celu. Osoby pracujące w&nbsp;środowisku o&nbsp;wysokim poziomie takiego tarcia znacznie częściej doświadczają wypalenia. Badaczka z&nbsp;UTS podkreśla, że&nbsp;problem leży w&nbsp;projekcie pracy, a&nbsp;nie w&nbsp;odporności jednostki.</p><p>Drugi silny sygnał dotyczy bezpieczeństwa. Wśród osób, które nie czują się pewnie w&nbsp;swojej pracy, wypalenie zgłasza 68 proc., wobec 20 proc. wśród tych, które czują się bardzo bezpiecznie. Autorzy zwracają też uwagę na&nbsp;dużą rozpiętość między organizacjami o&nbsp;bardzo niskim i&nbsp;bardzo wysokim poziomie wypalenia. Niezależna ekspertka z&nbsp;Griffith University przypomina, że&nbsp;próba jest stosunkowo niewielka, więc wyniki warto traktować jako kierunkowe.</p><p>Co z&nbsp;tego wynika dla organizacji: programy dobrostanu nie zrównoważą codziennego tarcia. Zarząd i&nbsp;HR powinni najpierw przeprowadzić audyt tego, co spowalnia ludzi – procesów, narzędzi, rytuałów spotkań – oraz jasno komunikować kierunek zmian, zwłaszcza w&nbsp;okresie niepewności. To zwykle najtańsza i&nbsp;najszybsza interwencja w&nbsp;obszarze wypalenia.</p></div><p class="src hint">Źródło: <a href="https://www.abc.net.au/news/2026-10-19/environmental-and-workplace-factors-make-burnout-more-likely/107273764" target="_blank" rel="noopener">ABC News (Australia), 19 października 2026 – raport „The State of Workplace Burnout” (Infinite Potential, Beyond Blue, UTS Business School)</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o&nbsp;tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
   </section>
   
   
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -963,18 +969,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

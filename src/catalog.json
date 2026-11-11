@@ -8,8 +8,8 @@
     {"id": "wydarzenia", "pl": "Wydarzenia i formy specjalne", "en": "Events and special formats"}
   ],
   "default_format": {
-    "pl": [["Forma", "warsztat stacjonarny lub online, webinar albo power speech"], ["Czas", "zwykle 1 dzień, długość dopasowujemy do organizacji"], ["Grupa", "do 20 uczestników"]],
-    "en": [["Format", "on-site or online workshop, webinar or power speech"], ["Duration", "usually 1 day, tailored to the organisation"], ["Group", "up to 20 participants"]]
+    "pl": [["Forma", "warsztat stacjonarny lub online, webinar albo power speech"], ["Czas", "zwykle 1 dzień, długość dopasowujemy do organizacji"], ["Grupa", "do 15 uczestników"]],
+    "en": [["Format", "on-site or online workshop, webinar or power speech"], ["Duration", "usually 1 day, tailored to the organisation"], ["Group", "up to 15 participants"]]
   },
   "items": [
     {
@@ -34,8 +34,8 @@
       "points_title_pl": "Spotkania w cyklu", "points_title_en": "Meetings in the series",
       "points_pl": ["Spotkanie z emocjami: jaką walkę toczy umysł między emocjami a logiką, na czym polega „paradoks szympansa” i jak mądrze stanąć z emocjami twarzą w twarz", "Spotkanie z umysłem logicznym: dlaczego pod wpływem silnych emocji nie myślimy logicznie, czym jest kreatywny neurofitness i co sprzyja skupieniu oraz zarządzaniu sobą w czasie", "Zwinność emocjonalna jako kompetencja przyszłości: emocjonalne pułapki, tłumienie, wyrzucanie i zwrotnica oraz ich wpływ na zdrowie i efektywność, a także codzienna współpraca z emocjami"],
       "points_en": ["Meeting the emotions: the battle our mind wages between emotions and logic, the “chimp paradox” and how to face our emotions wisely", "Meeting the logical mind: why strong emotions stop us thinking logically, what creative neurofitness is, and what supports focus and time management", "Emotional agility as a competence of the future: emotional traps, suppressing, venting and redirecting emotions, their effect on health and effectiveness, and everyday cooperation with emotions"],
-      "format_pl": [["Forma", "cykl trzech spotkań warsztatowych, stacjonarnie lub online"], ["Grupa", "do 20 uczestników"]],
-      "format_en": [["Format", "a series of three workshop meetings, on-site or online"], ["Group", "up to 20 participants"]]
+      "format_pl": [["Forma", "cykl trzech spotkań warsztatowych, stacjonarnie lub online"], ["Grupa", "do 15 uczestników"]],
+      "format_en": [["Format", "a series of three workshop meetings, on-site or online"], ["Group", "up to 15 participants"]]
     },
     {
       "slug": "spokoj-pod-presja", "slug_en": "finding-calm-under-pressure", "group": "umysl",
@@ -202,8 +202,8 @@
       "points_title_pl": "Uczestnicy", "points_title_en": "Participants",
       "points_pl": ["rozpoznają sygnały kryzysu, przeciążenia i wypalenia u pracowników", "prowadzą rozmowy z osobą w kryzysie w sposób empatyczny i bezpieczny", "rozumieją podstawowe mechanizmy psychologiczne w sytuacjach kryzysowych", "wiedzą, jaką rolę lider powinien, a jakiej nie powinien pełnić w obliczu kryzysu", "dbają o własne granice i zasoby, wspierając innych w odpowiedzialny sposób"],
       "points_en": ["recognise signs of crisis, overload and burnout in employees", "hold conversations with a person in crisis in an empathetic and safe way", "understand the basic psychological mechanisms in crisis situations", "know which role a leader should and should not take in a crisis", "look after their own boundaries and resources while supporting others responsibly"],
-      "format_pl": [["Forma", "warsztat stacjonarny dla liderów i menedżerów"], ["Czas", "2 dni"], ["Grupa", "do 20 uczestników"]],
-      "format_en": [["Format", "on-site workshop for leaders and managers"], ["Duration", "2 days"], ["Group", "up to 20 participants"]]
+      "format_pl": [["Forma", "warsztat stacjonarny dla liderów i menedżerów"], ["Czas", "2 dni"], ["Grupa", "do 15 uczestników"]],
+      "format_en": [["Format", "on-site workshop for leaders and managers"], ["Duration", "2 days"], ["Group", "up to 15 participants"]]
     },
     {
       "slug": "apteczka-pierwszej-pomocy-psychologicznej", "slug_en": "psychological-first-aid-kit", "group": "zmiana",

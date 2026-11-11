@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -794,18 +800,18 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   
   <section class="in sec view" id="news" data-view="news">
     <a class="back" href="/psychology-news/"><span aria-hidden="true">←</span> Psychology News</a>
-    <article class="art art-full"><time datetime="2026-10-19">19 października 2026</time><div><span class="tag">Kultura organizacyjna</span><h1>Polityka dobrostanu na papierze, przeciążenie w praktyce</h1><p class="lead">Badanie Nottingham Business School pokazuje, że ponad połowa pracowników widzi rozdźwięk między deklaracjami organizacji w obszarze dobrostanu a tym, czego doświadcza na co dzień. O wiarygodności polityk decydują przede wszystkim liderzy.</p><div class="body"><p>Prof. Zara Whysall i prof. Nadia K. Kougiannou z Nottingham Business School (Nottingham Trent University) przebadały 1178 pracowników średnich i dużych organizacji w Wielkiej Brytanii – w ochronie zdrowia, edukacji, finansach i sektorze publicznym. Wyniki ukazały się w recenzowanym czasopiśmie „Employee Relations”. Autorki opisują zjawisko jako „HR whitewashing”: formalne zobowiązania, które nie znajdują odzwierciedlenia w doświadczeniu ludzi.</p><p>Największa rozbieżność dotyczy dobrostanu: 53 proc. badanych dostrzega wyraźny kontrast lub niespójność między polityką a codzienną praktyką. W obszarze różnorodności i włączania niespójności zgłasza 44 proc., a 19 proc. uważa, że kultura ich organizacji nie odzwierciedla deklarowanych wartości. Typowy przykład to komunikaty o dbaniu o zdrowie psychiczne, które docierają do osób chronicznie przeciążonych pracą.</p><p>Badaczki podkreślają, że nie chodzi o celowe wprowadzanie ludzi w błąd. Whysall zauważa, że „a policy is much easier to change than organisational culture”. Pracownicy oceniają wartości firmy po zachowaniu menedżerów, rozdziale obciążeń oraz decyzjach rekrutacyjnych i awansowych. Badanie nie dowodzi związku przyczynowego między konkretnymi praktykami a tymi ocenami.</p><p>Co z tego wynika dla organizacji: kolejny program dobrostanu nie zbuduje zaufania, jeśli codzienna praktyka mu przeczy. Zarządy i dyrektorzy HR powinni oceniać menedżerów za to, jak przekładają deklaracje na praktykę – zwłaszcza przy rozdziale pracy i awansach – oraz mierzyć doświadczenie pracowników, a nie tylko formalną zgodność z polityką. Spójność słów i działań to najtańsze i najbardziej wiarygodne narzędzie budowania kultury.</p></div><p class="src hint">Źródło: <a href="https://hrreview.co.uk/hr-news/wellbeing-news/more-than-half-of-workers-see-gap-between-wellbeing-policies-and-reality/391822" target="_blank" rel="noopener">HR Review, 19 października 2026 – badanie Z. Whysall i N. K. Kougiannou (Nottingham Business School, Nottingham Trent University), „Employee Relations”</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
+    <article class="art art-full"><time datetime="2026-10-19">19 października 2026</time><div><span class="tag">Kultura organizacyjna</span><h1>Polityka dobrostanu na&nbsp;papierze, przeciążenie w&nbsp;praktyce</h1><p class="lead">Badanie Nottingham Business School pokazuje, że&nbsp;ponad połowa pracowników widzi rozdźwięk między deklaracjami organizacji w&nbsp;obszarze dobrostanu a&nbsp;tym, czego doświadcza na&nbsp;co dzień. O&nbsp;wiarygodności polityk decydują przede wszystkim liderzy.</p><div class="body"><p>Prof. Zara Whysall i&nbsp;prof. Nadia K. Kougiannou z&nbsp;Nottingham Business School (Nottingham Trent University) przebadały 1178 pracowników średnich i&nbsp;dużych organizacji w&nbsp;Wielkiej Brytanii – w&nbsp;ochronie zdrowia, edukacji, finansach i&nbsp;sektorze publicznym. Wyniki ukazały się w&nbsp;recenzowanym czasopiśmie „Employee Relations”. Autorki opisują zjawisko jako „HR whitewashing”: formalne zobowiązania, które nie znajdują odzwierciedlenia w&nbsp;doświadczeniu ludzi.</p><p>Największa rozbieżność dotyczy dobrostanu: 53 proc. badanych dostrzega wyraźny kontrast lub niespójność między polityką a&nbsp;codzienną praktyką. W&nbsp;obszarze różnorodności i&nbsp;włączania niespójności zgłasza 44 proc., a&nbsp;19 proc. uważa, że&nbsp;kultura ich organizacji nie odzwierciedla deklarowanych wartości. Typowy przykład to komunikaty o&nbsp;dbaniu o&nbsp;zdrowie psychiczne, które docierają do&nbsp;osób chronicznie przeciążonych pracą.</p><p>Badaczki podkreślają, że&nbsp;nie chodzi o&nbsp;celowe wprowadzanie ludzi w&nbsp;błąd. Whysall zauważa, że&nbsp;„a&nbsp;policy is much easier to change than organisational culture”. Pracownicy oceniają wartości firmy po&nbsp;zachowaniu menedżerów, rozdziale obciążeń oraz decyzjach rekrutacyjnych i&nbsp;awansowych. Badanie nie dowodzi związku przyczynowego między konkretnymi praktykami a&nbsp;tymi ocenami.</p><p>Co z&nbsp;tego wynika dla organizacji: kolejny program dobrostanu nie zbuduje zaufania, jeśli codzienna praktyka mu przeczy. Zarządy i&nbsp;dyrektorzy HR powinni oceniać menedżerów za&nbsp;to, jak przekładają deklaracje na&nbsp;praktykę – zwłaszcza przy rozdziale pracy i&nbsp;awansach – oraz mierzyć doświadczenie pracowników, a&nbsp;nie tylko formalną zgodność z&nbsp;polityką. Spójność słów i&nbsp;działań to najtańsze i&nbsp;najbardziej wiarygodne narzędzie budowania kultury.</p></div><p class="src hint">Źródło: <a href="https://hrreview.co.uk/hr-news/wellbeing-news/more-than-half-of-workers-see-gap-between-wellbeing-policies-and-reality/391822" target="_blank" rel="noopener">HR Review, 19 października 2026 – badanie Z. Whysall i&nbsp;N. K. Kougiannou (Nottingham Business School, Nottingham Trent University), „Employee Relations”</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o&nbsp;tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
   </section>
   
   
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -963,18 +969,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

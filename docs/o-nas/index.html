@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -791,34 +797,34 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
     <a class="back" href="/"><span aria-hidden="true">←</span> <span class="pl">Strona główna</span></a>
     <div class="about">
       <div>
-        <h1 class="label"><span class="pl">O nas</span></h1>
-        <p class="thesis pl" style="margin-top:18px">Inevitable Zone to przestrzeń, w której <em>psychologia spotyka technologię</em>, a człowiek wraca do centrum biznesu.</p>
+        <h1 class="label"><span class="pl">O&nbsp;nas</span></h1>
+        <p class="thesis pl" style="margin-top:18px">Inevitable Zone to przestrzeń, w&nbsp;której <em>psychologia spotyka technologię</em>, a&nbsp;człowiek wraca do&nbsp;centrum biznesu.</p>
         
-        <p class="pl" style="margin-top:22px;color:var(--ink-soft)">Pomagamy organizacjom rozwijać liderów, przeprowadzać transformacje i budować odporne zespoły w czasach niepewności. Nie uczymy teorii. Wdrażamy praktykę, która zostaje w organizacji na długo.</p>
+        <p class="pl" style="margin-top:22px;color:var(--ink-soft)">Pomagamy organizacjom rozwijać liderów, przeprowadzać transformacje i&nbsp;budować odporne zespoły w&nbsp;czasach niepewności. Nie uczymy teorii. Wdrażamy praktykę, która zostaje w&nbsp;organizacji na&nbsp;długo.</p>
         
-        <p class="motto">You don’t build a business. You build people. And then people build the business.<small>Karina Tomczyk &amp; Adam Bugaj</small></p>
+        <p class="motto">You don’t build a&nbsp;business. You build people. And then people build the business.<small>Karina Tomczyk &amp; Adam Bugaj</small></p>
         <div class="stats">
-          <div class="stat"><b>40%</b><p class="pl">nowo mianowanych menedżerów traci stanowisko w ciągu pierwszych 18 miesięcy.</p></div>
+          <div class="stat"><b>40%</b><p class="pl">nowo mianowanych menedżerów traci stanowisko w&nbsp;ciągu pierwszych 18 miesięcy.</p></div>
           <div class="stat"><b>20%</b><p class="pl">rocznej pensji menedżera to średni koszt nieudanego obsadzenia stanowiska.</p></div>
         </div>
         <p class="src"><span class="pl">Źródło: Polska Agencja Rozwoju Przedsiębiorczości</span></p>
       </div>
       <div class="pillars">
-        <div class="pillar"><i>i</i><div>
-          <h3><span class="pl">Psychologia i transformacja cyfrowa w jednym podejściu</span></h3>
-          <p class="pl">Łączymy psychologię pozytywną, zarządzanie emocjami i nowoczesne podejście do technologii i organizacji. Wspieramy ludzi na poziomie emocji, kompetencji i zaangażowania.</p>
+        <div class="pillar"><i>1.</i><div>
+          <h3><span class="pl">Psychologia i&nbsp;transformacja cyfrowa w&nbsp;jednym podejściu</span></h3>
+          <p class="pl">Łączymy psychologię pozytywną, zarządzanie emocjami i&nbsp;nowoczesne podejście do&nbsp;technologii i&nbsp;organizacji. Wspieramy ludzi na&nbsp;poziomie emocji, kompetencji i&nbsp;zaangażowania.</p>
           </div></div>
-        <div class="pillar"><i>ii</i><div>
+        <div class="pillar"><i>2.</i><div>
           <h3><span class="pl">Zespół multidyscyplinarny</span></h3>
-          <p class="pl">Lekarze psychiatrzy, psycholodzy, badacze, neurocopywriterzy, mentorzy liderów i specjaliści sztucznej inteligencji. Od szkolenia sił specjalnych po zarządzanie spółką giełdową.</p>
+          <p class="pl">Lekarze psychiatrzy, psycholodzy, badacze, neurocopywriterzy, mentorzy liderów i&nbsp;specjaliści sztucznej inteligencji. Od&nbsp;szkolenia sił specjalnych po&nbsp;zarządzanie spółką giełdową.</p>
           </div></div>
-        <div class="pillar"><i>iii</i><div>
-          <h3><span class="pl">Żadnych szkoleń z półki</span></h3>
-          <p class="pl">Proces rozwoju projektujemy na podstawie audytu organizacji, specyfiki branży i wyzwań liderów. Pracujemy ze stresem, emocjami, zmianą i wypaleniem. Budujemy odporność, nie chwilową motywację.</p>
+        <div class="pillar"><i>3.</i><div>
+          <h3><span class="pl">Programy projektowane od&nbsp;podstaw</span></h3>
+          <p class="pl">Proces rozwoju projektujemy na&nbsp;podstawie audytu organizacji, specyfiki branży i&nbsp;wyzwań liderów. Pracujemy ze&nbsp;stresem, emocjami, zmianą i&nbsp;wypaleniem. Budujemy odporność, nie chwilową motywację.</p>
           </div></div>
-        <div class="pillar"><i>iv</i><div>
-          <h3><span class="pl">Model PERMAH i cyfrowy mindset</span></h3>
-          <p class="pl">Fundamentem jest model psychologii pozytywnej PERMAH: emocje, zaangażowanie, relacje, sens, osiągnięcia, zdrowie. Uzupełniamy go o zarządzanie umysłem w epoce cyfrowego przebodźcowania.</p>
+        <div class="pillar"><i>4.</i><div>
+          <h3><span class="pl">Model PERMAH i&nbsp;cyfrowy mindset</span></h3>
+          <p class="pl">Fundamentem jest model psychologii pozytywnej PERMAH: emocje, zaangażowanie, relacje, sens, osiągnięcia, zdrowie. Uzupełniamy go o&nbsp;zarządzanie umysłem w&nbsp;epoce cyfrowego przebodźcowania.</p>
           </div></div>
       </div>
     </div>
@@ -828,7 +834,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   <section class="in sec view" id="zespol" data-view="o-nas">
     <div class="sec-head">
       <div><p class="label"><span class="pl">Nasz zespół</span></p><h2><span class="pl">Ludzie, którzy prowadzą Inevitable Zone</span></h2></div>
-      <p><span class="pl">To z nami rozmawiają Państwo od pierwszego kontaktu do zakończenia programu.</span></p>
+      <p><span class="pl">To z&nbsp;nami rozmawiają Państwo od&nbsp;pierwszego kontaktu do&nbsp;zakończenia programu.</span></p>
     </div>
     <div class="team">
       <article class="member">
@@ -836,7 +842,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <div class="tx">
           <p class="role"><span class="pl">Współzałożycielka · psycholożka · mentorka</span></p>
           <h3>Karina Tomczyk</h3>
-          <p class="pl">Psycholożka z ponad 20-letnim doświadczeniem pracy z korporacjami, mentorka i konsultantka kryzysowa w biznesie. Wykładowczyni psychologii pozytywnej i przywództwa przyszłości na Uniwersytecie SWPS oraz psychologii biznesu w Akademii Leona Koźmińskiego. Autorka metody MIND-RETREAT, współtwórczyni idei Human Reflection of Business.</p>
+          <p class="pl">Psycholożka z&nbsp;ponad 20-letnim doświadczeniem pracy z&nbsp;korporacjami, mentorka i&nbsp;konsultantka kryzysowa w&nbsp;biznesie. Wykładowczyni psychologii pozytywnej i&nbsp;przywództwa przyszłości na&nbsp;Uniwersytecie SWPS oraz psychologii biznesu w&nbsp;Akademii Leona Koźmińskiego. Autorka metody MIND-RETREAT, współtwórczyni idei Human Reflection of Business.</p>
           
           <div class="contact-line"><span>karina.tomczyk@inevitable.zone</span><span>+48 604 519 550</span></div>
         </div>
@@ -846,7 +852,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <div class="tx">
           <p class="role"><span class="pl">Współzałożyciel · mentor · ekspert biznesu</span></p>
           <h3>Adam Bugaj</h3>
-          <p class="pl">Ponad 20 lat w zarządzaniu organizacjami technologicznymi. Jako współprezes i członek zarządu spółki notowanej na Giełdzie Papierów Wartościowych (Ailleron S.A.) odpowiadał za organizację liczącą 650 osób oraz za HR. Absolwent MBA, specjalista psychologii zarządzania i lider transformacji kulturowej.</p>
+          <p class="pl">Ponad 20 lat w&nbsp;zarządzaniu organizacjami technologicznymi. Jako współprezes i&nbsp;członek zarządu spółki notowanej na&nbsp;Giełdzie Papierów Wartościowych (Ailleron S.A.) odpowiadał za&nbsp;organizację liczącą 650 osób oraz za&nbsp;HR. Absolwent MBA, specjalista psychologii zarządzania i&nbsp;lider transformacji kulturowej.</p>
           
           <div class="contact-line"><span>adam.bugaj@inevitable.zone</span><span>+48 668 300 305</span></div>
         </div>
@@ -856,7 +862,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <div class="tx">
           <p class="role">Training &amp; Office Support</p>
           <h3>Rafał Obstawski</h3>
-          <p class="pl">Absolwent Wydziału Prawa i Administracji Uczelni Łazarskiego. Organizuje eventy szkoleniowo-rekreacyjne i wprowadza metody aktywnej integracji podczas szkoleń. Dba o przebieg wszystkich projektów zespołu Inevitable Zone, od logistyki po technologię.</p>
+          <p class="pl">Absolwent Wydziału Prawa i&nbsp;Administracji Uczelni Łazarskiego. Organizuje eventy szkoleniowo-rekreacyjne i&nbsp;wprowadza metody aktywnej integracji podczas szkoleń. Dba o&nbsp;przebieg wszystkich projektów zespołu Inevitable Zone, od&nbsp;logistyki po&nbsp;technologię.</p>
           
           <div class="contact-line"><span>rafal.obstawski@inevitable.zone</span><span>+48 793 669 950</span></div>
         </div>
@@ -870,11 +876,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -1032,18 +1038,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -800,15 +806,11 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       </div>
       <div class="lux-art">
         <svg class="hero-arc" viewBox="0 0 1000 1000" aria-hidden="true"><defs><linearGradient id="heroarc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5B3FFE"/><stop offset="1" stop-color="#0E1F3A"/></linearGradient><mask id="heromask"><rect width="1000" height="1000" fill="#fff"/><circle cx="506" cy="508" r="446" fill="#000"/></mask></defs><circle cx="500" cy="500" r="452" fill="url(#heroarc)" mask="url(#heromask)"/></svg>
-        <div class="circle six" id="hero-six">
-          <img class="q q1" src="/photos/adam-bugaj-cutout.webp" alt="Adam Bugaj">
-          <img class="q q2" src="/photos/anna-werner-maliszewska-cutout.webp" alt="dr Anna Werner-Maliszewska">
-          <img class="q q3" src="/photos/dominik-skowronski-cutout.webp" alt="dr Dominik Skowroński">
-          <img class="q q4" src="/photos/alicja-sekret-cutout.webp" alt="Alicja Sekret">
-          <img class="q q5" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk">
-          <img class="q q6" src="/photos/ewa-drozdowicz-jastrzebska-cutout.webp" alt="lek. Ewa Drozdowicz-Jastrzębska">
+        <div class="circle">
+          <img class="p-a" src="/photos/adam-bugaj-cutout.webp" alt="Adam Bugaj" width="397" height="535">
+          <img class="p-k" src="/photos/karina-tomczyk-cutout.webp" alt="Karina Tomczyk" width="520" height="636">
         </div>
-        <p class="lux-names trio-names"><span class="ln"><span>Karina Tomczyk</span></span><span class="ln"><span>Anna Werner-Maliszewska</span><span class="amp">·</span><span>Bartłomiej Janiak</span></span></p>
+        <p class="lux-names"><span>Karina Tomczyk</span><span class="amp">&amp;</span><span>Adam Bugaj</span></p>
       </div>
     </div>
     <div class="in creds">
@@ -833,7 +835,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">01</span><h3><span class="en">Requirements</span></h3><p class="en">A conversation with the board and HR: business goal, context, constraints. We agree what must change and how we will recognise it.</p></li>
         <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">02</span><h3><span class="en">Evidence</span></h3><p class="en">We gather evidence: interviews, observation, diagnostic tools and research findings. Every hypothesis must rest on facts.</p></li>
         <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">03</span><h3><span class="en">Verification</span></h3><p class="en">We test the diagnosis with the client and agree success criteria together before designing anything.</p></li>
-        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">04</span><h3><span class="en">Preparation</span></h3><p class="en">We select the experts and design a programme for this one organisation. Nothing off the shelf.</p></li>
+        <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">04</span><h3><span class="en">Preparation</span></h3><p class="en">We select the experts and design a programme for this one organisation. No ready-made templates.</p></li>
         <li class="fl-step"><span class="fl-dot" aria-hidden="true"></span><span class="fl-n">05</span><h3><span class="en">Delivery</span></h3><p class="en">Workshops, mentoring and expert sessions built on participants’ real situations, led by practitioners.</p></li>
       </ol>
       <svg class="fl-loop" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
@@ -845,7 +847,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   </section>
   <section class="in manifesto">
     <p class="label gold-label"><span class="en">What we believe</span></p>
-    <blockquote>You don’t build a business. You build <em>people</em>. And&nbsp;then people build the business.</blockquote>
+    <blockquote><span class="mf-l">You don’t build a business.</span><span class="mf-l">You build <em>people</em>.</span><span class="mf-l">And&nbsp;then people build the&nbsp;business.</span></blockquote>
   </section>
   <section class="in khome">
     <div class="hist">
@@ -883,7 +885,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
       <div><p class="label"><span class="en">Services</span></p><ul><li><a href="/en/training/"><span class="en">Training &amp; workshops</span></a></li><li><a href="/en/services/">Mentoring</a></li><li><a href="/en/programme/">High-Performance Culture</a></li></ul></div>
       <div><p class="label">Inevitable Zone</p><ul><li><a href="/en/about-us/"><span class="en">About us</span></a></li><li><a href="/en/about-us/#zespol"><span class="en">Team</span></a></li><li><a href="/en/competences/"><span class="en">Competences</span></a></li></ul></div>
-      <div><p class="label"><span class="en">Contact</span></p><ul><li>inevitable.zone</li><li><a href="/en/contact/"><span class="en">Enquiry form</span></a></li></ul></div>
+      <div><p class="label"><span class="en">Contact</span></p><ul><li><a href="/en/contact/"><span class="en">Enquiry form</span></a></li></ul></div>
     </div>
     <p class="legal"><span class="en">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków, Poland · KRS 0001116611 · VAT ID PL6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="en">Privacy policy</span></a></div>
@@ -1043,18 +1045,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>

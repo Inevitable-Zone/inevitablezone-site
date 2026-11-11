@@ -172,6 +172,8 @@ details.tile:not([open]) .c-open{display:none}
 .tr details summary::after{content:"+";font-size:15px;color:var(--accent)}
 .tr details[open] summary::after{content:"–"}
 .tr details p{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.tr details .pl p+p,.tr details .en p+p{margin-top:8px}
+.tr details .pl p,.tr details .en p{font-size:13.5px;line-height:1.55}
 .unis{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px;padding-top:28px;border-top:.5px solid var(--rule);align-items:center}
 .unis .label{margin-right:8px}
 .unis>span:not(.label){font-size:13px;border:.5px solid var(--rule-strong);padding:6px 12px;color:var(--ink-soft)}
@@ -756,6 +758,10 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
 .story .ck{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--ink-soft);margin:6px 0 4px;line-height:1.5}
 .story .ck input{width:auto!important;flex:0 0 auto;margin:3px 0 0!important;padding:0!important;border:0!important;accent-color:var(--ink)}
 .story .ck>span{flex:1;text-transform:none;letter-spacing:0;font-size:13.5px}
+.manifesto blockquote{max-width:none}
+@media (max-width:720px){.trainers .tr:has(details.sb.on){grid-column:1/-1}.trainers .tr:has(details.sb.on) .ph{width:calc(50% - 7px)}}
+.manifesto .mf-l{display:block}
+.manifesto .mf-l+.mf-l{margin-top:.18em}
 </style>
 </head>
 <body>
@@ -768,7 +774,7 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
         <li><a href="/program/"><span class="pl">Program</span></a></li>
         <li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li>
         <li><a href="/psychology-news/">Psychology News</a></li>
-        <li><a class="gold" href="/tell-me-a-story/">Tell me a story</a></li>
+        <li><a class="gold" href="/tell-me-a-story/">Tell me a&nbsp;story</a></li>
         <li><a href="/o-nas/">About us</a></li>
       </ul>
     </nav>
@@ -794,18 +800,18 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   
   <section class="in sec view" id="news" data-view="news">
     <a class="back" href="/psychology-news/"><span aria-hidden="true">←</span> Psychology News</a>
-    <article class="art art-full"><time datetime="2026-10-22">22 października 2026</time><div><span class="tag">Stres i niepewność</span><h1>Niepewność odbiera ludziom poczucie wpływu na przyszłość</h1><p class="lead">Najnowsze badanie „Stress in America” Amerykańskiego Towarzystwa Psychologicznego pokazuje, że przewlekły stres coraz częściej prowadzi do wycofania i odkładania ważnych decyzji – także zawodowych.</p><div class="body"><p>Badanie przeprowadziła The Harris Poll na zlecenie APA w dniach 29 lipca – 24 sierpnia 2026 r. na próbie 3132 dorosłych Amerykanów. Najczęściej wskazywanym źródłem stresu są koszty życia (77 proc.), a 74 proc. respondentów niepokoi się o przyszłość kraju. Odsetek osób, które uważają, że mają niewielki lub żaden wpływ na własną przyszłość, wzrósł z 23 proc. w 2025 r. do 28 proc.</p><p>Niepewność przekłada się na zachowanie. 26 proc. badanych w ciągu ostatniego roku „zawiesiło” swoją przyszłość: przestało planować albo odłożyło ważne decyzje, takie jak zmiana pracy czy zakup domu. Wśród osób w wieku 18–29 i 30–45 lat odsetek ten sięga 34 proc. Ponad połowa (51 proc.) czuje się zbyt wyczerpana emocjonalnie, by angażować się w sprawy wykraczające poza codzienność, a 47 proc. ograniczyło przynajmniej jedną formę aktywności społecznej.</p><p>Zmienia się też to, gdzie ludzie szukają wsparcia. 70 proc. świadomie korzysta z AI, a 47 proc. użytkowników sięga po nią w roli zbliżonej do specjalisty zdrowia psychicznego. Jednocześnie 72 proc. nadal czuje, że ma przynajmniej częściowy wpływ na swoją przyszłość – to punkt zaczepienia dla działań, które ten wpływ wzmacniają. Badanie dotyczy ogółu dorosłych w USA, nie wyłącznie pracowników.</p><p>Co z tego wynika dla organizacji: ludzie przynoszą do pracy stres, który nie powstał w pracy, ale wpływa na ich energię, zaangażowanie i gotowość do podejmowania decyzji. Zarządy i dyrektorzy HR mogą przywracać poczucie wpływu tam, gdzie mają realną kontrolę: przez przewidywalną komunikację, czytelne ścieżki rozwoju i liderów przygotowanych do rozmowy o niepewności. Warto też świadomie zaprojektować dostęp do ludzkiego wsparcia, zanim pracownicy w pełni zastąpią je narzędziami AI.</p></div><p class="src hint">Źródło: <a href="https://www.apa.org/pubs/reports/stress-in-america/2026" target="_blank" rel="noopener">American Psychological Association, 22 października 2026 – raport „Stress in America 2026: The stress of uncertainty” (badanie The Harris Poll na zlecenie APA)</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
+    <article class="art art-full"><time datetime="2026-10-22">22 października 2026</time><div><span class="tag">Stres i&nbsp;niepewność</span><h1>Niepewność odbiera ludziom poczucie wpływu na&nbsp;przyszłość</h1><p class="lead">Najnowsze badanie „Stress in America” Amerykańskiego Towarzystwa Psychologicznego pokazuje, że&nbsp;przewlekły stres coraz częściej prowadzi do&nbsp;wycofania i&nbsp;odkładania ważnych decyzji – także zawodowych.</p><div class="body"><p>Badanie przeprowadziła The Harris Poll na&nbsp;zlecenie APA w&nbsp;dniach 29 lipca – 24 sierpnia 2026 r. na&nbsp;próbie 3132 dorosłych Amerykanów. Najczęściej wskazywanym źródłem stresu są koszty życia (77 proc.), a&nbsp;74 proc. respondentów niepokoi się o&nbsp;przyszłość kraju. Odsetek osób, które uważają, że&nbsp;mają niewielki lub żaden wpływ na&nbsp;własną przyszłość, wzrósł z&nbsp;23 proc. w&nbsp;2025 r. do&nbsp;28 proc.</p><p>Niepewność przekłada się na&nbsp;zachowanie. 26 proc. badanych w&nbsp;ciągu ostatniego roku „zawiesiło” swoją przyszłość: przestało planować albo odłożyło ważne decyzje, takie jak zmiana pracy czy zakup domu. Wśród osób w&nbsp;wieku 18–29 i&nbsp;30–45 lat odsetek ten sięga 34 proc. Ponad połowa (51 proc.) czuje się zbyt wyczerpana emocjonalnie, by angażować się w&nbsp;sprawy wykraczające poza codzienność, a&nbsp;47 proc. ograniczyło przynajmniej jedną formę aktywności społecznej.</p><p>Zmienia się też to, gdzie ludzie szukają wsparcia. 70 proc. świadomie korzysta z&nbsp;AI, a&nbsp;47 proc. użytkowników sięga po&nbsp;nią w&nbsp;roli zbliżonej do&nbsp;specjalisty zdrowia psychicznego. Jednocześnie 72 proc. nadal czuje, że&nbsp;ma przynajmniej częściowy wpływ na&nbsp;swoją przyszłość – to punkt zaczepienia dla działań, które ten wpływ wzmacniają. Badanie dotyczy ogółu dorosłych w&nbsp;USA, nie wyłącznie pracowników.</p><p>Co z&nbsp;tego wynika dla organizacji: ludzie przynoszą do&nbsp;pracy stres, który nie powstał w&nbsp;pracy, ale wpływa na&nbsp;ich energię, zaangażowanie i&nbsp;gotowość do&nbsp;podejmowania decyzji. Zarządy i&nbsp;dyrektorzy HR mogą przywracać poczucie wpływu tam, gdzie mają realną kontrolę: przez przewidywalną komunikację, czytelne ścieżki rozwoju i&nbsp;liderów przygotowanych do&nbsp;rozmowy o&nbsp;niepewności. Warto też świadomie zaprojektować dostęp do&nbsp;ludzkiego wsparcia, zanim pracownicy w&nbsp;pełni zastąpią je narzędziami AI.</p></div><p class="src hint">Źródło: <a href="https://www.apa.org/pubs/reports/stress-in-america/2026" target="_blank" rel="noopener">American Psychological Association, 22 października 2026 – raport „Stress in America 2026: The stress of uncertainty” (badanie The Harris Poll na&nbsp;zlecenie APA)</a></p><p class="art-cta"><a class="lux-link" href="/kontakt/">Porozmawiajmy o&nbsp;tym, co to oznacza dla Państwa zespołu →</a></p></div></article>
   </section>
   
   
   <footer class="in">
     <div class="ft">
       <div><img src="/logo.png" alt="Inevitable Zone" width="440" height="143"><p>Human Reflection of Business</p></div>
-      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
-      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
-      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li>inevitable.zone</li><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Oferta</span></p><ul><li><a href="/szkolenia/"><span class="pl">Szkolenia i&nbsp;warsztaty</span></a></li><li><a href="/oferta/">Mentoring</a></li><li><a href="/program/">High-Performance Culture</a></li></ul></div>
+      <div><p class="label">Inevitable Zone</p><ul><li><a href="/o-nas/"><span class="pl">O&nbsp;nas</span></a></li><li><a href="/o-nas/#zespol"><span class="pl">Zespół</span></a></li><li><a href="/kompetencje/"><span class="pl">Kompetencje</span></a></li></ul></div>
+      <div><p class="label"><span class="pl">Kontakt</span></p><ul><li><a href="/kontakt/"><span class="pl">Formularz</span></a></li></ul></div>
     </div>
-    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
+    <p class="legal"><span class="pl">INEVITABLE ZONE sp. z&nbsp;o.o. · Kącik 4, 30-549 Kraków · KRS 0001116611 · NIP 6793304174 · REGON 529168282</span></p>
     <div class="fb label"><span>© 2026 Inevitable Zone Institute</span><a href="/polityka-prywatnosci.html"><span class="pl">Polityka prywatności</span></a></div>
   </footer>
 </main>
@@ -963,18 +969,6 @@ h1.label{font-family:inherit;font-size:11px;letter-spacing:.1em;text-transform:u
   });
 })();
 
-/* hero six: pick 6 random experts on each visit */
-(()=>{const c=document.getElementById('hero-six');if(!c)return;
-  const P=[["karina-tomczyk", "Karina Tomczyk"], ["adam-bugaj", "Adam Bugaj"], ["anna-werner-maliszewska", "dr Anna Werner-Maliszewska"], ["dominik-skowronski", "dr Dominik Skowroński"], ["alicja-sekret", "Alicja Sekret"], ["bartlomiej-janiak", "Bartłomiej Janiak"], ["ewa-drozdowicz-jastrzebska", "lek. Ewa Drozdowicz-Jastrzębska"], ["barbara-pieklo", "dr inż. Barbara Piekło"], ["halina-piasecka", "Halina Piasecka"], ["agnieszka-bilinska", "Agnieszka Bilińska"], ["tomasz-manugiewicz", "Tomasz Manugiewicz"], ["tomasz-gulak", "Tomasz Gulak"], ["bogumil-wrobel", "Bogumił Wróbel"], ["natalia-sinillo", "Natalia Siniłło"], ["joanna-burdek", "Joanna Burdek"], ["pawel-prokopczuk", "Paweł Prokopczuk"], ["maciej-chrzanowski", "dr Maciej Chrzanowski"], ["kamil-porembinski", "Kamil Porembiński"]];
-  /* Karina always in the front row, centre (q5); the other five are random */
-  const K=P.find(p=>p[0]==='karina-tomczyk');
-  const rest=P.filter(p=>p!==K).sort(()=>Math.random()-.5).slice(0,5);
-  const pick=[rest[0],rest[1],rest[2],rest[3],K,rest[4]];
-  const imgs=[...c.querySelectorAll('img.q')];
-  c.classList.add('loading');let left=imgs.length;const done=()=>{if(--left<=0)c.classList.remove('loading')};
-  imgs.forEach((im,i)=>{const p=pick[i];im.onload=done;im.onerror=done;im.alt=p[1];im.src='/photos/'+p[0]+'-cutout.webp'});
-  setTimeout(()=>c.classList.remove('loading'),1500);
-})();
 </script>
 </body>
 </html>
